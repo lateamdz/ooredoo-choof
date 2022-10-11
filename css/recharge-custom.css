@@ -1,0 +1,128 @@
+.recharge-offer-card{
+    flex: 1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    color: #171717;
+    position: relative;
+    isolation: isolate;
+    min-height: 340px;
+}
+.recharge-offer-card .hand-3d{
+    position: absolute;
+    bottom:120px;
+    right: 0;
+    z-index: -1;
+    max-width: 60%;
+    /*margin: auto 0;*/
+}
+.recharge-offer-card.blue{
+    background:  #3cdbbf;
+}
+.recharge-offer-card.yellow{
+    background:  #ffd101;
+}
+.recharge-offer-card.white{
+    background: #ffffff;
+}
+.recharge-offer-card .ooredoo-calls .to-ooredoo{
+    font-weight: normal;
+    font-size: 1.1em;
+}
+.recharge-offer-card .ooredoo-calls .call-count{
+    font-size: 2.1em;
+    font-weight: bold;
+    font-family: NotoSans-Bold;
+    /*color: #ed1c24;*/
+    /*font-family: NotoSans-Bold;*/
+}
+.recharge-offer-card .internet img{
+    vertical-align: sub;
+}
+.recharge-offer-card .internet .gigas{
+    color: #171717;
+}
+.recharge-offer-card .internet{
+    font-size: 4.1em;
+    font-weight: bold;
+    color: #ed1c24;
+    z-index: 1;
+    font-family: NotoSans-Bold;
+}
+.recharge-offer-card .buy h3{
+    color: #ed1c24;
+    font-size: 3em;
+    font-family: ooredoobold;
+}
+.recharge-offer-card .buy{
+    /*margin-top: 60px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 15px);
+}
+.recharge-offer-card .buy a{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/*========================*/
+.recharge .md-recharge-film .favourit-film .anaflix-logo{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    height: 80px;
+    z-index: -1;
+}
+@media (max-width: 767px){
+    .recharge .md-recharge-film .favourit-film p{
+        line-height: 3.4rem!important;
+        font-size: 4rem!important;
+    }
+}
+.recharge .md-recharge-film .favourit-film p{
+    line-height: 5.4rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-family: NotoSans-Bold, Arial;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+.recharge .md-recharge-film .download-anaflix p{
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.recharge .md-recharge-film .download-anaflix .download-playstore{
+    padding: 16px;
+}
+.recharge .md-recharge-film .download-anaflix{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+.recharge .md-recharge-film .favourit-film{
+    padding-top: 60px;
+    width: 100%;
+    position: relative;
+    isolation: isolate;
+    padding-bottom: 40px;
+}
+
+.recharge .md-recharge-film {
+    color: #171717;
+}
+.recharge.dark .md-recharge-film {
+    color: #cdcdcd;
+}
+.recharge .md-recharge-film .section-content{
+    background: #f8f8f8
+}
+.recharge.dark .md-recharge-film .section-content{
+    background: #141414
+}
+
