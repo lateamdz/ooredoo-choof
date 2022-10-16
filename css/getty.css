@@ -12,7 +12,10 @@
   font-family: NotoSans-Bold;
   src: url(../fonts/NotoSans-Bold.ttf);
 }
-
+@font-face {
+    font-family: NotoSans-Black;
+    src: url(../fonts/NotoSans-Black.ttf);
+}
 /* chargement de polices */
 
 .getty .header .logo-section .logo-directive {
