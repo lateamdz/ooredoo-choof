@@ -1,3 +1,6 @@
+.choof-logo{
+    height: 48px;
+}
 .recharge-offer-card{
     flex: 1;
     border-radius: 10px;
@@ -10,7 +13,7 @@
 }
 .recharge-offer-card .hand-3d{
     position: absolute;
-    bottom:120px;
+    bottom:110px;
     right: 0;
     z-index: -1;
     max-width: 60%;
@@ -24,6 +27,9 @@
 }
 .recharge-offer-card.white{
     background: #ffffff;
+}
+.recharge-offer-card .ooredoo-calls:nth-child(3n){
+    padding-top: 50px;
 }
 .recharge-offer-card .ooredoo-calls .to-ooredoo{
     font-weight: normal;
