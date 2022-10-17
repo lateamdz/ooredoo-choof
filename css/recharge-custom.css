@@ -9,15 +9,23 @@
     color: #171717;
     position: relative;
     isolation: isolate;
-    min-height: 340px;
+    min-height: 350px;
 }
+
 .recharge-offer-card .hand-3d{
     position: absolute;
     bottom:110px;
     right: 0;
     z-index: -1;
     max-width: 60%;
-    /*margin: auto 0;*/
+}
+.text-ar{
+    font-family: ooredoobold, Arial!important;
+}
+.ar .recharge-offer-card .hand-3d{
+    left: 0;
+    right: auto;
+    transform: scaleX(-1);
 }
 .recharge-offer-card.blue{
     background:  #3cdbbf;
@@ -38,6 +46,7 @@
 .recharge-offer-card .ooredoo-calls .call-count{
     font-size: 2.1em;
     font-weight: 800;
+    padding: 0 4px;
     font-family: NotoSans-Black, Arial;
     /*color: #ed1c24;*/
     /*font-family: NotoSans-Bold;*/
