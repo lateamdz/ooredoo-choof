@@ -88,12 +88,21 @@
     height: 80px;
     z-index: -1;
 }
+.ar.recharge .md-recharge-film .favourit-film .anaflix-logo{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: auto;
+    height: 80px;
+    z-index: -1;
+}
 @media (max-width: 767px){
     .recharge .md-recharge-film .favourit-film p{
         line-height: 3.4rem!important;
         font-size: 4rem!important;
     }
 }
+
 .recharge .md-recharge-film .favourit-film p{
     line-height: 5.4rem;
     font-size: 6rem;
@@ -101,6 +110,9 @@
     font-family: NotoSans-Black, Arial;
     font-weight: bold;
     padding-bottom: 40px;
+}
+.ar.recharge .md-recharge-film .favourit-film p{
+    font-family: ooredoobold, Arial;
 }
 .recharge .md-recharge-film .download-anaflix p{
     margin: 0;
@@ -137,4 +149,7 @@
 .recharge.dark .md-recharge-film .section-content{
     background: #141414
 }
-
+.alaflix-small-duration b{
+    font-weight: 800;
+    font-family: NotoSans-Black, Arial;
+}
