@@ -114,6 +114,9 @@ font-weight: bold
 .recharge .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.anaflix-dash{
 	background-image: url(../images/icons/anaflix-dash.svg);
 }
+.recharge .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.anaflix-icon{
+    background-image: url(../images/icons/anaflix.svg);
+}
 .recharge .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a.small{
 	font-size: 15px;
     padding: 5px 0 5px 0px;
