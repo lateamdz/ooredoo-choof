@@ -746,6 +746,9 @@ display: none;background: #000428;  /* fallback for old browsers */background: -
 .dark .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .progressBarContainer .progressBar{
 	background-color: #cdcdcd;
 }
+.title {
+    padding: 0 20px;
+}
 .dark .md-recharge-internet.roaming.black .section-title {
     padding: 10px 0;
     background: #141414;

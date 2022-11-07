@@ -1,6 +1,12 @@
 .choof-logo{
     height: 48px;
 }
+.pl-2{
+    padding-left: 8px;
+}
+.pr-2{
+    padding-right: 8px;
+}
 .recharge-offer-card{
     flex: 1;
     border-radius: 10px;
@@ -9,7 +15,8 @@
     color: #171717;
     position: relative;
     isolation: isolate;
-    min-height: 224px;
+    min-height: 218px;
+    min-width: 218px;
 }
 
 .recharge-offer-card .hand-3d{
@@ -36,9 +43,7 @@
 .recharge-offer-card.white{
     background: #ffffff;
 }
-.recharge-offer-card .ooredoo-calls:nth-child(3n){
-    padding-top: 50px;
-}
+
 .recharge-offer-card .ooredoo-calls .to-ooredoo{
     font-weight: normal;
     font-size: 1.1em;
@@ -50,6 +55,18 @@
     font-family: NotoSans-Black, Arial;
     /*color: #ed1c24;*/
     /*font-family: NotoSans-Bold;*/
+}
+.recharge-offer-card .boost{
+    flex: 1;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #ed1c24;
+    z-index: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: NotoSans-Black, Arial;
 }
 .recharge-offer-card .internet{
     font-size: 3.1em;
@@ -187,6 +204,11 @@
 }
 .border-0{
     border: unset!important;
+}
+@media (min-width: 1200px){
+    .container {
+        width: 1190px;
+    }
 }
 @media (min-width: 1300px){
     .container {
