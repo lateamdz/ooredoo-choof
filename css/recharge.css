@@ -747,7 +747,8 @@ display: none;background: #000428;  /* fallback for old browsers */background: -
 	background-color: #cdcdcd;
 }
 .dark .md-recharge-internet.roaming.black .section-title {
-    background: #191919;
+    padding: 10px 0;
+    background: #141414;
 }
 .dark .md-recharge-internet.roaming .section-content .change .fullWidthCard {
     background: #101010;
