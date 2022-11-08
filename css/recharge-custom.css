@@ -215,3 +215,52 @@
         width: 1270px;
     }
 }
+/*====================================================================================================================*/
+.qatar-banner{
+    padding:34px;
+    min-height: calc(100vh - 116px);
+    width: 100%;
+    margin-bottom: 16px;
+    background: rgb(28,1,18);
+    background: linear-gradient(45deg, rgba(28,1,18,1) 0%, rgba(139,21,56,1) 100%);
+    color: white;
+    font-family: NotoSans-Black, Arial;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.qatar-title h2{
+    flex: 1;
+    font-size: 5em;
+    font-weight: 800;
+}
+.qatar-description{
+    max-width: 80%;
+    padding: 64px 34px 16px;
+    font-size: 2em;
+
+}
+.qatar-participate-section{
+    margin-top: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: NotoSans-Black, Arial;
+}
+.qatar-participate-section a{
+    color: white;
+    text-decoration: underline;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.qatar-participate{
+    background-color: white;
+    padding: 8px 24px;
+    color: #8B1538FF;
+    font-size: 1.5em;
+    font-weight: 800;
+    border-radius: 1.5em;
+}
