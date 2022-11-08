@@ -308,6 +308,12 @@
 .text-underline{
     text-decoration: underline;
 }
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
 
 .qatar-form{
     font-family: NotoSans-Black, Arial;
