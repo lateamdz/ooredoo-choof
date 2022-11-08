@@ -26,8 +26,17 @@
     z-index: -1;
     max-width: 60%;
 }
+.text-bold{
+    font-weight: bold;
+}
+.text-grey{
+    color: rgba(128,128,128);
+}
 .text-ar{
     font-family: ooredoobold, Arial!important;
+}
+.text-fr{
+    font-family: NotoSans-Black, Arial!important;
 }
 .ar .recharge-offer-card .hand-3d{
     left: 0;
@@ -270,7 +279,7 @@
 .submit-btn{
     color: white;
     padding: 8px 24px;
-    background-color: #ed1c24;
+    background-color: #ed1c24!important;
     /*font-weight: ;*/
     font-size: 1.05em;
     border-radius: 0.8em;
@@ -291,7 +300,7 @@
 }
 .qatar-form-section{
     background: unset;
-    color: black;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -299,15 +308,27 @@
 .text-underline{
     text-decoration: underline;
 }
-.qatar-form{
 
+.qatar-form{
     font-family: NotoSans-Black, Arial;
     box-shadow: 0px 0px 60px -24px rgba(0,0,0,0.75);
     background: white;
+    color: black;
     padding: 40px;
     border-radius: 2em;
     width: 100%;
     max-width: 600px;
+}
+.dark.recharge .qatar-form{
+    background: #171717;
+    color: white;
+}
+.dark.recharge .qatar-form select option{
+    background: #171717;
+}
+.dark.recharge .qatar-form input,.dark.recharge .qatar-form select{
+    background: rgba(128,128,128,0.1);
+    color: white;
 }
 .formbuilder-text-label , .formbuilder-select-label{
     width: 100%;
