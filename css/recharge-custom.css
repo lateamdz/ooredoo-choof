@@ -318,6 +318,9 @@
     border-radius: 2em;
     width: 100%;
     max-width: 600px;
+    position: relative;
+    isolation: isolate;
+
 }
 .dark.recharge .qatar-form{
     background: #171717;
@@ -333,4 +336,53 @@
 .formbuilder-text-label , .formbuilder-select-label{
     width: 100%;
     text-align: start;
+}
+/*======================================*/
+.custom-modal{
+    z-index: 150;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.red-btn{
+
+    color: white;
+    padding: 8px 24px;
+    background-color: #ed1c24!important;
+    /*font-weight: ;*/
+    font-size: 1.05em;
+    border-radius: 0.8em;
+    border: unset;
+    outline: unset;
+    font-family: ooredoobold, Arial;
+}
+.red-btn:hover{
+    color: white;
+}
+.custom-modal-popup p{
+    font-size: 1.2em;
+}
+.custom-modal-popup{
+    font-family: NotoSans-Black, Arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 34px;
+    min-height: 160px;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 14px;
+}
+.modal-hidden{
+    display: none;
 }

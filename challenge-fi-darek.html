@@ -51,11 +51,38 @@
     <![endif]-->
     <link href="css/recharge.css" rel="stylesheet">
     <link href="css/recharge-custom.css" rel="stylesheet">
-
+    <script type="text/javascript">
+        function process(element) {
+            // const form = element.closest('form')
+            const value = {
+                ["sahla-box-number"]: document.getElementById('sahla-box-number').value,
+                ["prenom"]: document.getElementById('prenom').value,
+                ["nom"]: document.getElementById('nom').value,
+                ["address"]: document.getElementById('adresse').value,
+                ["commune"]: document.getElementById('commune').value,
+                ["wilaya"]: document.getElementById('wilaya').value,
+                ["contact"]: document.getElementById('contact').value,
+                ["condition-accept"]: document.getElementById('condition-accept').checked,
+            }
+            const notEmpty = Object.entries(value).every(([key, value]) => value.toString().trim() !== "")
+            if (notEmpty && document.getElementById('condition-accept').checked) {
+                console.log(value)
+                document.getElementById("custom-modal").classList.remove("modal-hidden");
+            }
+        }
+    </script>
 </head>
 
 <body class="recharge">
-
+<div class="custom-modal modal-hidden" id="custom-modal">
+    <div class="custom-modal-popup">
+        <p>
+            Vous avez participé avec succeès au <b>Challenge Fanzone fi Darek.</b> Merci pour votre participation.
+        </p>
+        <br>
+        <a class="red-btn" href="./index.html">Terminer</a>
+    </div>
+</div>
 <div class="accessibilities mobileMenu" style="display: none;">
     <div class="accessibilities-header">
         <img src="images/choof-black.svg" alt="Logo ooredoo" class="img-responsive">
@@ -160,33 +187,49 @@
                     <h4>Information Personnelles</h4>
                     <br>
                     <br>
-                    <form class="">
+                    <form class="" onsubmit="return false">
                         <div class="rendered-form">
                             <div class="formbuilder-text form-group field-sahla-box-number">
-                                <label for="sahla-box-number" class="formbuilder-text-label">Numéro Sahla Box<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="Ex: 010 XXXX" class="form-control" name="sahla-box-number" access="false" maxlength="100" id="sahla-box-number" required="required" aria-required="true">
+                                <label for="sahla-box-number" class="formbuilder-text-label">Numéro Sahla Box<span
+                                        class="formbuilder-required">*</span></label>
+                                <input type="text" placeholder="Ex: 010 XXXX" class="form-control"
+                                       name="sahla-box-number" access="false" maxlength="100" id="sahla-box-number"
+                                       required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-prenom">
-                                <label for="prenom" class="formbuilder-text-label">Prénom<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="votre prénom" class="form-control" name="prenom" access="false" maxlength="50" id="prenom" required="required" aria-required="true">
+                                <label for="prenom" class="formbuilder-text-label">Prénom<span
+                                        class="formbuilder-required">*</span></label>
+                                <input type="text" placeholder="votre prénom" class="form-control" name="prenom"
+                                       access="false" maxlength="50" id="prenom" required="required"
+                                       aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-nom">
-                                <label for="nom" class="formbuilder-text-label">Nom<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="votre nom" class="form-control" name="nom" access="false" maxlength="50" id="nom" required="required" aria-required="true">
+                                <label for="nom" class="formbuilder-text-label">Nom<span
+                                        class="formbuilder-required">*</span></label>
+                                <input type="text" placeholder="votre nom" class="form-control" name="nom"
+                                       access="false" maxlength="50" id="nom" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-adresse">
-                                <label for="adresse" class="formbuilder-text-label">Adresse exacte<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="Ex: 12 rue de la porte" class="form-control" name="adresse" access="false" maxlength="300" id="adresse" required="required" aria-required="true">
+                                <label for="adresse" class="formbuilder-text-label">Adresse exacte<span
+                                        class="formbuilder-required">*</span></label>
+                                <input type="text" placeholder="Ex: 12 rue de la porte" class="form-control"
+                                       name="adresse" access="false" maxlength="300" id="adresse" required="required"
+                                       aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-commune">
-                                <label for="commune" class="formbuilder-text-label">Commune<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="Ex: Alger" class="form-control" name="commune" access="false" maxlength="15" id="commune" required="required" aria-required="true">
+                                <label for="commune" class="formbuilder-text-label">Commune<span
+                                        class="formbuilder-required">*</span></label>
+                                <input type="text" placeholder="Ex: Alger" class="form-control" name="commune"
+                                       access="false" maxlength="15" id="commune" required="required"
+                                       aria-required="true">
                             </div>
                             <div class="formbuilder-select form-group field-wilaya">
-                                <label for="wilaya" class="formbuilder-select-label">Wilaya<span class="formbuilder-required">*</span></label>
-                                <select class="form-control" name="wilaya" id="wilaya" required="required" aria-required="true">
+                                <label for="wilaya" class="formbuilder-select-label">Wilaya<span
+                                        class="formbuilder-required">*</span></label>
+                                <select class="form-control" name="wilaya" id="wilaya" required="required"
+                                        aria-required="true">
                                     <option id="1" value="ADRAR" selected="true">ADRAR</option>
-                                    <option id="2" value="CHLEF" >CHLEF</option>
+                                    <option id="2" value="CHLEF">CHLEF</option>
                                     <option id="3" value="LAGHOUAT">LAGHOUAT</option>
                                     <option id="4" value="OUM EL BOUAGHI">OUM EL BOUAGHI</option>
                                     <option id="5" value="BATNA">BATNA</option>
@@ -245,21 +288,26 @@
                                     <option id="58" value="IN GUEZZAM">IN GUEZZAM</option>
                                 </select>
                             </div>
-                            <div class="formbuilder-text form-group field-text-1667894313384">
-                                <label for="text-1667894313384" class="formbuilder-text-label">Numero de contact personnel<span class="formbuilder-required">*</span></label>
-                                <input type="tel" placeholder="xxxxx" class="form-control" name="text-1667894313384" access="false" maxlength="10" id="text-1667894313384" required="required" aria-required="true">
+                            <div class="formbuilder-text form-group field-contact">
+                                <label for="contact" class="formbuilder-text-label">Numero de contact personnel<span
+                                        class="formbuilder-required">*</span></label>
+                                <input type="tel" placeholder="xxxxx" class="form-control" name="contact" access="false"
+                                       maxlength="10" id="contact" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-checkbox-group form-group field-condition-accept">
                                 <div class="checkbox-group">
                                     <div class="formbuilder-checkbox">
-                                        <input name="condition-accept[]" access="false" id="condition-accept-0" required="required" aria-required="true" value="condition-accept" type="checkbox">
-                                        <label for="condition-accept-0">J'accept les <a href="http://ooredoo.dz" class="text-red text-underline">condition generales d'utilisation</a></label>
+                                        <input name="condition-accept[]" access="false" id="condition-accept"
+                                               required="required" aria-required="true" type="checkbox">
+                                        <label for="condition-accept">J'accept les <a href="http://ooredoo.dz"
+                                                                                      class="text-red text-underline">condition
+                                            generales d'utilisation</a></label>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button  class="submit-btn" >Partiiciper</button>
-                        <a href="./index.html" class="cancel-btn" >Annuler</a>
+                        <button class="submit-btn" onclick="process(this)">Partiiciper</button>
+                        <a href="./index.html" class="cancel-btn">Annuler</a>
                     </form>
                 </div>
             </div>
