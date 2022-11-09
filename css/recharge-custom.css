@@ -3,8 +3,17 @@
     src: url(../fonts/outfit.ttf);
 }
 @font-face {
-    font-family: "Rubik Black";
+    font-family: rubik;
     src: url(../fonts/rubik.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: rubik-bold;
+    src: url(../fonts/rubik.ttf);
+    font-weight: 800;
+}
+body{
+    font-family: rubik,NotoSans-Regular, Arial ;
 }
 .choof-logo {
     height: 48px;
@@ -68,9 +77,11 @@
     color: transparent !important;
     margin-left: -1em;
 }
-
+.text-fr-bold{
+    font-family: rubik-bold, Arial,sans-serif !important;
+}
 .text-fr {
-    font-family: outfit, Arial,sans-serif !important;
+    font-family: rubik, ooredoobold,Arial;,sans-serif !important;
 }
 
 .ar .recharge-offer-card .hand-3d {
@@ -94,13 +105,14 @@
 .recharge-offer-card .ooredoo-calls .to-ooredoo {
     font-weight: normal;
     font-size: 1.1em;
+    font-family: rubik, ooredoobold,Arial;;
 }
 
 .recharge-offer-card .ooredoo-calls .call-count {
     font-size: 1.7em;
     font-weight: 800;
     padding: 0 4px;
-    font-family: NotoSans-Black, Arial;
+    font-family: rubik-bold, Arial;
     /*color: #ed1c24;*/
     /*font-family: NotoSans-Bold;*/
 }
@@ -128,7 +140,7 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-    font-family: NotoSans-Black, Arial;
+    font-family: rubik-bold, Arial;
 }
 
 .recharge-offer-card .internet img {
@@ -159,13 +171,13 @@
 }
 
 .recharge-offer-card .buy h3 sup {
-    font-family: ooredoobold;
+    font-family: rubik, ooredoobold,Arial;
 }
 
 .recharge-offer-card .buy h3 {
     color: #ed1c24;
     font-size: 2.5em;
-    font-family: NotoSans-Black, Arial;
+    font-family: rubik, ooredoobold,Arial;;
 }
 
 .recharge-offer-card .buy {
@@ -313,7 +325,7 @@
 
 .qatar-title h2 {
     flex: 1;
-    font-family:  "Rubik Black", Arial, sans-serif;
+    font-family:  rubik-bold, Arial, sans-serif;
     font-size: 3.5em;
     font-weight: 800;
 }
