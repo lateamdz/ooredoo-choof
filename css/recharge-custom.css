@@ -12,8 +12,14 @@
     src: url(../fonts/rubik.ttf);
     font-weight: 800;
 }
-body{
-    font-family: rubik,NotoSans-Regular, Arial ;
+#page, body, html{
+    font-family: rubik,ooredooregular, Arial ;
+}
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit,
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency,
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a
+{
+    font-family: rubik,ooredooregular, Arial ;
 }
 .choof-logo {
     height: 48px;
@@ -78,7 +84,7 @@ body{
     margin-left: -1em;
 }
 .text-fr-bold{
-    font-family: rubik-bold, Arial,sans-serif !important;
+    font-family: rubik-bold,ooredoobold, Arial,sans-serif !important;
 }
 .text-fr {
     font-family: rubik, ooredoobold,Arial;,sans-serif !important;
@@ -112,7 +118,7 @@ body{
     font-size: 1.7em;
     font-weight: 800;
     padding: 0 4px;
-    font-family: rubik-bold, Arial;
+    font-family: rubik-bold,ooredoobold, Arial;
     /*color: #ed1c24;*/
     /*font-family: NotoSans-Bold;*/
 }
@@ -140,7 +146,7 @@ body{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-    font-family: rubik-bold, Arial;
+    font-family: rubik-bold,ooredoobold, Arial;
 }
 
 .recharge-offer-card .internet img {
@@ -314,7 +320,6 @@ body{
     background: rgb(28, 1, 18);
     background: linear-gradient(45deg, rgba(28, 1, 18, 1) 0%, rgba(139, 21, 56, 1) 100%);
     color: white;
-    font-family: NotoSans-Black, Arial;
     text-align: center;
     display: flex;
     align-items: center;
@@ -348,7 +353,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 20px;
-    font-family: NotoSans-Black, Arial;
+    font-family: outfit,  Arial;
 }
 
 .qatar-participate-section .conditions {
