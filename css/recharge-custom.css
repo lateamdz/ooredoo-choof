@@ -35,6 +35,17 @@
 .text-ar{
     font-family: ooredoobold, Arial!important;
 }
+.text-rtl{
+    font-family: ooredoobold, Arial!important;
+    direction: rtl;
+}
+.text-ltr{
+    direction: rtl;
+}
+.text-transparent{
+    color: transparent!important;
+    margin-left: -1em;
+}
 .text-fr{
     font-family: NotoSans-Black, Arial!important;
 }
@@ -67,7 +78,7 @@
 }
 .recharge-offer-card .boost{
     flex: 1;
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: 800;
     color: #ed1c24;
     z-index: 1;
@@ -293,6 +304,9 @@
     padding: 8px 24px;
     background-color: #dedede;
     /*font-weight: ;*/
+    border: unset;
+    outline: unset;
+
     font-size: 1.05em;
     border-radius: 0.8em;
     border: unset;
