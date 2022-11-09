@@ -207,9 +207,9 @@
                                        aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-nom">
-                                <label for="nom" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" class="formbuilder-text-label">Nom<span
+                                <label for="nom"  class="formbuilder-text-label">Nom<span
                                         class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="votre nom" class="form-control" name="nom"
+                                <input type="text" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" placeholder="votre nom" class="form-control" name="nom"
                                        access="false" maxlength="50" id="nom" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-adresse">
