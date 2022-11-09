@@ -1,13 +1,21 @@
-.choof-logo{
+.choof-logo {
     height: 48px;
 }
-.pl-2{
+
+.pl-2 {
     padding-left: 8px;
 }
-.pr-2{
+
+.pr-2 {
     padding-right: 8px;
 }
-.recharge-offer-card{
+
+/*@media (min-width: 1200px) {*/
+/*    .container-special {*/
+/*        width: 930px;*/
+/*    }*/
+/*}*/
+.recharge-offer-card {
     flex: 1;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -19,56 +27,68 @@
     min-width: 218px;
 }
 
-.recharge-offer-card .hand-3d{
+.recharge-offer-card .hand-3d {
     position: absolute;
-    bottom:110px;
+    bottom: 110px;
     right: 0;
     z-index: -1;
     max-width: 60%;
 }
-.text-bold{
+
+.text-bold {
     font-weight: bold;
 }
-.text-grey{
-    color: rgba(128,128,128);
+
+.text-grey {
+    color: rgba(128, 128, 128);
 }
-.text-ar{
-    font-family: ooredoobold, Arial!important;
+
+.text-ar {
+    font-family: ooredoobold, Arial !important;
 }
-.text-rtl{
-    font-family: ooredoobold, Arial!important;
+
+.text-rtl {
+    font-family: ooredoobold, Arial !important;
     direction: rtl;
 }
-.text-ltr{
+
+.text-ltr {
     direction: rtl;
 }
-.text-transparent{
-    color: transparent!important;
+
+.text-transparent {
+    color: transparent !important;
     margin-left: -1em;
 }
-.text-fr{
-    font-family: NotoSans-Black, Arial!important;
+
+.text-fr {
+    font-family: NotoSans-Black, Arial !important;
 }
-.ar .recharge-offer-card .hand-3d{
+
+.ar .recharge-offer-card .hand-3d {
     left: 0;
     right: auto;
     transform: scaleX(-1);
 }
-.recharge-offer-card.blue{
-    background:  #3cdbbf;
+
+.recharge-offer-card.blue {
+    background: #3cdbbf;
 }
-.recharge-offer-card.yellow{
-    background:  #ffd101;
+
+.recharge-offer-card.yellow {
+    background: #ffd101;
 }
-.recharge-offer-card.white{
+
+.recharge-offer-card.white {
     background: #ffffff;
 }
 
-.recharge-offer-card .ooredoo-calls .to-ooredoo{
+.recharge-offer-card .ooredoo-calls .to-ooredoo {
     font-weight: normal;
     font-size: 1.1em;
 }
-.recharge-offer-card .ooredoo-calls .call-count{
+
+.recharge-offer-card .ooredoo-calls .call-count {
     font-size: 1.7em;
     font-weight: 800;
     padding: 0 4px;
@@ -76,10 +96,11 @@
     /*color: #ed1c24;*/
     /*font-family: NotoSans-Bold;*/
 }
-.recharge-offer-card .boost{
+
+.recharge-offer-card .boost {
     flex: 1;
     white-space: nowrap;
-    font-size: 1.7em;
+    font-size: 1.6em;
     font-weight: 800;
     color: #ed1c24;
     z-index: 1;
@@ -89,7 +110,8 @@
     justify-content: flex-start;
     font-family: NotoSans-Black, Arial;
 }
-.recharge-offer-card .internet{
+
+.recharge-offer-card .internet {
     font-size: 3.1em;
     font-weight: 800;
     color: #ed1c24;
@@ -100,38 +122,45 @@
     justify-content: flex-start;
     font-family: NotoSans-Black, Arial;
 }
-.recharge-offer-card .internet img{
+
+.recharge-offer-card .internet img {
     vertical-align: sub;
     max-height: 1.2em;
     /*padding: 0 0.3em;*/
 }
-.recharge-offer-card .internet .gigas{
+
+.recharge-offer-card .internet .gigas {
     flex: 1;
     color: #171717;
     letter-spacing: -2px;
 }
 
-.text-red{
-    color: #ed1c24!important;
+.text-red {
+    color: #ed1c24 !important;
 }
-.recharge-offer-card .buy img{
+
+.recharge-offer-card .buy img {
     transition: filter 300ms ease;
     border-radius: 20px;
-    transition-property: filter , box-shadow;
+    transition-property: filter, box-shadow;
 }
-.recharge-offer-card .buy img:hover{
+
+.recharge-offer-card .buy img:hover {
     filter: brightness(1.2);
-    box-shadow: 0px 0px 1px 8px rgba(128,128,128,0.1);
+    box-shadow: 0px 0px 1px 8px rgba(128, 128, 128, 0.1);
 }
-.recharge-offer-card .buy h3 sup{
+
+.recharge-offer-card .buy h3 sup {
     font-family: ooredoobold;
 }
-.recharge-offer-card .buy h3{
+
+.recharge-offer-card .buy h3 {
     color: #ed1c24;
     font-size: 2.5em;
-    font-family:  NotoSans-Black, Arial;
+    font-family: NotoSans-Black, Arial;
 }
-.recharge-offer-card .buy{
+
+.recharge-offer-card .buy {
     /*margin-top: 60px;*/
     display: flex;
     justify-content: space-between;
@@ -140,20 +169,23 @@
     bottom: 0;
     width: calc(100% - 15px);
 }
-.recharge-offer-card .buy a{
+
+.recharge-offer-card .buy a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+
 /*========================*/
-.recharge .md-recharge-film .favourit-film .anaflix-logo{
+.recharge .md-recharge-film .favourit-film .anaflix-logo {
     position: absolute;
     top: 86px;
     left: 334px;
     height: 80px;
     z-index: -1;
 }
-.ar.recharge .md-recharge-film .favourit-film .anaflix-logo{
+
+.ar.recharge .md-recharge-film .favourit-film .anaflix-logo {
     position: absolute;
     top: 40px;
     left: 40px;
@@ -161,14 +193,15 @@
     height: 80px;
     z-index: -1;
 }
-@media (max-width: 767px){
-    .recharge .md-recharge-film .favourit-film p{
-        line-height: 3.4rem!important;
-        font-size: 4rem!important;
+
+@media (max-width: 767px) {
+    .recharge .md-recharge-film .favourit-film p {
+        line-height: 3.4rem !important;
+        font-size: 4rem !important;
     }
 }
 
-.recharge .md-recharge-film .favourit-film p{
+.recharge .md-recharge-film .favourit-film p {
     line-height: 5.4rem;
     font-size: 6rem;
     text-transform: uppercase;
@@ -176,20 +209,27 @@
     font-weight: bold;
     padding-bottom: 40px;
 }
-.ar.recharge .md-recharge-film .favourit-film p{
+
+.ar.recharge .md-recharge-film .favourit-film p {
     font-family: ooredoobold, Arial;
 }
-.recharge .md-recharge-film .download-anaflix p{
+
+.recharge .md-recharge-film .download-anaflix p {
     margin: 0;
     font-weight: bold;
     font-size: 1.5rem;
     padding: 0 16px;
 }
-.recharge .md-recharge-film .download-anaflix .download-playstore img{ height: 50px;}
-.recharge .md-recharge-film .download-anaflix .download-playstore{
+
+.recharge .md-recharge-film .download-anaflix .download-playstore img {
+    height: 50px;
+}
+
+.recharge .md-recharge-film .download-anaflix .download-playstore {
     padding: 4px;
 }
-.recharge .md-recharge-film .download-anaflix{
+
+.recharge .md-recharge-film .download-anaflix {
     width: 100%;
     display: flex;
     align-items: center;
@@ -197,7 +237,8 @@
     padding-bottom: 40px;
     max-width: 440px;
 }
-.recharge .md-recharge-film .favourit-film{
+
+.recharge .md-recharge-film .favourit-film {
     padding-top: 60px;
     width: 100%;
     position: relative;
@@ -208,42 +249,50 @@
 .recharge .md-recharge-film {
     color: #171717;
 }
+
 .recharge.dark .md-recharge-film {
     color: #cdcdcd;
 }
-.recharge .md-recharge-film .section-content{
+
+.recharge .md-recharge-film .section-content {
     background: #f8f8f8;
     padding-top: 60px;
     padding-bottom: 60px;
 }
-.recharge.dark .md-recharge-film .section-content{
+
+.recharge.dark .md-recharge-film .section-content {
     background: #141414
 }
-.alaflix-small-duration b{
+
+.alaflix-small-duration b {
     font-weight: 800;
     font-family: NotoSans-Black, Arial;
 }
-.border-0{
-    border: unset!important;
+
+.border-0 {
+    border: unset !important;
 }
-@media (min-width: 1200px){
+
+@media (min-width: 1200px) {
     .container {
-        width: 1190px;
+        width: 1170px;
     }
 }
-@media (min-width: 1300px){
-    .container {
-        width: 1270px;
-    }
+
+@media (min-width: 1300px) {
+    /*.container {*/
+    /*    width: 1270px;*/
+    /*}*/
 }
+
 /*====================================================================================================================*/
 /* QATAR BANNER */
-.qatar-banner{
-    padding:34px;
+.qatar-banner {
+    padding: 34px;
     /*min-height: calc(100vh - 116px);*/
     width: 100%;
-    background: rgb(28,1,18);
-    background: linear-gradient(45deg, rgba(28,1,18,1) 0%, rgba(139,21,56,1) 100%);
+    background: rgb(28, 1, 18);
+    background: linear-gradient(45deg, rgba(28, 1, 18, 1) 0%, rgba(139, 21, 56, 1) 100%);
     color: white;
     font-family: NotoSans-Black, Arial;
     text-align: center;
@@ -253,21 +302,25 @@
     flex-direction: column;
     margin-bottom: 84px;
 }
-.qatar-title h2{
+
+.qatar-title h2 {
     flex: 1;
     font-size: 3.5em;
     font-weight: 800;
 }
-.qatar-header img{
+
+.qatar-header img {
     width: 80%;
     max-width: 900px;
 }
-.qatar-description{
+
+.qatar-description {
     max-width: 70%;
     padding: 64px 34px 16px;
     font-size: 1.6em;
 }
-.qatar-participate-section{
+
+.qatar-participate-section {
     margin-top: 54px;
     display: flex;
     align-items: center;
@@ -275,13 +328,15 @@
     gap: 20px;
     font-family: NotoSans-Black, Arial;
 }
-.qatar-participate-section .conditions{
+
+.qatar-participate-section .conditions {
     color: white;
     text-decoration: underline;
     font-size: 1.2em;
     font-weight: bold;
 }
-.qatar-participate-section .qatar-participate{
+
+.qatar-participate-section .qatar-participate {
     background-color: white;
     padding: 8px 24px;
     color: #8B1538FF;
@@ -289,27 +344,31 @@
     font-weight: 800;
     border-radius: 1.5em;
 }
-@media (max-width: 1000px){
+
+@media (max-width: 1000px) {
     .qatar-banner {
         padding: 34px 5px;
     }
-    .qatar-description{
+
+    .qatar-description {
         max-width: 100%;
         padding: 64px 20px 16px;
         font-size: 1.8em;
     }
 }
+
 /*====================================================================================================================*/
 /* QATAR FORM */
-.disable-link{
+.disable-link {
     pointer-events: none;
-    background-color: rgba(128,128,128,0.5)!important;
-    color: rgba(128,128,128)!important;
+    background-color: rgba(128, 128, 128, 0.5) !important;
+    color: rgba(128, 128, 128) !important;
 }
-.submit-btn{
+
+.submit-btn {
     color: white;
     padding: 8px 24px;
-    background-color: #ed1c24!important;
+    background-color: #ed1c24 !important;
     /*font-weight: ;*/
     font-size: 1.05em;
     border-radius: 0.8em;
@@ -317,7 +376,8 @@
     outline: unset;
     font-family: ooredoobold, Arial;
 }
-.cancel-btn{
+
+.cancel-btn {
     font-family: ooredoobold, Arial;
     color: #262626;
     padding: 8px 24px;
@@ -331,26 +391,30 @@
     border: unset;
     outline: unset;
 }
-.qatar-form-section{
+
+.qatar-form-section {
     background: unset;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.text-underline{
+
+.text-underline {
     text-decoration: underline;
 }
-.text-right{
+
+.text-right {
     text-align: right;
 }
-.text-left{
+
+.text-left {
     text-align: left;
 }
 
-.qatar-form{
+.qatar-form {
     font-family: NotoSans-Black, Arial;
-    box-shadow: 0px 0px 60px -24px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 60px -24px rgba(0, 0, 0, 0.75);
     background: white;
     color: black;
     padding: 40px;
@@ -361,23 +425,28 @@
     isolation: isolate;
 
 }
-.dark.recharge .qatar-form{
+
+.dark.recharge .qatar-form {
     background: #171717;
     color: white;
 }
-.dark.recharge .qatar-form select option{
+
+.dark.recharge .qatar-form select option {
     background: #171717;
 }
-.dark.recharge .qatar-form input,.dark.recharge .qatar-form select{
-    background: rgba(128,128,128,0.1);
+
+.dark.recharge .qatar-form input, .dark.recharge .qatar-form select {
+    background: rgba(128, 128, 128, 0.1);
     color: white;
 }
-.formbuilder-text-label , .formbuilder-select-label{
+
+.formbuilder-text-label, .formbuilder-select-label {
     width: 100%;
     text-align: start;
 }
+
 /*======================================*/
-.custom-modal{
+.custom-modal {
     z-index: 150;
     position: fixed;
     left: 0;
@@ -387,16 +456,17 @@
     margin-right: auto;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.red-btn{
+
+.red-btn {
 
     color: white;
     padding: 8px 24px;
-    background-color: #ed1c24!important;
+    background-color: #ed1c24 !important;
     /*font-weight: ;*/
     font-size: 1.05em;
     border-radius: 0.8em;
@@ -404,13 +474,16 @@
     outline: unset;
     font-family: ooredoobold, Arial;
 }
-.red-btn:hover{
+
+.red-btn:hover {
     color: white;
 }
-.custom-modal-popup p{
+
+.custom-modal-popup p {
     font-size: 1.2em;
 }
-.custom-modal-popup{
+
+.custom-modal-popup {
     font-family: NotoSans-Black, Arial;
     display: flex;
     align-items: center;
@@ -422,6 +495,7 @@
     background-color: white;
     border-radius: 14px;
 }
-.modal-hidden{
+
+.modal-hidden {
     display: none;
 }
