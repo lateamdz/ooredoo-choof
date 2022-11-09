@@ -61,7 +61,7 @@ font-weight: bold
 	background:none;
 }
 .recharge .header .accessibilities .lang a, .recharge .md-my-account .section-title .title h1, .recharge .md-my-account .section-title .description p, .recharge .md-my-account .section-content .my-account-container .my-account-holder .holder-header h2{
-    font-family: rubik, Arial;
+    font-family: rubik-bold, Arial;
 }
 
 .recharge .header .accessibilities .lang a{
@@ -156,7 +156,7 @@ background-image: linear-gradient( 135deg, #FFE985 10%, #FA742B 100%);
 }
 .recharge .md-recharge-internet.roaming .section-title .title h1 {
 	text-transform: none;
-    font-family: rubik, Arial;
+    font-family: rubik-bold, Arial;
     font-size: 32px;
     font-weight: bold;
     color: #171717;
