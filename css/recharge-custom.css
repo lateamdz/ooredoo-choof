@@ -240,7 +240,7 @@
 /* QATAR BANNER */
 .qatar-banner{
     padding:34px;
-    min-height: calc(100vh - 116px);
+    /*min-height: calc(100vh - 116px);*/
     width: 100%;
     background: rgb(28,1,18);
     background: linear-gradient(45deg, rgba(28,1,18,1) 0%, rgba(139,21,56,1) 100%);
@@ -278,7 +278,7 @@
 .qatar-participate-section .conditions{
     color: white;
     text-decoration: underline;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 .qatar-participate-section .qatar-participate{
