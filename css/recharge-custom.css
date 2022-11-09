@@ -249,7 +249,7 @@
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     margin-bottom: 84px;
 }
@@ -289,7 +289,7 @@
     font-weight: 800;
     border-radius: 1.5em;
 }
-@media (max-width: 800px){
+@media (max-width: 1000px){
     .qatar-banner {
         padding: 34px 5px;
     }
