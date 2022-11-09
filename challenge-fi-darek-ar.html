@@ -66,7 +66,10 @@
             }
             const notEmpty = Object.entries(value).every(([key, value]) => value.toString().trim() !== "")
             if (notEmpty && document.getElementById('condition-accept').checked) {
-                console.log(value)
+                if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["contact"])) return
+                if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["sahla-box-number"])) return
+                console.log(value);
+                window.localStorage.setItem("participated","true");
                 document.getElementById("custom-modal").classList.remove("modal-hidden");
             }
         }
@@ -192,15 +195,15 @@
                         <div class="rendered-form">
                             <div class="formbuilder-text form-group field-sahla-box-number">
                                 <label for="sahla-box-number" class="formbuilder-text-label text-ar">رقم ساهلة Box<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="Ex: 010 XXXX" class="form-control" name="sahla-box-number" access="false" maxlength="100" id="sahla-box-number" required="required" aria-required="true">
+                                <input type="tel" pattern="^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,7}$" placeholder="Ex: 010 XXXX" class="form-control" name="sahla-box-number" access="false" maxlength="100" id="sahla-box-number" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-prenom">
                                 <label for="prenom" class="formbuilder-text-label text-ar">الاسم<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="votre prénom" class="form-control" name="prenom" access="false" maxlength="50" id="prenom" required="required" aria-required="true">
+                                <input type="text" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" placeholder="votre prénom" class="form-control" name="prenom" access="false" maxlength="50" id="prenom" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-nom">
                                 <label for="nom" class="formbuilder-text-label text-ar">اللقب<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="votre nom" class="form-control" name="nom" access="false" maxlength="50" id="nom" required="required" aria-required="true">
+                                <input type="text" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" placeholder="votre nom" class="form-control" name="nom" access="false" maxlength="50" id="nom" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-adresse">
                                 <label for="adresse" class="formbuilder-text-label text-ar">العنوان<span class="formbuilder-required">*</span></label>
@@ -275,7 +278,7 @@
                             </div>
                             <div class="formbuilder-text form-group field-contact">
                                 <label for="contact" class="formbuilder-text-label text-ar">رقم الهاتف الشخصي<span class="formbuilder-required">*</span></label>
-                                <input type="tel" placeholder="xxxxx" class="form-control" name="contact" access="false" maxlength="10" id="contact" required="required" aria-required="true">
+                                <input type="tel" pattern="^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,7}$" placeholder="xxxxx" class="form-control" name="contact" access="false" maxlength="10" id="contact" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-checkbox-group form-group field-condition-accept">
                                 <div class="checkbox-group">
@@ -286,7 +289,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="submit-btn" onclick="process(this)">مشاركة</button>
+                        <button class="submit-btn" onclick="process(this)" id="participate-btn">مشاركة</button>
                         <a href="./index-ar.html" class="cancel-btn" >إلغاء</a>
                     </form>
                 </div>

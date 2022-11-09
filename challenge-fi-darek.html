@@ -65,8 +65,11 @@
                 ["condition-accept"]: document.getElementById('condition-accept').checked,
             }
             const notEmpty = Object.entries(value).every(([key, value]) => value.toString().trim() !== "")
-            if (notEmpty && document.getElementById('condition-accept').checked) {
-                console.log(value)
+            if (notEmpty && document.getElementById('condition-accept').checked ) {
+                if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["contact"])) return
+                if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["sahla-box-number"])) return
+                console.log(value);
+                window.localStorage.setItem("participated","true");
                 document.getElementById("custom-modal").classList.remove("modal-hidden");
             }
         }
@@ -192,19 +195,19 @@
                             <div class="formbuilder-text form-group field-sahla-box-number">
                                 <label for="sahla-box-number" class="formbuilder-text-label">Numéro Sahla Box<span
                                         class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="Ex: 010 XXXX" class="form-control"
+                                <input type="tel" pattern="^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,7}$" placeholder="Ex: 010 XXXX" class="form-control"
                                        name="sahla-box-number" access="false" maxlength="100" id="sahla-box-number"
                                        required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-prenom">
                                 <label for="prenom" class="formbuilder-text-label">Prénom<span
                                         class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="votre prénom" class="form-control" name="prenom"
+                                <input type="text" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" placeholder="votre prénom" class="form-control" name="prenom"
                                        access="false" maxlength="50" id="prenom" required="required"
                                        aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-nom">
-                                <label for="nom" class="formbuilder-text-label">Nom<span
+                                <label for="nom" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" class="formbuilder-text-label">Nom<span
                                         class="formbuilder-required">*</span></label>
                                 <input type="text" placeholder="votre nom" class="form-control" name="nom"
                                        access="false" maxlength="50" id="nom" required="required" aria-required="true">
@@ -291,7 +294,7 @@
                             <div class="formbuilder-text form-group field-contact">
                                 <label for="contact" class="formbuilder-text-label">Numéro de contact personnel<span
                                         class="formbuilder-required">*</span></label>
-                                <input type="tel" placeholder="xxxxx" class="form-control" name="contact" access="false"
+                                <input type="tel" placeholder="xxxxx" class="form-control" pattern="^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,7}$" name="contact" access="false"
                                        maxlength="10" id="contact" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-checkbox-group form-group field-condition-accept">
