@@ -1,3 +1,11 @@
+@font-face {
+    font-family: outfit;
+    src: url(../fonts/outfit.ttf);
+}
+@font-face {
+    font-family: "Rubik Black";
+    src: url(../fonts/rubik.ttf);
+}
 .choof-logo {
     height: 48px;
 }
@@ -62,7 +70,7 @@
 }
 
 .text-fr {
-    font-family: NotoSans-Black, Arial !important;
+    font-family: outfit, Arial,sans-serif !important;
 }
 
 .ar .recharge-offer-card .hand-3d {
@@ -305,6 +313,7 @@
 
 .qatar-title h2 {
     flex: 1;
+    font-family:  "Rubik Black", Arial, sans-serif;
     font-size: 3.5em;
     font-weight: 800;
 }
@@ -316,6 +325,7 @@
 
 .qatar-description {
     max-width: 70%;
+    font-family: outfit, Arial, sans-serif;
     padding: 64px 34px 16px;
     font-size: 1.6em;
 }
