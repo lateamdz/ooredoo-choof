@@ -78,6 +78,7 @@
 }
 .recharge-offer-card .boost{
     flex: 1;
+    white-space: nowrap;
     font-size: 1.7em;
     font-weight: 800;
     color: #ed1c24;
@@ -258,7 +259,7 @@
     font-weight: 800;
 }
 .qatar-description{
-    max-width: 80%;
+    max-width: 70%;
     padding: 64px 34px 16px;
     font-size: 2em;
 
@@ -284,6 +285,16 @@
     font-size: 1.5em;
     font-weight: 800;
     border-radius: 1.5em;
+}
+@media (max-width: 800px){
+    .qatar-banner {
+        padding: 34px 5px;
+    }
+    .qatar-description{
+        max-width: 100%;
+        padding: 64px 20px 16px;
+        font-size: 1.8em;
+    }
 }
 /*====================================================================================================================*/
 /* QATAR FORM */
