@@ -134,7 +134,7 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-    font-family: NotoSans-Black, Arial;
+    font-family: rubik-bold, Arial;
 }
 
 .recharge-offer-card .internet {
@@ -231,7 +231,7 @@
     line-height: 5.4rem;
     font-size: 6rem;
     text-transform: uppercase;
-    font-family: NotoSans-Black, Arial;
+    font-family: rubik-bold, Arial;
     font-weight: bold;
     padding-bottom: 40px;
 }
@@ -411,11 +411,11 @@
     border-radius: 0.8em;
     border: unset;
     outline: unset;
-    font-family: ooredoobold, Arial;
+    font-family: outfit,ooredoobold, Arial;
 }
 
 .cancel-btn {
-    font-family: ooredoobold, Arial;
+    font-family:  outfit,ooredoobold, Arial;
     color: #262626;
     padding: 8px 24px;
     background-color: #dedede;
@@ -449,8 +449,14 @@
     text-align: left;
 }
 
+.qatar-form h3{
+    font-family: rubik-bold, ooredoobold, Arial;
+}
+input,select{
+    font-family: rubik, ooredoobold, Arial;
+}
 .qatar-form {
-    font-family: NotoSans-Black, Arial;
+    font-family: rubik, Arial;
     box-shadow: 0px 0px 60px -24px rgba(0, 0, 0, 0.75);
     background: white;
     color: black;
@@ -509,7 +515,7 @@
     border-radius: 0.8em;
     border: unset;
     outline: unset;
-    font-family: ooredoobold, Arial;
+    font-family: rubik,ooredoobold, Arial;
 }
 
 .red-btn:hover {
@@ -521,7 +527,7 @@
 }
 
 .custom-modal-popup {
-    font-family: NotoSans-Black, Arial;
+    font-family: rubik,ooredoobold, Arial;
     display: flex;
     align-items: center;
     justify-content: center;
