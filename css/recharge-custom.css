@@ -387,6 +387,11 @@
         padding-top: 14em !important;
     }
 }
+@media (max-width: 600px) {
+    .kaspersky-form .choice .number +h4 {
+        font-size: 1.8em!important;
+    }
+}
 @media (max-width: 900px) {
     .kaspersky-form-section {
         display: block;
