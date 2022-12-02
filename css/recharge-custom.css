@@ -577,7 +577,10 @@
 .text-left {
     text-align: left;
 }
-
+.text-rubik{
+    /*font-weight: 600!important;*/
+    font-family: rubik-regular, ooredoobold, Arial!important;
+}
 input, select {
     font-family: rubik, ooredoobold, Arial;
 }
