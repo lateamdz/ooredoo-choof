@@ -451,7 +451,20 @@
     font-family: rubik-regular, ooredoobold, Arial;
     font-weight: 800 !important;
 }
+.kaspersky-form .choice-content .price {
+    font-size: 3em;
+    font-weight: 800;
+    padding: 0 4px;
+    padding-inline-start: 8px;
+    font-family: outfit-bold, ooredoobold, Arial;
+}
 
+.kaspersky-form .choice-content .price .currency {
+    font-size: 0.65em;
+    font-weight: 800;
+    margin-left: -0.5rem;
+    font-family: outfit-bold, ooredoobold, Arial;
+}
 .kaspersky-form .choice .title {
     color: var(--kaspersky-green);
     display: flex;
@@ -538,7 +551,10 @@
     border: unset;
     outline: unset;
 }
-
+.formbuilder-radio-inline{
+    display: inline-block;
+    margin-inline-start: 1em;
+}
 .checkbox-group {
     margin-top: 60px;
     display: flex;
