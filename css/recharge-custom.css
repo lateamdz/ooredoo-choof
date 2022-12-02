@@ -2,34 +2,47 @@
     font-family: outfit;
     src: url(../fonts/outfit.ttf);
 }
+
 @font-face {
     font-family: outfit-bold;
     src: url(../fonts/outfit.ttf);
     font-weight: 800;
 }
+
 @font-face {
     font-family: rubik;
     src: url(../fonts/rubik.ttf);
     font-weight: 200;
 }
+
+@font-face {
+    font-family: rubik-regular;
+    src: url(../fonts/rubik.ttf);
+    font-weight: 500;
+}
+
 @font-face {
     font-family: rubik-bold;
     src: url(../fonts/rubik.ttf);
     font-weight: 800;
 }
-#page, body, html{
-    font-family: rubik,ooredooregular, Arial ;
+
+#page, body, html {
+    font-family: rubik, ooredooregular, Arial;
 }
-:root,:before,:after{
+
+:root, :before, :after {
     --ooredoo-red: #ed1c24;
+    --kaspersky-green: #25a992;
 }
+
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit,
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency,
-.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a
-{
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a {
     font-weight: 700;
-    font-family: rubik,ooredooregular, Arial ;
+    font-family: rubik, ooredooregular, Arial;
 }
+
 .choof-logo {
     height: 48px;
 }
@@ -66,9 +79,11 @@
 .text-grey {
     color: rgba(128, 128, 128);
 }
+
 .text-red {
     color: var(--ooredoo-red) !important;
 }
+
 .text-ar {
     font-family: ooredoobold, Arial !important;
 }
@@ -86,11 +101,13 @@
     color: transparent !important;
     margin-left: -1em;
 }
-.text-fr-bold{
-    font-family: rubik-bold,ooredoobold, Arial,sans-serif !important;
+
+.text-fr-bold {
+    font-family: rubik-bold, ooredoobold, Arial, sans-serif !important;
 }
+
 .text-fr {
-    font-family: rubik, ooredoobold,Arial;,sans-serif !important;
+    font-family: rubik, ooredoobold, Arial;, sans-serif !important;
 }
 
 .recharge-offer-card.blue {
@@ -104,13 +121,15 @@
 .recharge-offer-card.white {
     background: #ffffff;
 }
+
 .dark.recharge .recharge-offer-card.white {
     background: #101010;
     border: 1px solid rgba(255, 255, 255, 0.12);
     color: white;
 }
+
 /*===KASPERSKY========================================================================================================*/
-.kaspersky-card{
+.kaspersky-card {
     min-height: 300px;
     display: flex;
     align-items: stretch;
@@ -118,77 +137,90 @@
     /*box-shadow: 0 3px 5px rgb(0 0 0 / 35%);*/
     box-shadow: 0 12px 40px rgb(0 0 0 / 15%);
 }
-.kaspersky-card .card-img img{height: 100%}
-.kaspersky-card .card-img{
+
+.kaspersky-card .card-img img {
+    height: 100%
+}
+
+.kaspersky-card .card-img {
     width: 45%;
     max-height: 270px;
     margin-top: -15px;
     margin-inline-start: -15px;
 }
-.kaspersky-card .card-content{
+
+.kaspersky-card .card-content {
     padding-inline-start: 8px;
     flex: 1;
     /*height: 100%;*/
     display: flex;
     flex-direction: column;
 }
-.kaspersky-card .card-content .card-article p:last-child{
+
+.kaspersky-card .card-content .card-article p:last-child {
     margin-bottom: 0;
 }
-.kaspersky-card .card-content .card-article{
+
+.kaspersky-card .card-content .card-article {
     font-size: 1em;
     flex: 1;
     font-weight: 700;
-    font-family: rubik, ooredoobold,Arial;
+    font-family: rubik, ooredoobold, Arial;
 }
-.kaspersky-card .card-content .title{
+
+.kaspersky-card .card-content .title {
     text-transform: uppercase;
     padding: 0;
     font-size: 1.2em;
     margin-bottom: 1em;
-    font-family: rubik-bold, ooredoobold,Arial;
+    font-family: rubik-bold, ooredoobold, Arial;
 }
-.kaspersky-card  .ooredoo-starting-from{
+
+.kaspersky-card .ooredoo-starting-from {
     padding-bottom: 1em;
     display: flex;
     align-items: flex-end;
     font-size: 0.85em;
     justify-content: center;
 }
-.kaspersky-card  .ooredoo-starting-from .starting {
+
+.kaspersky-card .ooredoo-starting-from .starting {
     font-weight: normal;
     font-size: 1.4em;
     font-weight: 800;
-    font-family: rubik, ooredoobold,Arial;
+    font-family: rubik, ooredoobold, Arial;
     margin-bottom: 0.4em;
 }
 
-.kaspersky-card  .ooredoo-starting-from .price {
+.kaspersky-card .ooredoo-starting-from .price {
     font-size: 3em;
     font-weight: 800;
     padding: 0 4px;
     padding-inline-start: 8px;
-    font-family: outfit-bold,ooredoobold, Arial;
+    font-family: outfit-bold, ooredoobold, Arial;
 }
-.kaspersky-card .ooredoo-starting-from .price .currency{
+
+.kaspersky-card .ooredoo-starting-from .price .currency {
     font-size: 0.65em;
     font-weight: 800;
     margin-left: -0.5rem;
-    font-family: outfit-bold,ooredoobold, Arial;
+    font-family: outfit-bold, ooredoobold, Arial;
 }
 
-.kaspersky-card  .card-action {
+.kaspersky-card .card-action {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
+
 .kaspersky-card .card-action a:hover {
     filter: brightness(1.2);
 }
-.kaspersky-card  .card-action a {
+
+.kaspersky-card .card-action a {
     height: 100%;
-    transition:transform 300ms ease;
-    transition-property: filter ;
+    transition: transform 300ms ease;
+    transition-property: filter;
     color: white;
     padding: 4px 24px;
     background-color: var(--ooredoo-red) !important;
@@ -198,13 +230,15 @@
     border-radius: 2em;
     letter-spacing: 0.05em;
     border: 2px solid white;
-    outline: 2px solid  var(--ooredoo-red);
-    font-family: rubik-bold,ooredoobold, Arial;
+    outline: 2px solid var(--ooredoo-red);
+    font-family: rubik-bold, ooredoobold, Arial;
 }
-.dark.recharge .kaspersky-card .card-action a{
+
+.dark.recharge .kaspersky-card .card-action a {
     color: #101010;
     border: 2px solid #101010;
 }
+
 /*========================*/
 .recharge .md-recharge-film .favourit-film .anaflix-logo {
     position: absolute;
@@ -329,8 +363,9 @@
     /*flex-direction: column;*/
     /*margin-bottom: 84px;*/
 }
-.kaspersky-form-image{
-    
+
+.kaspersky-form-image {
+
 }
 
 @media (max-width: 1000px) {
@@ -356,7 +391,7 @@
     letter-spacing: 0.05em;
     border: unset;
     outline: unset;
-    font-family: outfit,ooredoobold, Arial;
+    font-family: outfit, ooredoobold, Arial;
 }
 
 .cancel-btn {
@@ -366,17 +401,19 @@
     font-size: 1.3em;
     border-radius: 2em;
     letter-spacing: 0.05em;
-    font-family: outfit,ooredoobold, Arial;
+    font-family: outfit, ooredoobold, Arial;
     border: unset;
     outline: unset;
 }
-.checkbox-group{
+
+.checkbox-group {
     margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.checkbox-group label{
+
+.checkbox-group label {
     padding-inline-start: 16px;
 }
 
@@ -392,35 +429,74 @@
     text-align: left;
 }
 
-.kaspersky-form h3{
-    font-family: rubik-bold, ooredoobold, Arial;
+.kaspersky-form h3 {
+    font-size: 2.5em;
+    font-family: outfit-bold, ooredoobold, Arial;
 }
-input,select{
+
+input, select {
     font-family: rubik, ooredoobold, Arial;
 }
+
 .kaspersky-form {
     font-family: rubik, Arial;
     color: black;
     padding: 40px;
     border-radius: 2em;
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     position: relative;
     isolation: isolate;
 
 }
 
 .kaspersky-form .choice {
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 40px rgb(0 0 0 / 5%);
+    text-align: start;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background: white;
     color: black;
     padding: 16px;
     border-radius: 4px;
-    margin: 8px 0;
+    margin: 24px 0;
+    font-family: rubik-regular, ooredoobold, Arial;
+    font-weight: 800 !important;
+}
+
+.kaspersky-form .choice .title {
+    color: var(--kaspersky-green);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 1em;
+}
+
+.kaspersky-form .choice .title h4 {
+    font-size: 2.2em;
+    padding: 8px;
+}
+
+.kaspersky-form .choice .title:before {
+    content: "0";
+    margin-inline-start: -1em;
+    height: 50px;
+    width: 1em;
+    background-color: var(--kaspersky-green);
+}
+.kaspersky-form .choice .title .number {
+    padding-inline-start: 20px;
+    margin-inline-end: 1em;
+    background-color: rgba(0,0,0,0.04);
+}
+
+
+.dark.recharge .kaspersky-form .choice .title .number {
+    background-color: rgba(255,255,255,0.04);
 }
 .dark.recharge .kaspersky-form {
     color: #cdcdcd;
 }
+
 .dark.recharge .kaspersky-form .choice {
     background: #171717;
     color: #cdcdcd;
@@ -465,7 +541,7 @@ input,select{
     font-size: 1.3em;
     border-radius: 2em;
     letter-spacing: 0.05em;
-    font-family: outfit,ooredoobold, Arial;
+    font-family: outfit, ooredoobold, Arial;
     border: unset;
     outline: unset;
 }
@@ -479,7 +555,7 @@ input,select{
 }
 
 .custom-modal-popup {
-    font-family: rubik,ooredoobold, Arial;
+    font-family: rubik, ooredoobold, Arial;
     display: flex;
     align-items: center;
     justify-content: center;
