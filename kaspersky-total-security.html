@@ -56,16 +56,14 @@
         function process(element) {
             // const form = element.closest('form')
             const value = {
-                // ["prenom"]: document.getElementById('prenom').value,
-                // ["nom"]: document.getElementById('nom').value,
+                ["duration"]: document.querySelector('input[name="duration"]:checked').value,
+                ["device"]: document.querySelector('input[name="device"]:checked').value,
                 ["condition-accept"]: document.getElementById('condition-accept').checked,
             }
             const notEmpty = Object.entries(value).every(([key, value]) => value.toString().trim() !== "")
             if (notEmpty && document.getElementById('condition-accept').checked) {
-                // if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["contact"])) return
-                // if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["sahla-box-number"])) return
                 console.log(value);
-                document.location.href = "./";
+                document.location.href = "./index.html";
                 // document.getElementById("custom-modal").classList.remove("modal-hidden");
             }
         }
@@ -75,11 +73,11 @@
 <body class="recharge">
 <div class="custom-modal modal-hidden" id="custom-modal">
     <div class="custom-modal-popup">
-        <!--        <p class="text-center">-->
-        <!--            Vous avez participé avec succeès au <b>Challenge Fanzone fi Darek.</b> Merci pour votre participation.-->
-        <!--        </p>-->
-        <!--        <br>-->
-        <!--        <a class="red-btn" href="./index.html">Terminé</a>-->
+<!--                <p class="text-center">-->
+<!--                    Vous avez participé avec succeès au <b>Challenge Fanzone fi Darek.</b> Merci pour votre participation.-->
+<!--                </p>-->
+<!--                <br>-->
+<!--                <a class="red-btn" href="./index.html">Terminé</a>-->
     </div>
 </div>
 <div class="accessibilities mobileMenu" style="display: none;">
