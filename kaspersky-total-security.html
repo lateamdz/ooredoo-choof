@@ -51,6 +51,7 @@
     <![endif]-->
     <link href="css/recharge.css" rel="stylesheet">
     <link href="css/recharge-custom.css" rel="stylesheet">
+    <link href="css/kaspersky-radios.css" rel="stylesheet">
     <script type="text/javascript">
         function process(element) {
             // const form = element.closest('form')
@@ -196,23 +197,23 @@
                             <div class="choice-content">
                                 <div class="radio-group-duration">
                                     <div class="formbuilder-radio-inline">
-                                        <input name="duration" access="false" id="duration-0" required="required"
+                                        <input name="duration" class="duration-radio" access="false" id="duration-0" required="required"
                                                checked
                                                aria-required="true" value="1 mois" type="radio">
                                         <label for="duration-0">1 mois</label>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="duration" access="false" id="duration-1" required="required"
+                                        <input name="duration" class="duration-radio" access="false" id="duration-1" required="required"
                                                aria-required="true" value="3 mois" type="radio">
                                         <label for="duration-1">3 mois</label>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="duration" access="false" id="duration-2" required="required"
+                                        <input name="duration" class="duration-radio" access="false" id="duration-2" required="required"
                                                aria-required="true" value="6 mois" type="radio">
                                         <label for="duration-2">6 mois</label>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="duration" access="false" id="duration-3" required="required"
+                                        <input name="duration" class="duration-radio" access="false" id="duration-3" required="required"
                                                aria-required="true" value="12 mois" type="radio">
                                         <label for="duration-3">12 mois</label>
                                     </div>
@@ -227,29 +228,34 @@
                             <div class="choice-content">
                                 <div class="radio-group-device">
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" access="false" id="device-0" required="required"
+                                        <input name="device" class="device-radio" access="false" id="device-0" required="required"
                                                aria-required="true" value="1" type="radio" checked>
                                         <label for="device-0">1</label>
+                                        <span>1</span>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" access="false" id="device-1" required="required"
+                                        <input name="device" class="device-radio" access="false" id="device-1" required="required"
                                                aria-required="true" value="2" type="radio">
                                         <label for="device-1">2</label>
+                                        <span>2</span>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" access="false" id="device-2" required="required"
+                                        <input name="device" class="device-radio" access="false" id="device-2" required="required"
                                                aria-required="true" value="3" type="radio">
                                         <label for="device-2">3</label>
+                                        <span>3</span>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" access="false" id="device-3" required="required"
+                                        <input name="device" class="device-radio" access="false" id="device-3" required="required"
                                                aria-required="true" value="4" type="radio">
                                         <label for="device-3">4</label>
+                                        <span>4</span>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" access="false" id="device-4" required="required"
+                                        <input name="device" class="device-radio" access="false" id="device-4" required="required"
                                                aria-required="true" value="5" type="radio">
                                         <label for="device-4">5</label>
+                                        <span>5</span>
                                     </div>
                                 </div>
                             </div>
@@ -266,8 +272,8 @@
                         <div class="formbuilder-checkbox-group form-group field-condition-accept">
                             <div class="checkbox-group">
                                 <div class="formbuilder-checkbox">
-                                    <input name="condition-accept[]" access="false" id="condition-accept"
-                                           required="required" aria-required="true" type="checkbox">
+                                    <input name="condition-accept" access="false" id="condition-accept"
+                                           required="required" class="duration-radio" aria-required="true" type="checkbox">
                                     <label for="condition-accept"> J'accept les <a
                                             href="conditions/réglement_Fanzone_fi_darek_validé.pdf"
                                             class="text-red text-underline">condition
