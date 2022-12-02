@@ -364,16 +364,151 @@
     /*margin-bottom: 84px;*/
 }
 
-
-
 @media (max-width: 1000px) {
     .kaspersky-form-section {
         padding: 34px 5px;
+        /*display: block;*/
+    }
+
+    .kaspersky-form-image {
+
     }
 }
 
+
+
+@media (max-width: 1210px) {
+    .kaspersky-form-section {
+        padding: 34px 5px;
+        /*display: block;*/
+    }
+
+    .kaspersky-form-image img {
+        padding-top: 14em !important;
+    }
+}
+@media (max-width: 900px) {
+    .kaspersky-form-section {
+        display: block;
+    }
+
+    .kaspersky-form-image {
+        max-width: unset!important;
+    }
+    .kaspersky-form-image img {
+        max-width: 400px;
+        padding-inline-end: unset;
+        padding: 40px !important;
+    }
+}
 /*====================================================================================================================*/
 /* KSPERSKY FORM */
+.kaspersky-form h3 {
+    font-size: 2.5em;
+    font-family: outfit-bold, ooredoobold, Arial;
+}
+
+.kaspersky-form {
+    flex: 1;
+    font-family: rubik, Arial;
+    color: black;
+    padding: 40px;
+    border-radius: 2em;
+    /*width: 100%;*/
+    max-width: 1000px;
+    position: relative;
+    isolation: isolate;
+
+}
+
+.kaspersky-form-image {
+
+    flex: 1;
+    max-width: 354px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*padding-top: 14em;*/
+}
+
+.kaspersky-form-image img {
+    padding: 40px;
+    padding-top: 11em;
+    padding-inline-end: 0;
+    width: 100%;
+}
+
+.kaspersky-form .choice {
+    box-shadow: 0 12px 40px rgb(0 0 0 / 5%);
+    text-align: start;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+    color: black;
+    padding: 16px;
+    border-radius: 4px;
+    margin: 24px 0;
+    font-family: rubik-regular, ooredoobold, Arial;
+    font-weight: 800 !important;
+}
+
+.kaspersky-form .choice .title {
+    color: var(--kaspersky-green);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 1em;
+}
+
+.kaspersky-form .choice .title h4 {
+    font-size: 2.2em;
+    padding: 8px;
+}
+
+.kaspersky-form .choice .title:before {
+    content: "0";
+    margin-inline-start: -1em;
+    height: 50px;
+    width: 1em;
+    background-color: var(--kaspersky-green);
+}
+
+.kaspersky-form .choice .title .number {
+    padding-inline-start: 20px;
+    margin-inline-end: 1em;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+.dark.recharge .kaspersky-form .choice .title .number {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.dark.recharge .kaspersky-form {
+    color: #cdcdcd;
+}
+
+.dark.recharge .kaspersky-form .choice {
+    background: #171717;
+    color: #cdcdcd;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dark.recharge .kaspersky-form select option {
+    background: #171717;
+}
+
+.dark.recharge .kaspersky-form input, .dark.recharge .kaspersky-form select {
+    background: rgba(128, 128, 128, 0.1);
+    color: white;
+}
+
+.formbuilder-text-label, .formbuilder-select-label {
+    width: 100%;
+    text-align: start;
+}
+
+/*============buttons*/
 .disable-link {
     pointer-events: none;
     background-color: rgba(128, 128, 128, 0.5) !important;
@@ -427,102 +562,8 @@
     text-align: left;
 }
 
-.kaspersky-form h3 {
-    font-size: 2.5em;
-    font-family: outfit-bold, ooredoobold, Arial;
-}
-
 input, select {
     font-family: rubik, ooredoobold, Arial;
-}
-
-.kaspersky-form {
-    /*flex: 1;*/
-    font-family: rubik, Arial;
-    color: black;
-    padding: 40px;
-    border-radius: 2em;
-    /*width: 100%;*/
-    max-width: 1000px;
-    position: relative;
-    isolation: isolate;
-
-}
-.kaspersky-form-image {
-    padding: 40px;
-    flex: 1;
-    max-width: 354px;
-    padding-inline-end: 0;
-    padding-top: 11em;
-}
-.kaspersky-form-image img{
-    width: 100%;
-}
-.kaspersky-form .choice {
-    box-shadow: 0 12px 40px rgb(0 0 0 / 5%);
-    text-align: start;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: white;
-    color: black;
-    padding: 16px;
-    border-radius: 4px;
-    margin: 24px 0;
-    font-family: rubik-regular, ooredoobold, Arial;
-    font-weight: 800 !important;
-}
-
-.kaspersky-form .choice .title {
-    color: var(--kaspersky-green);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-bottom: 1em;
-}
-
-.kaspersky-form .choice .title h4 {
-    font-size: 2.2em;
-    padding: 8px;
-}
-
-.kaspersky-form .choice .title:before {
-    content: "0";
-    margin-inline-start: -1em;
-    height: 50px;
-    width: 1em;
-    background-color: var(--kaspersky-green);
-}
-.kaspersky-form .choice .title .number {
-    padding-inline-start: 20px;
-    margin-inline-end: 1em;
-    background-color: rgba(0,0,0,0.04);
-}
-
-
-.dark.recharge .kaspersky-form .choice .title .number {
-    background-color: rgba(255,255,255,0.04);
-}
-.dark.recharge .kaspersky-form {
-    color: #cdcdcd;
-}
-
-.dark.recharge .kaspersky-form .choice {
-    background: #171717;
-    color: #cdcdcd;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.dark.recharge .kaspersky-form select option {
-    background: #171717;
-}
-
-.dark.recharge .kaspersky-form input, .dark.recharge .kaspersky-form select {
-    background: rgba(128, 128, 128, 0.1);
-    color: white;
-}
-
-.formbuilder-text-label, .formbuilder-select-label {
-    width: 100%;
-    text-align: start;
 }
 
 /*======================================*/
