@@ -3,6 +3,11 @@
     src: url(../fonts/outfit.ttf);
 }
 @font-face {
+    font-family: outfit-bold;
+    src: url(../fonts/outfit.ttf);
+    font-weight: 800;
+}
+@font-face {
     font-family: rubik;
     src: url(../fonts/rubik.ttf);
     font-weight: 200;
@@ -107,8 +112,10 @@
     justify-content: flex-start;
     box-shadow: 0 3px 5px rgb(0 0 0 / 35%);
 }
+.kaspersky-card .card-img img{height: 100%}
 .kaspersky-card .card-img{
     width: 45%;
+    max-height: 270px;
     margin-top: -15px;
     margin-inline-start: -15px;
 }
@@ -132,6 +139,7 @@
     text-transform: uppercase;
     padding: 0;
     font-size: 1.2em;
+    margin-bottom: 1em;
     font-family: rubik-bold, ooredoobold,Arial;
 }
 .kaspersky-card  .ooredoo-starting-from{
@@ -154,13 +162,13 @@
     font-weight: 800;
     padding: 0 4px;
     padding-inline-start: 8px;
-    font-family: rubik-bold,ooredoobold, Arial;
+    font-family: outfit-bold,ooredoobold, Arial;
 }
 .kaspersky-card .ooredoo-starting-from .price .currency{
     font-size: 0.65em;
     font-weight: 800;
-    margin-left: -0.8rem;
-    font-family: rubik-bold,ooredoobold, Arial;
+    margin-left: -0.5rem;
+    font-family: outfit-bold,ooredoobold, Arial;
 }
 
 .kaspersky-card  .card-action {
@@ -176,14 +184,16 @@
     transition:transform 300ms ease;
     transition-property: filter ;
     color: white;
-    padding: 8px 48px;
+    padding: 4px 24px;
     background-color: var(--ooredoo-red) !important;
     /*font-weight: ;*/
-    font-size: 1.2em;
+    font-size: 1.3em;
+    /*font-weight: 700;*/
     border-radius: 2em;
+    letter-spacing: 0.05em;
     border: 2px solid white;
     outline: 2px solid  var(--ooredoo-red);
-    font-family: rubik,ooredoobold, Arial;
+    font-family: rubik-bold,ooredoobold, Arial;
 }
 
 /*========================*/
