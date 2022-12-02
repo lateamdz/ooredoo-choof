@@ -15,10 +15,14 @@
 #page, body, html{
     font-family: rubik,ooredooregular, Arial ;
 }
+:root,:before,:after{
+    --ooredoo-red: #ed1c24;
+}
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit,
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency,
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a
 {
+    font-weight: 700;
     font-family: rubik,ooredooregular, Arial ;
 }
 .choof-logo {
@@ -50,14 +54,6 @@
     min-width: 218px;
 }
 
-.recharge-offer-card .hand-3d {
-    position: absolute;
-    bottom: 110px;
-    right: 0;
-    z-index: -1;
-    max-width: 60%;
-}
-
 .text-bold {
     font-weight: bold;
 }
@@ -65,7 +61,9 @@
 .text-grey {
     color: rgba(128, 128, 128);
 }
-
+.text-red {
+    color: var(--ooredoo-red) !important;
+}
 .text-ar {
     font-family: ooredoobold, Arial !important;
 }
@@ -90,12 +88,6 @@
     font-family: rubik, ooredoobold,Arial;,sans-serif !important;
 }
 
-.ar .recharge-offer-card .hand-3d {
-    left: 0;
-    right: auto;
-    transform: scaleX(-1);
-}
-
 .recharge-offer-card.blue {
     background: #3cdbbf;
 }
@@ -107,99 +99,91 @@
 .recharge-offer-card.white {
     background: #ffffff;
 }
-
-.recharge-offer-card .ooredoo-calls .to-ooredoo {
-    font-weight: normal;
-    font-size: 1.1em;
-    font-family: rubik, ooredoobold,Arial;;
-}
-
-.recharge-offer-card .ooredoo-calls .call-count {
-    font-size: 1.7em;
-    font-weight: 800;
-    padding: 0 4px;
-    font-family: rubik-bold,ooredoobold, Arial;
-    /*color: #ed1c24;*/
-    /*font-family: NotoSans-Bold;*/
-}
-
-.recharge-offer-card .boost {
-    flex: 1;
-    white-space: nowrap;
-    font-size: 1.6em;
-    font-weight: 800;
-    color: #ed1c24;
-    z-index: 1;
+/*===KASPERSKY========================================================================================================*/
+.kaspersky-card{
+    min-height: 300px;
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
-    font-family: rubik-bold, Arial;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 35%);
 }
-
-.recharge-offer-card .internet {
-    font-size: 3.1em;
-    font-weight: 800;
-    color: #ed1c24;
-    z-index: 1;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    font-family: rubik-bold,ooredoobold, Arial;
+.kaspersky-card .card-img{
+    width: 45%;
+    margin-top: -15px;
+    margin-inline-start: -15px;
 }
-
-.recharge-offer-card .internet img {
-    vertical-align: sub;
-    max-height: 1.2em;
-    /*padding: 0 0.3em;*/
-}
-
-.recharge-offer-card .internet .gigas {
+.kaspersky-card .card-content{
+    padding-inline-start: 8px;
     flex: 1;
-    color: #171717;
-    letter-spacing: -2px;
+    /*height: 100%;*/
+    display: flex;
+    flex-direction: column;
 }
-
-.text-red {
-    color: #ed1c24 !important;
+.kaspersky-card .card-content .card-article p:last-child{
+    margin-bottom: 0;
 }
-
-.recharge-offer-card .buy img {
-    transition: filter 300ms ease;
-    border-radius: 20px;
-    transition-property: filter, box-shadow;
-}
-
-.recharge-offer-card .buy img:hover {
-    filter: brightness(1.2);
-    box-shadow: 0px 0px 1px 8px rgba(128, 128, 128, 0.1);
-}
-
-.recharge-offer-card .buy h3 sup {
+.kaspersky-card .card-content .card-article{
+    font-size: 1em;
+    flex: 1;
+    font-weight: 700;
     font-family: rubik, ooredoobold,Arial;
 }
-
-.recharge-offer-card .buy h3 {
-    color: #ed1c24;
-    font-size: 2.5em;
-    font-family: rubik, ooredoobold,Arial;;
+.kaspersky-card .card-content .title{
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 1.2em;
+    font-family: rubik-bold, ooredoobold,Arial;
+}
+.kaspersky-card  .ooredoo-starting-from{
+    padding-bottom: 1em;
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.85em;
+    justify-content: center;
+}
+.kaspersky-card  .ooredoo-starting-from .starting {
+    font-weight: normal;
+    font-size: 1.4em;
+    font-weight: 800;
+    font-family: rubik, ooredoobold,Arial;
+    margin-bottom: 0.4em;
 }
 
-.recharge-offer-card .buy {
-    /*margin-top: 60px;*/
+.kaspersky-card  .ooredoo-starting-from .price {
+    font-size: 3em;
+    font-weight: 800;
+    padding: 0 4px;
+    padding-inline-start: 8px;
+    font-family: rubik-bold,ooredoobold, Arial;
+}
+.kaspersky-card .ooredoo-starting-from .price .currency{
+    font-size: 0.65em;
+    font-weight: 800;
+    margin-left: -0.8rem;
+    font-family: rubik-bold,ooredoobold, Arial;
+}
+
+.kaspersky-card  .card-action {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: absolute;
-    bottom: 0;
-    width: calc(100% - 15px);
-}
-
-.recharge-offer-card .buy a {
-    display: flex;
     justify-content: flex-end;
-    align-items: center;
+}
+.kaspersky-card .card-action a:hover {
+    filter: brightness(1.2);
+}
+.kaspersky-card  .card-action a {
+    height: 100%;
+    transition:transform 300ms ease;
+    transition-property: filter ;
+    color: white;
+    padding: 8px 48px;
+    background-color: var(--ooredoo-red) !important;
+    /*font-weight: ;*/
+    font-size: 1.2em;
+    border-radius: 2em;
+    border: 2px solid white;
+    outline: 2px solid  var(--ooredoo-red);
+    font-family: rubik,ooredoobold, Arial;
 }
 
 /*========================*/
@@ -405,7 +389,7 @@
 .submit-btn {
     color: white;
     padding: 8px 24px;
-    background-color: #ed1c24 !important;
+    background-color: var(--ooredoo-red) !important;
     /*font-weight: ;*/
     font-size: 1.05em;
     border-radius: 0.8em;
@@ -509,7 +493,7 @@ input,select{
 
     color: white;
     padding: 8px 24px;
-    background-color: #ed1c24 !important;
+    background-color: var(--ooredoo-red) !important;
     /*font-weight: ;*/
     font-size: 1.05em;
     border-radius: 0.8em;
