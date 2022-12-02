@@ -60,11 +60,11 @@
                 ["condition-accept"]: document.getElementById('condition-accept').checked,
             }
             const notEmpty = Object.entries(value).every(([key, value]) => value.toString().trim() !== "")
-            if (notEmpty && document.getElementById('condition-accept').checked ) {
+            if (notEmpty && document.getElementById('condition-accept').checked) {
                 // if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["contact"])) return
                 // if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["sahla-box-number"])) return
                 console.log(value);
-                document.location.href="./";
+                document.location.href = "./";
                 // document.getElementById("custom-modal").classList.remove("modal-hidden");
             }
         }
@@ -74,11 +74,11 @@
 <body class="recharge">
 <div class="custom-modal modal-hidden" id="custom-modal">
     <div class="custom-modal-popup">
-<!--        <p class="text-center">-->
-<!--            Vous avez participé avec succeès au <b>Challenge Fanzone fi Darek.</b> Merci pour votre participation.-->
-<!--        </p>-->
-<!--        <br>-->
-<!--        <a class="red-btn" href="./index.html">Terminé</a>-->
+        <!--        <p class="text-center">-->
+        <!--            Vous avez participé avec succeès au <b>Challenge Fanzone fi Darek.</b> Merci pour votre participation.-->
+        <!--        </p>-->
+        <!--        <br>-->
+        <!--        <a class="red-btn" href="./index.html">Terminé</a>-->
     </div>
 </div>
 <div class="accessibilities mobileMenu" style="display: none;">
@@ -182,7 +182,7 @@
             </div>
             <div class="kaspersky-form-section">
                 <div class="kaspersky-form-image">
-
+                    <img src="images/kaspersky/offer_1.png" alt=""/>
                 </div>
                 <div class="kaspersky-form">
                     <h3 class="text-left text-uppercase">Choisissez l'offre qui vous convient</h3>
@@ -198,24 +198,37 @@
                             </div>
                         </div>
                         <div class="choice">
-                            some choice here
+                            <div class="title">
+                                <h4 class="number">2</h4>
+                                <h4>Choisissez le nombre d'appareils</h4>
+                            </div>
+                            <div class="choice-content">
+                                some choice here
+                            </div>
                         </div>
                         <div class="choice">
-                            some choice here
+                            <div class="title">
+                                <h4 class="number">3</h4>
+                                <h4>Prix d'abonnement</h4>
+                            </div>
+                            <div class="choice-content">
+                                some choice here
+                            </div>
                         </div>
                         <div class="formbuilder-checkbox-group form-group field-condition-accept">
                             <div class="checkbox-group">
                                 <div class="formbuilder-checkbox">
                                     <input name="condition-accept[]" access="false" id="condition-accept"
                                            required="required" aria-required="true" type="checkbox">
-                                    <label for="condition-accept"> J'accept les <a href="conditions/réglement_Fanzone_fi_darek_validé.pdf"
-                                                                                  class="text-red text-underline">condition
+                                    <label for="condition-accept"> J'accept les <a
+                                            href="conditions/réglement_Fanzone_fi_darek_validé.pdf"
+                                            class="text-red text-underline">condition
                                         generales d'utilisation</a></label>
                                 </div>
                                 <button class="submit-btn" onclick="process(this)">Choisir</button>
                             </div>
                         </div>
-<!--                        <a href="./index.html" class="cancel-btn">Annuler</a>-->
+                        <!--                        <a href="./index.html" class="cancel-btn">Annuler</a>-->
                     </form>
                 </div>
             </div>

@@ -358,15 +358,13 @@
     color: white;
     text-align: center;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     /*flex-direction: column;*/
     /*margin-bottom: 84px;*/
 }
 
-.kaspersky-form-image {
 
-}
 
 @media (max-width: 1000px) {
     .kaspersky-form-section {
@@ -439,17 +437,27 @@ input, select {
 }
 
 .kaspersky-form {
+    /*flex: 1;*/
     font-family: rubik, Arial;
     color: black;
     padding: 40px;
     border-radius: 2em;
-    width: 100%;
+    /*width: 100%;*/
     max-width: 1000px;
     position: relative;
     isolation: isolate;
 
 }
-
+.kaspersky-form-image {
+    padding: 40px;
+    flex: 1;
+    max-width: 354px;
+    padding-inline-end: 0;
+    padding-top: 11em;
+}
+.kaspersky-form-image img{
+    width: 100%;
+}
 .kaspersky-form .choice {
     box-shadow: 0 12px 40px rgb(0 0 0 / 5%);
     text-align: start;
