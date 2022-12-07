@@ -593,6 +593,10 @@
     align-items: center;
     justify-content: space-between;
 }
+.visibility-none{
+    visibility: hidden!important;
+    pointer-events: none!important;
+}
 input, select {
     font-family: rubik, ooredoobold, Arial;
 }
