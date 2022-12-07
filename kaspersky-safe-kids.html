@@ -56,8 +56,7 @@
         function process(element) {
             // const form = element.closest('form')
             const value = {
-                ["duration"]: document.querySelector('input[name="duration"]:checked').value,
-                ["device"]: document.querySelector('input[name="device"]:checked').value,
+                ["protection"]: document.querySelector('input[name="protection"]:checked').value,
                 ["condition-accept"]: document.getElementById('condition-accept').checked,
             }
             const notEmpty = Object.entries(value).every(([key, value]) => value.toString().trim() !== "")
@@ -181,88 +180,26 @@
             </div>
             <div class="kaspersky-form-section">
                 <div class="kaspersky-form-image">
-                    <img src="images/kaspersky/offer_3.png" alt=""/>
+                    <img src="images/kaspersky/offer_1.png" alt=""/>
                 </div>
                 <div class="kaspersky-form">
                     <h3 class="text-left text-uppercase">Choisissez l'offre qui vous convient</h3>
                     <br>
                     <form class="" onsubmit="return false">
                         <div class="choice">
-                            <div class="title">
-                                <h4 class="number">1</h4>
-                                <h4>Choisissez la durée de l'abonnement</h4>
-                            </div>
-                            <div class="choice-content">
-                                <div class="radio-group-duration">
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-0" required="required"
-                                               checked
-                                               aria-required="true" value="1 mois" type="radio">
-                                        <label for="duration-0">1 mois</label>
-                                    </div>
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-1" required="required"
-                                               aria-required="true" value="3 mois" type="radio">
-                                        <label for="duration-1">3 mois</label>
-                                    </div>
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-2" required="required"
-                                               aria-required="true" value="6 mois" type="radio">
-                                        <label for="duration-2">6 mois</label>
-                                    </div>
-                                </div>
+                            <div class="choice-content space-between">
+                                <input name="protection" access="false" id="protection-1mois" value="1 mois"
+                                       required="required" class="duration-radio" aria-required="true" type="radio">
+                                <label for="protection-1mois" class="text-rubik-regular"> 01 Mois - Protection complète</label>
+                                <span class="price text-red">150 <sup class="currency">DA</sup></span>
                             </div>
                         </div>
                         <div class="choice">
-                            <div class="title">
-                                <h4 class="number">2</h4>
-                                <h4>Choisissez le nombre d'appareils</h4>
-                            </div>
-                            <div class="choice-content">
-                                <div class="radio-group-device">
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-0" required="required"
-                                               aria-required="true" value="1" type="radio" checked>
-                                        <label for="device-0">1</label>
-                                        <span>1</span>
-                                    </div>
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-1" required="required"
-                                               aria-required="true" value="2" type="radio">
-                                        <label for="device-1">2</label>
-                                        <span>2</span>
-                                    </div>
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-2" required="required"
-                                               aria-required="true" value="3" type="radio">
-                                        <label for="device-2">3</label>
-                                        <span>3</span>
-                                    </div>
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-3" required="required"
-                                               aria-required="true" value="4" type="radio">
-                                        <label for="device-3">4</label>
-                                        <span>4</span>
-                                    </div>
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-4" required="required"
-                                               aria-required="true" value="5" type="radio">
-                                        <label for="device-4">5</label>
-                                        <span>5</span>
-                                    </div>
-                                    <span class="text-muted text-rubik">Appareil(s)</span>
-                                    <span class="text-muted text-rubik">LOGOS HERE</span>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="choice">
-                            <div class="title">
-                                <h4 class="number">3</h4>
-                                <h4>Prix d'abonnement</h4>
-                            </div>
-                            <div class="choice-content">
-                                <span class="price text-red">350 <sup class="currency">DA</sup></span>
+                            <div class="choice-content space-between">
+                                <input name="protection" access="false" id="protection-12mois" value="12 mois"
+                                       required="required" class="duration-radio" aria-required="true" type="radio">
+                                <label for="protection-12mois" class="text-rubik-regular"> 12 Mois - Protection complète</label>
+                                <span class="price text-red">1300 <sup class="currency">DA</sup></span>
                             </div>
                         </div>
                         <div class="formbuilder-checkbox-group form-group field-condition-accept">

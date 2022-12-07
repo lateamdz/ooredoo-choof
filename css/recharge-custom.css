@@ -588,6 +588,11 @@
 .text-rubik{
     font-family: rubik, ooredoobold, Arial!important;
 }
+.space-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 input, select {
     font-family: rubik, ooredoobold, Arial;
 }
