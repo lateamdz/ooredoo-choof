@@ -9,7 +9,7 @@
 .device-radio:checked,
 .device-radio:not(:checked) {
     position: absolute;
-    left: -9999px;
+    display: none;
 }
 
 .device-radio:checked + label,
@@ -77,7 +77,7 @@
 .duration-radio:checked,
 .duration-radio:not(:checked) {
     position: absolute;
-    left: -9999px;
+    display: none;
 }
 
 .duration-radio:checked + label,

@@ -1,0 +1,42 @@
+.device-radio:checked + label,
+.device-radio:not(:checked) + label {
+    padding-left: unset;
+    padding-right: 8px;
+}
+.device-radio:checked +label+ span,
+.device-radio:not(:checked) +label+ span {
+    left:unset;
+    right: 10px;
+}
+.device-radio:checked + label:before,
+.device-radio:not(:checked) + label:before {
+    content: '';
+    left: unset;
+    right: 0;
+}
+
+.device-radio:checked + label:after,
+.device-radio:not(:checked) + label:after {
+    content: '';
+    left: unset;
+    right: 3px;
+}
+.duration-radio:checked + label,
+.duration-radio:not(:checked) + label {
+    padding-left: unset;
+    padding-right: 28px;
+}
+
+.duration-radio:checked + label:before,
+.duration-radio:not(:checked) + label:before {
+    content: '';
+    left: unset;
+    right: 0;
+}
+
+.duration-radio:checked + label:after,
+.duration-radio:not(:checked) + label:after {
+    content: '';
+    left: unset;
+    right: 3px;
+}
