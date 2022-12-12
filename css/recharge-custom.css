@@ -505,7 +505,12 @@
 .dark.recharge .kaspersky-form {
     color: #cdcdcd;
 }
-
+#main-content{
+    background-color: #f8f8f8!important;
+}
+.dark #main-content{
+    background-color: #141414!important;
+}
 .dark.recharge .kaspersky-form .choice {
     background: #171717;
     color: #cdcdcd;
@@ -597,10 +602,15 @@
     visibility: hidden!important;
     pointer-events: none!important;
 }
+.visibility-shrink{
+    max-height: 80px!important;
+}
 input, select {
     font-family: rubik, ooredoobold, Arial;
 }
-
+.logo-devices{
+    height: 24px;
+}
 /*======================================*/
 .custom-modal {
     z-index: 150;
