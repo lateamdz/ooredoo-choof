@@ -354,10 +354,11 @@
 /*====================================================================================================================*/
 /* Kaspersky form */
 .kaspersky-form-section {
+
     min-height: calc(100vh - 169px);
     padding: 34px;
     /*min-height: calc(100vh - 116px);*/
-    width: 100%;
+    width: 100vw;
     color: white;
     text-align: center;
     display: flex;
@@ -625,6 +626,9 @@ input, select {
 }
 .logo-devices{
     height: 24px;
+}
+.no-scroll-x{
+    overflow-x:hidden ;
 }
 /*======================================*/
 .custom-modal {
