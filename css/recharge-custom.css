@@ -217,6 +217,9 @@
     filter: brightness(1.2);
 }
 
+.kaspersky-card .card-action a.text-ar {
+    font-weight: 700;
+}
 .kaspersky-card .card-action a {
     height: 100%;
     transition: transform 300ms ease;
@@ -226,7 +229,7 @@
     background-color: var(--ooredoo-red) !important;
     /*font-weight: ;*/
     font-size: 1.3em;
-    /*font-weight: 700;*/
+
     border-radius: 2em;
     letter-spacing: 0.05em;
     border: 2px solid white;
@@ -604,6 +607,18 @@
 }
 .visibility-shrink{
     max-height: 80px!important;
+}
+.dir-ltr{
+    direction: ltr!important;
+}
+.dir-rtl{
+    direction: rtl!important;
+}
+.flex-row-reverse{
+    flex-direction: row-reverse!important;
+}
+.img-right{
+    transform: scaleX(-1);
 }
 input, select {
     font-family: rubik, ooredoobold, Arial;
