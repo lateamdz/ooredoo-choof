@@ -53,6 +53,26 @@
     <link href="css/recharge-custom.css" rel="stylesheet">
     <link href="css/kaspersky-radios.css" rel="stylesheet">
     <script type="text/javascript">
+        function onChange(element) {
+            const value = {
+                ["duration"]: document.querySelector('input[name="duration"]:checked').value,
+                ["device"]: document.querySelector('input[name="device"]:checked').value,
+            }
+            document.getElementById("total-price").innerHTML = (() => {
+                    switch (value.duration) {
+                        case "1 mois":
+                            return value.device === "1" ? 350 : value.device === "2" ? 400 : value.device === "3" ? 450 : value.device === "4" ? 500 : value.device === "5" ? 550 : 350;
+                        case "3 mois":
+                            return value.device === "1" ? 950 : value.device === "2" ? 1000 : value.device === "3" ? 1200 : value.device === "4" ? 1300 : value.device === "5" ? 1400 : 950;
+                        case "6 mois":
+                            return value.device === "1" ? 1500 : value.device === "2" ? 1800 : value.device === "3" ? 2200 : value.device === "4" ? 2400 : value.device === "5" ? 2600 : 1500;
+                        default:
+                            return 350;
+                    }
+                }
+            )()
+        }
+
         function process(element) {
             // const form = element.closest('form')
             const value = {
@@ -73,11 +93,11 @@
 <body class="recharge">
 <div class="custom-modal modal-hidden" id="custom-modal">
     <div class="custom-modal-popup">
-<!--                <p class="text-center">-->
-<!--                    Vous avez participé avec succeès au <b>Challenge Fanzone fi Darek.</b> Merci pour votre participation.-->
-<!--                </p>-->
-<!--                <br>-->
-<!--                <a class="red-btn" href="./index.html">Terminé</a>-->
+        <!--                <p class="text-center">-->
+        <!--                    Vous avez participé avec succeès au <b>Challenge Fanzone fi Darek.</b> Merci pour votre participation.-->
+        <!--                </p>-->
+        <!--                <br>-->
+        <!--                <a class="red-btn" href="./index.html">Terminé</a>-->
     </div>
 </div>
 <div class="accessibilities mobileMenu" style="display: none;">
@@ -195,18 +215,21 @@
                             <div class="choice-content">
                                 <div class="radio-group-duration">
                                     <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-0" required="required"
+                                        <input name="duration" onchange="onChange(this)" class="duration-radio"
+                                               access="false" id="duration-0" required="required"
                                                checked
                                                aria-required="true" value="1 mois" type="radio">
                                         <label for="duration-0">1 mois</label>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-1" required="required"
+                                        <input name="duration" onchange="onChange(this)" class="duration-radio"
+                                               access="false" id="duration-1" required="required"
                                                aria-required="true" value="3 mois" type="radio">
                                         <label for="duration-1">3 mois</label>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-2" required="required"
+                                        <input name="duration" onchange="onChange(this)" class="duration-radio"
+                                               access="false" id="duration-2" required="required"
                                                aria-required="true" value="6 mois" type="radio">
                                         <label for="duration-2">6 mois</label>
                                     </div>
@@ -221,37 +244,44 @@
                             <div class="choice-content">
                                 <div class="radio-group-device">
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-0" required="required"
+                                        <input name="device" onchange="onChange(this)" class="device-radio"
+                                               access="false" id="device-0" required="required"
                                                aria-required="true" value="1" type="radio" checked>
                                         <label for="device-0">1</label>
                                         <span>1</span>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-1" required="required"
+                                        <input name="device" onchange="onChange(this)" class="device-radio"
+                                               access="false" id="device-1" required="required"
                                                aria-required="true" value="2" type="radio">
                                         <label for="device-1">2</label>
                                         <span>2</span>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-2" required="required"
+                                        <input name="device" onchange="onChange(this)" class="device-radio"
+                                               access="false" id="device-2" required="required"
                                                aria-required="true" value="3" type="radio">
                                         <label for="device-2">3</label>
                                         <span>3</span>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-3" required="required"
+                                        <input name="device" onchange="onChange(this)" class="device-radio"
+                                               access="false" id="device-3" required="required"
                                                aria-required="true" value="4" type="radio">
                                         <label for="device-3">4</label>
                                         <span>4</span>
                                     </div>
                                     <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-4" required="required"
+                                        <input name="device" onchange="onChange(this)" class="device-radio"
+                                               access="false" id="device-4" required="required"
                                                aria-required="true" value="5" type="radio">
                                         <label for="device-4">5</label>
                                         <span>5</span>
                                     </div>
                                     <span class="text-muted text-rubik">Appareil(s)</span>
-                                    <span class="text-muted text-rubik"><img class="logo-devices" src="images/kaspersky/platform_logos.png" alt="devices"></span>
+                                    <span class="text-muted text-rubik"><img class="logo-devices"
+                                                                             src="images/kaspersky/platform_logos.png"
+                                                                             alt="devices"></span>
                                 </div>
 
                             </div>
@@ -262,14 +292,16 @@
                                 <h4>Prix d'abonnement</h4>
                             </div>
                             <div class="choice-content">
-                                <span class="price text-red">350 <sup class="currency">DA</sup></span>
+                                <span class="price text-red"><span id="total-price">350</span> <sup
+                                        class="currency">DA</sup></span>
                             </div>
                         </div>
                         <div class="formbuilder-checkbox-group form-group field-condition-accept">
                             <div class="checkbox-group">
                                 <div class="formbuilder-checkbox">
                                     <input name="condition-accept" access="false" id="condition-accept"
-                                           required="required" class="duration-radio" aria-required="true" type="checkbox">
+                                           required="required" class="duration-radio" aria-required="true"
+                                           type="checkbox">
                                     <label for="condition-accept" class="text-rubik-regular"> J'accepte les <a
                                             href="docs/condition_generales_choof_fr.pdf"
                                             class="text-red text-underline">conditions d'utilisation</a></label>

@@ -53,7 +53,29 @@
     <link href="css/recharge-custom.css" rel="stylesheet">
     <link href="css/kaspersky-radios.css" rel="stylesheet">
     <link href="css/kaspersky-radios-ar.css" rel="stylesheet">
-    <script type="text/javascript" >
+    <script type="text/javascript">
+        function onChange(element) {
+            const value = {
+                ["duration"]: document.querySelector('input[name="duration"]:checked').value,
+                ["device"]: document.querySelector('input[name="device"]:checked').value,
+            }
+            document.getElementById("total-price").innerHTML = (() => {
+                    switch (value.duration) {
+                        case "1 mois":
+                            return value.device === "1" ? 100 : 100;
+                        case "3 mois":
+                            return value.device === "1" ? 250 : 250;
+                        case "6 mois":
+                            return value.device === "1" ? 450 : 450;
+                        case "12 mois":
+                            return value.device === "1" ? 900 : 900;
+                        default:
+                            return 100;
+                    }
+                }
+            )()
+        }
+
         function process(element) {
             // const form = element.closest('form')
             const value = {
@@ -81,7 +103,7 @@
         <!--                <a class="red-btn" href="./index.html">Terminé</a>-->
     </div>
     </di
-<div class="accessibilities mobileMenu" style="display: none;">
+    <div class="accessibilities mobileMenu" style="display: none;">
         <div class="accessibilities-header">
             <img src="images/choof-black.svg" alt="Logo ooredoo" class="img-responsive">
         </div>
@@ -95,7 +117,8 @@
                 </li>
                 <li>
                     <a href="index-ar.html">
-                        <span class="lang"><img src="images/icons/icone-ar.svg" width="23" alt=""></span> Changer de langue
+                        <span class="lang"><img src="images/icons/icone-ar.svg" width="23" alt=""></span> Changer de
+                        langue
                     </a>
                 </li>
                 <li>
@@ -106,301 +129,312 @@
                 </li>
                 <li>
                     <a href="">
-                        <span class="aide"><img src="images/icons/icone-aide.svg" width="19" alt=""></span> Besoin d’aide ?
+                        <span class="aide"><img src="images/icons/icone-aide.svg" width="19" alt=""></span> Besoin
+                        d’aide ?
                     </a>
                 </li>
             </ul>
         </div>
     </div>
-<div id="page" class="clearfix">
+    <div id="page" class="clearfix">
 
-    <div class="header">
-        <div class="container">
-            <div class="pull-right">
-                <div class="logo-section">
+        <div class="header">
+            <div class="container">
+                <div class="pull-right">
+                    <div class="logo-section">
 
-                    <div class="logo-directive">
-                        <img src="images/gold-plus/choof.svg" alt="CHOOF" class="img-responsive choof-logo">
+                        <div class="logo-directive">
+                            <img src="images/gold-plus/choof.svg" alt="CHOOF" class="img-responsive choof-logo">
+                        </div>
                     </div>
+                    <!-- logo-section -->
                 </div>
-                <!-- logo-section -->
-            </div>
-            <div class="pull-left">
-                <div class="header-button lang-list">
-                    <a class="current" onclick="return false;" href="#">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <!-- /lang-list -->
-                <div class="accessibilities hidden-xxs text-right">
-                    <div class="dark-btn switch">
-                        <a href="#" class="inner-switch">Mode Nuit : OFF</a>
-                    </div>
-                    <div class="lang">
-                        <a href="kaspersky-internet-security-android.html">
-                            FR
+                <div class="pull-left">
+                    <div class="header-button lang-list">
+                        <a class="current" onclick="return false;" href="#">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
                         </a>
                     </div>
-                    <div class="phone">
-                        <a href="">
-                            <img src="images/icons/phone.svg" alt="phone" class="img-responsive">
-                        </a>
-                    </div>
+                    <!-- /lang-list -->
+                    <div class="accessibilities hidden-xxs text-right">
+                        <div class="dark-btn switch">
+                            <a href="#" class="inner-switch">Mode Nuit : OFF</a>
+                        </div>
+                        <div class="lang">
+                            <a href="kaspersky-internet-security-android.html">
+                                FR
+                            </a>
+                        </div>
+                        <div class="phone">
+                            <a href="">
+                                <img src="images/icons/phone.svg" alt="phone" class="img-responsive">
+                            </a>
+                        </div>
 
-                    <div class="help">
-                        <a href="">
-                            <img src="images/icons/help.svg" alt="help" class="img-responsive">
-                        </a>
+                        <div class="help">
+                            <a href="">
+                                <img src="images/icons/help.svg" alt="help" class="img-responsive">
+                            </a>
+                        </div>
                     </div>
+                    <!-- accessibilities -->
                 </div>
-                <!-- accessibilities -->
             </div>
         </div>
-    </div>
-    <!-- /header -->
-    <div id="main-content">
+        <!-- /header -->
+        <div id="main-content">
 
-        <!-- md-my-account -->
-        <section class="md-s md-my-account clearfix no-scroll-x">
-            <div class="section-title">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 pull-left">
-                            <div class="title">
-                                <h1><span>مرحبــا</span></h1>
+            <!-- md-my-account -->
+            <section class="md-s md-my-account clearfix no-scroll-x">
+                <div class="section-title">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 pull-left">
+                                <div class="title">
+                                    <h1><span>مرحبــا</span></h1>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 pull-right">
-                            <div class="description">
-                                <p><span>
+                            <div class="col-sm-6 pull-right">
+                                <div class="description">
+                                    <p><span>
 								<span class="hidden-xs ">ر قمي : </span><span class=" price-unit" dir="rtl">0561 34 43 60</span></span>
-                                </p>
+                                    </p>
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- section-title -->
-            <div class="kaspersky-form-section">
-                <div class="kaspersky-form-image">
-                    <img src="images/kaspersky/offer_2.png" alt=""/>
+                <!-- section-title -->
+                <div class="kaspersky-form-section">
+                    <div class="kaspersky-form-image">
+                        <img src="images/kaspersky/offer_2.png" alt=""/>
+                    </div>
+                    <div class="kaspersky-form">
+                        <h3 class="text-right text-uppercase">اختاروا العرض الذي يناسبكم</h3>
+                        <br>
+                        <form class="" onsubmit="return false">
+                            <div class="choice">
+                                <div class="title">
+                                    <h4 class="number">1</h4>
+                                    <h4>اختاروا مدة الاشتراك</h4>
+                                </div>
+                                <div class="choice-content">
+                                    <div class="radio-group-duration">
+                                        <div class="formbuilder-radio-inline">
+                                            <input name="duration" onchange="onChange(this)" class="duration-radio"
+                                                   access="false" id="duration-0" required="required"
+                                                   checked
+                                                   aria-required="true" value="1 mois" type="radio">
+                                            <label for="duration-0">شهر واحد</label>
+                                        </div>
+                                        <div class="formbuilder-radio-inline">
+                                            <input name="duration" onchange="onChange(this)" class="duration-radio"
+                                                   access="false" id="duration-1" required="required"
+                                                   aria-required="true" value="3 mois" type="radio">
+                                            <label for="duration-1">3 أشهر</label>
+                                        </div>
+                                        <div class="formbuilder-radio-inline">
+                                            <input name="duration" onchange="onChange(this)" class="duration-radio"
+                                                   access="false" id="duration-2" required="required"
+                                                   aria-required="true" value="6 mois" type="radio">
+                                            <label for="duration-2">6 أشهر</label>
+                                        </div>
+                                        <div class="formbuilder-radio-inline">
+                                            <input name="duration" onchange="onChange(this)" class="duration-radio"
+                                                   access="false" id="duration-3" required="required"
+                                                   aria-required="true" value="12 mois" type="radio">
+                                            <label for="duration-3">12 شهر</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="choice">
+                                <div class="title">
+                                    <h4 class="number">2</h4>
+                                    <h4>اختاروا عدد الأجهزة</h4>
+                                </div>
+                                <div class="choice-content">
+                                    <div class="radio-group-device">
+                                        <div class="formbuilder-radio-inline">
+                                            <input name="device" onchange="onChange(this)" class="device-radio"
+                                                   access="false" id="device-0" required="required"
+                                                   aria-required="true" value="1" type="radio" checked>
+                                            <label for="device-0">1</label>
+                                            <span>1</span>
+                                        </div>
+                                        <span class="text-muted text-rubik">جهاز</span>
+                                        <span class="text-muted text-rubik"><img class="logo-devices"
+                                                                                 src="images/kaspersky/platform_logos.png"
+                                                                                 alt="devices"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="choice">
+                                <div class="title">
+                                    <h4 class="number">3</h4>
+                                    <h4>سعر الاشتراك</h4>
+                                </div>
+                                <div class="choice-content">
+                                    <span class="price text-red dir-rtl"><span id="total-price">100</span> <sup
+                                            class="currency dir-ltr">دج</sup></span><br>
+                                </div>
+                            </div>
+                            <div class="formbuilder-checkbox-group form-group field-condition-accept">
+                                <div class="checkbox-group">
+                                    <div class="formbuilder-checkbox">
+                                        <input name="condition-accept" access="false" id="condition-accept"
+                                               required="required" class="duration-radio" aria-required="true"
+                                               type="checkbox">
+                                        <label for="condition-accept" class="text-rubik-regular"> أوافق على <a
+                                                href="docs/condition_generales_choof_ar.pdf"
+                                                class="text-red text-underline">شروط الاستخدام</a></label>
+                                    </div>
+                                    <button class="submit-btn" onclick="process(this)">اختيار</button>
+                                </div>
+                            </div>
+                            <!--                        <a href="./index.html" class="cancel-btn">Annuler</a>-->
+                        </form>
+                    </div>
                 </div>
-                <div class="kaspersky-form">
-                    <h3 class="text-right text-uppercase">اختاروا العرض الذي يناسبكم</h3>
-                    <br>
-                    <form class="" onsubmit="return false">
-                        <div class="choice">
-                            <div class="title">
-                                <h4 class="number">1</h4>
-                                <h4>اختاروا مدة الاشتراك</h4>
-                            </div>
-                            <div class="choice-content">
-                                <div class="radio-group-duration">
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-0" required="required"
-                                               checked
-                                               aria-required="true" value="1 mois" type="radio">
-                                        <label for="duration-0">شهر واحد</label>
-                                    </div>
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-1" required="required"
-                                               aria-required="true" value="3 mois" type="radio">
-                                        <label for="duration-1">3 أشهر</label>
-                                    </div>
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-2" required="required"
-                                               aria-required="true" value="6 mois" type="radio">
-                                        <label for="duration-2">6 أشهر</label>
-                                    </div>
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="duration" class="duration-radio" access="false" id="duration-3" required="required"
-                                               aria-required="true" value="12 mois" type="radio">
-                                        <label for="duration-3">12 شهر</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="choice">
-                            <div class="title">
-                                <h4 class="number">2</h4>
-                                <h4>اختاروا عدد الأجهزة</h4>
-                            </div>
-                            <div class="choice-content">
-                                <div class="radio-group-device">
-                                    <div class="formbuilder-radio-inline">
-                                        <input name="device" class="device-radio" access="false" id="device-0" required="required"
-                                               aria-required="true" value="1" type="radio" checked>
-                                        <label for="device-0">1</label>
-                                        <span>1</span>
-                                    </div>
-                                    <span class="text-muted text-rubik">جهاز</span>
-                                    <span class="text-muted text-rubik"><img class="logo-devices" src="images/kaspersky/platform_logos.png" alt="devices"></span>
-                                </div>
+                <!-- section-content -->
+            </section>
+            <!-- /md-my-account  -->
 
-                            </div>
-                        </div>
-                        <div class="choice">
-                            <div class="title">
-                                <h4 class="number">3</h4>
-                                <h4>سعر الاشتراك</h4>
-                            </div>
-                            <div class="choice-content">
-                                <span class="price text-red dir-rtl">100 <sup class="currency dir-ltr">دج</sup></span><br>
-                            </div>
-                        </div>
-                        <div class="formbuilder-checkbox-group form-group field-condition-accept">
-                            <div class="checkbox-group">
-                                <div class="formbuilder-checkbox">
-                                    <input name="condition-accept" access="false" id="condition-accept"
-                                           required="required" class="duration-radio" aria-required="true" type="checkbox">
-                                    <label for="condition-accept" class="text-rubik-regular"> أوافق على <a
-                                            href="docs/condition_generales_choof_ar.pdf"
-                                            class="text-red text-underline">شروط الاستخدام</a></label>
-                                </div>
-                                <button class="submit-btn" onclick="process(this)">اختيار</button>
-                            </div>
-                        </div>
-                        <!--                        <a href="./index.html" class="cancel-btn">Annuler</a>-->
-                    </form>
-                </div>
-            </div>
-            <!-- section-content -->
-        </section>
-        <!-- /md-my-account  -->
+            <!-- md-Roaming-Section  -->
 
-        <!-- md-Roaming-Section  -->
-
-    </div>
-    <!-- /main-content -->
-    <!-- Block Footer -->
-    <footer>
-        <div class="container">
-            <div class="directives">
-
-            </div>
-            <div class="directives">
-                <div class="directiveIcon"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
-                <p>
-                    Important :En cliquant sur “Acheter”, vous acceptez d’être débité du montant du forfait choisi.
-                </p>
-            </div>
-            <!-- /directives -->
         </div>
-        <div class="copyrights text-center">
-            © Copyright <span>2020 Ooredoo</span>
-        </div>
-        <!-- /copyrights -->
-    </footer>
-    <!-- /Block Footer -->
-    <!-- Block Back Top -->
-    <div class="back-top" style="display: block;">
-        <a class="back-top-button hidden-xs" href="#"></a>
-    </div>
-    <!-- /Block Back Top -->
-    <!--Popup-->
-    <div class="modal fade" id="favor-num-popup" style="z-index: 10000;">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-dismiss="modal">×</button>
+        <!-- /main-content -->
+        <!-- Block Footer -->
+        <footer>
+            <div class="container">
+                <div class="directives">
+
                 </div>
-                <div class="modal-body">
-                    <div class="col-sm-12 col-xs-12"
-                         style="float:right;color:white;margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0;">
-                        <div class="title-popup">
-                            <div class="content-popup">
-                                <div class="col-sm-12 col-xs-12" style="
+                <div class="directives">
+                    <div class="directiveIcon"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+                    <p>
+                        Important :En cliquant sur “Acheter”, vous acceptez d’être débité du montant du forfait choisi.
+                    </p>
+                </div>
+                <!-- /directives -->
+            </div>
+            <div class="copyrights text-center">
+                © Copyright <span>2020 Ooredoo</span>
+            </div>
+            <!-- /copyrights -->
+        </footer>
+        <!-- /Block Footer -->
+        <!-- Block Back Top -->
+        <div class="back-top" style="display: block;">
+            <a class="back-top-button hidden-xs" href="#"></a>
+        </div>
+        <!-- /Block Back Top -->
+        <!--Popup-->
+        <div class="modal fade" id="favor-num-popup" style="z-index: 10000;">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-dismiss="modal">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-sm-12 col-xs-12"
+                             style="float:right;color:white;margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0;">
+                            <div class="title-popup">
+                                <div class="content-popup">
+                                    <div class="col-sm-12 col-xs-12" style="
     z-index: 183px;
 ">
 
-                                    <div class="text-popup">
+                                        <div class="text-popup">
 
-                                    </div>
+                                        </div>
 
-                                    <div class="btns-popup" style="float:left;width: 100%;margin-top: 18px;">
-                                        <div class="btn-download" style="margin-top: -15px;">
-                                            <div class="popup-inner-bloc"><span>Voici tes deux numéros favoris</span>
+                                        <div class="btns-popup" style="float:left;width: 100%;margin-top: 18px;">
+                                            <div class="btn-download" style="margin-top: -15px;">
+                                                <div class="popup-inner-bloc">
+                                                    <span>Voici tes deux numéros favoris</span>
 
-                                                <form class="phone-done" style="margin-bottom: 15px;">
-                                                    <div class="form-group" style="
+                                                    <form class="phone-done" style="margin-bottom: 15px;">
+                                                        <div class="form-group" style="
 ">
-                                                        <label for="staticEmail" class="col-sm-5 col-form-label">Premier
-                                                            numéro favoris</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="text" readonly=""
-                                                                   class="form-control-plaintext" id="staticEmail"
-                                                                   value="0555 24 58 78">
+                                                            <label for="staticEmail" class="col-sm-5 col-form-label">Premier
+                                                                numéro favoris</label>
+                                                            <div class="col-sm-7">
+                                                                <input type="text" readonly=""
+                                                                       class="form-control-plaintext" id="staticEmail"
+                                                                       value="0555 24 58 78">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </form>
-                                                <form class="phone-done" style="margin-bottom: 15px;">
-                                                    <div class="form-group" style="
+                                                    </form>
+                                                    <form class="phone-done" style="margin-bottom: 15px;">
+                                                        <div class="form-group" style="
 ">
-                                                        <label for="staticEmail" class="col-sm-5 col-form-label">deuxième
-                                                            numéro favoris</label>
-                                                        <div class="col-sm-7">
-                                                            <input type="text" readonly=""
-                                                                   class="form-control-plaintext" id="staticEmail"
-                                                                   value="0554 21 56 58">
+                                                            <label for="staticEmail" class="col-sm-5 col-form-label">deuxième
+                                                                numéro favoris</label>
+                                                            <div class="col-sm-7">
+                                                                <input type="text" readonly=""
+                                                                       class="form-control-plaintext" id="staticEmail"
+                                                                       value="0554 21 56 58">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </form>
+                                                    </form>
 
-                                                <form onsubmit="alert('BON FORMAT ^.^');return false;" style="
+                                                    <form onsubmit="alert('BON FORMAT ^.^');return false;" style="
     margin-bottom: 15px;
 "><input class="form-control form-control-lg" type="text" required="" pattern="^(00213|\+213|0)(5|6|7)[0-9]{8}$"
          value="" name="dates_pattern0" id="dates_pattern0" list="dates_pattern0_datalist"
          placeholder="insérer le premier numéro favoris">
-                                                    <button value="Accepter" class="" type="submit">Valider le N°
-                                                    </button>
-                                                    <datalist id="dates_pattern0_datalist"></datalist>
-                                                </form>
-                                                <form onsubmit="alert('BON FORMAT ^.^');return false;"><input
-                                                        class="form-control form-control-lg" type="text" required=""
-                                                        pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}"
-                                                        value="" name="dates_pattern0" id="dates_pattern0"
-                                                        list="dates_pattern0_datalist"
-                                                        placeholder="Insérer le deuxième numéro favoris">
-                                                    <button value="Accepter" class="" type="submit">Valider le N°
-                                                    </button>
-                                                    <datalist id="dates_pattern0_datalist"></datalist>
-                                                </form>
+                                                        <button value="Accepter" class="" type="submit">Valider le N°
+                                                        </button>
+                                                        <datalist id="dates_pattern0_datalist"></datalist>
+                                                    </form>
+                                                    <form onsubmit="alert('BON FORMAT ^.^');return false;"><input
+                                                            class="form-control form-control-lg" type="text" required=""
+                                                            pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}"
+                                                            value="" name="dates_pattern0" id="dates_pattern0"
+                                                            list="dates_pattern0_datalist"
+                                                            placeholder="Insérer le deuxième numéro favoris">
+                                                        <button value="Accepter" class="" type="submit">Valider le N°
+                                                        </button>
+                                                        <datalist id="dates_pattern0_datalist"></datalist>
+                                                    </form>
+                                                </div>
+
+
                                             </div>
 
-
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
-
-
                     </div>
-                </div>
 
+
+                </div>
 
             </div>
 
         </div>
+        <!--Popup-->
 
     </div>
-    <!--Popup-->
-
-</div>
-<!-- /page -->
-<!-- JavaScript ============================================================================= -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/dark-mode.js"></script>
-<!-- ====================Sticky Menu =============================== -->
-<script type="text/javascript" src="js/sticky/jquery.sticky.js"></script>
-<!-- ==================== Main Js ================================== -->
-<script type="text/javascript" src="js/main.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="js/ie10-viewport-bug-workaround.js"></script>
-<!-- ======================================================================================== -->
+    <!-- /page -->
+    <!-- JavaScript ============================================================================= -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <!-- ====================Sticky Menu =============================== -->
+    <script type="text/javascript" src="js/sticky/jquery.sticky.js"></script>
+    <!-- ==================== Main Js ================================== -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- ======================================================================================== -->
 </body>
 
 </html>

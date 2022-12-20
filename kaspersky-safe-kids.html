@@ -53,6 +53,26 @@
     <link href="css/recharge-custom.css" rel="stylesheet">
     <link href="css/kaspersky-radios.css" rel="stylesheet">
     <script type="text/javascript">
+        function onChange(element) {
+            const value = {
+                ["duration"]: document.querySelector('input[name="duration"]:checked').value,
+                ["device"]: document.querySelector('input[name="device"]:checked').value,
+            }
+            document.getElementById("total-price").innerHTML = (() => {
+                    switch (value.duration) {
+                        case "1 mois":
+                            return value.device === "1" ? 200 : value.device === "3" ? 400 : value.device === "5" ? 600 : 200;
+                        case "3 mois":
+                            return value.device === "1" ? 500 : value.device === "3" ? 1000 : value.device === "5" ? 1500 : 500;
+                        case "6 mois":
+                            return value.device === "1" ? 800 : value.device === "3" ? 1700 : value.device === "5" ? 2500 : 800;
+                        default:
+                            return 200;
+                    }
+                }
+            )()
+        }
+
         function process(element) {
             // const form = element.closest('form')
             const value = {
@@ -72,11 +92,11 @@
 <body class="recharge">
 <div class="custom-modal modal-hidden" id="custom-modal">
     <div class="custom-modal-popup">
-<!--                <p class="text-center">-->
-<!--                    Vous avez participé avec succeès au <b>Challenge Fanzone fi Darek.</b> Merci pour votre participation.-->
-<!--                </p>-->
-<!--                <br>-->
-<!--                <a class="red-btn" href="./index.html">Terminé</a>-->
+        <!--                <p class="text-center">-->
+        <!--                    Vous avez participé avec succeès au <b>Challenge Fanzone fi Darek.</b> Merci pour votre participation.-->
+        <!--                </p>-->
+        <!--                <br>-->
+        <!--                <a class="red-btn" href="./index.html">Terminé</a>-->
     </div>
 </div>
 <div class="accessibilities mobileMenu" style="display: none;">
@@ -190,7 +210,8 @@
                             <div class="choice-content space-between">
                                 <input name="protection" access="false" id="protection-1mois" value="1 mois"
                                        required="required" class="duration-radio" aria-required="true" type="radio">
-                                <label for="protection-1mois" class="text-rubik-regular"> 01 Mois - Protection complète</label>
+                                <label for="protection-1mois" class="text-rubik-regular"> 01 Mois - Protection
+                                    complète</label>
                                 <span class="price text-red">150 <sup class="currency">DA</sup></span>
                             </div>
                         </div>
@@ -198,7 +219,8 @@
                             <div class="choice-content space-between">
                                 <input name="protection" access="false" id="protection-12mois" value="12 mois"
                                        required="required" class="duration-radio" aria-required="true" type="radio">
-                                <label for="protection-12mois" class="text-rubik-regular"> 12 Mois - Protection complète</label>
+                                <label for="protection-12mois" class="text-rubik-regular"> 12 Mois - Protection
+                                    complète</label>
                                 <span class="price text-red">1300 <sup class="currency">DA</sup></span>
                             </div>
                         </div>
@@ -206,7 +228,8 @@
                             <div class="checkbox-group">
                                 <div class="formbuilder-checkbox">
                                     <input name="condition-accept" access="false" id="condition-accept"
-                                           required="required" class="duration-radio" aria-required="true" type="checkbox">
+                                           required="required" class="duration-radio" aria-required="true"
+                                           type="checkbox">
                                     <label for="condition-accept" class="text-rubik-regular"> J'accepte les <a
                                             href="docs/condition_generales_choof_fr.pdf"
                                             class="text-red text-underline">conditions d'utilisation</a></label>
