@@ -54,26 +54,12 @@
     <link href="css/kaspersky-radios.css" rel="stylesheet">
     <link href="css/kaspersky-radios-ar.css" rel="stylesheet">
     <script type="text/javascript">
-        function onChange(element) {
-            const value = {
-                ["duration"]: document.querySelector('input[name="duration"]:checked').value,
-                ["device"]: document.querySelector('input[name="device"]:checked').value,
-            }
-            document.getElementById("total-price").innerHTML = (() => {
-                    switch (value.duration) {
-                        case "1 mois":
-                            return value.device === "1" ? 200 : value.device === "3" ? 400 : value.device === "5" ? 600 : 200;
-                        case "3 mois":
-                            return value.device === "1" ? 500 : value.device === "3" ? 1000 : value.device === "5" ? 1500 : 500;
-                        case "6 mois":
-                            return value.device === "1" ? 800 : value.device === "3" ? 1700 : value.device === "5" ? 2500 : 800;
-                        default:
-                            return 200;
-                    }
-                }
-            )()
+        function reset(){
+            setTimeout(()=>{
+                document.querySelector('input[name="protection"]:first-child').checked=true;
+            },200);
         }
-
+        reset();
         function process(element) {
             // const form = element.closest('form')
             const value = {

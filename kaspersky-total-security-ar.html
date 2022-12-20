@@ -73,7 +73,13 @@
                 }
             )()
         }
-
+        function reset(){
+            setTimeout(()=>{
+                document.querySelector('input[name="duration"]:first-child').checked=true;
+                document.querySelector('input[name="device"]:first-child').checked=true;
+            },200);
+        }
+        reset();
         function process(element) {
             // const form = element.closest('form')
             const value = {
