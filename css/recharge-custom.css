@@ -683,3 +683,60 @@ input, select {
 .modal-hidden {
     display: none;
 }
+/*========================FREE FIRE===================================================================================*/
+.freefire-card {
+    min-width: 250px;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    /*box-shadow: 0 3px 5px rgb(0 0 0 / 35%);*/
+    box-shadow: 0 12px 40px rgb(0 0 0 / 15%);
+    isolation: isolate;
+    position: relative;
+    padding: 0!important;
+    overflow: hidden;
+    aspect-ratio: 1.9 / 1;
+}
+.freefire-card>.card-img{
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    height: 100%;
+    width: 100%;
+}
+.freefire-card>.card-content>p{
+   margin-bottom: 10%;
+}
+.freefire-card>.card-content>.bar{
+    max-width: 50%;
+}
+.freefire-card>.card-content{
+    font-size: 2.2rem;
+    max-width: 50%;
+    position: absolute;
+    bottom: 12%;
+    left: 6%;
+}
+/*@media (max-width: 1000px) {*/
+/*    .freefire-card>.card-content{*/
+/*        font-size: 2.4rem;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 1210px) {*/
+/*    .freefire-card>.card-content{*/
+/*        font-size: 2.4rem;*/
+/*    }*/
+/*}*/
+
+
+@media (max-width: 900px) {
+    .freefire-card>.card-content{
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 600px) {
+    .freefire-card>.card-content{
+        font-size: 1.2rem;
+    }
+}

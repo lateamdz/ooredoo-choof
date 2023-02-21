@@ -39,6 +39,11 @@
     <script type='text/javascript' src='js/jquery/jquery.easing.js'></script>
     <script>
         $ = jQuery.noConflict();
+
+        setTimeout(()=>{
+            const myDiv=document.querySelector('#free-fire');
+            if(myDiv) myDiv.scrollIntoView({behavior:"smooth", block:"start"})
+        },1000)
     </script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]>
@@ -534,108 +539,30 @@
                     <div class="row">
                         <div class="col-xs-12 pull-left">
                             <div class="title">
-                                <h1>OFFRE KASPERSKY</h1>
+                                <h1>فري فاير حصري على اوريدو</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- section-title -->
-            <div class="section-content transfert-hp">
+            <div class="section-content transfert-hp" id="free-fire">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-lg-offset-0 col-md-offset-1 col-md-10 col-sm-12 change" style="">
-                            <div class="recharge-offer-card kaspersky-card white">
+                        <div class="col-lg-12 col-lg-offset-0 col-md-offset-0 col-md-12 col-sm-12 change">
+                            <div class="recharge-offer-card freefire-card">
                                 <div class="card-img">
-                                    <img src="images/kaspersky/kfk.png" class="img-right" alt=""/>
+                                    <img src="images/freefire/bg-ar.png" alt=""/>
                                 </div>
-                                <div class="card-content">
-                                    <h4 class="title">kaspersky Safe Kids</h4>
-                                    <div class="card-article">
-                                        <p>مصمم خصيصًا لمساعدتكم على مراقبة أطفالكم على شبكة الإنترنت وغيرها، والتحكم في استعمالهم للإنترنت ومنع الدخول إلى المواقع والمحتويات غير الملائمة.</p>
-                                    </div>
-                                    <div class="ooredoo-starting-from">
-                                        <span class="starting">ابتداء من</span>
-                                        <span class="price text-red dir-rtl">150 <sup class="currency dir-ltr">دج</sup></span><br>
-                                    </div>
-                                    <div class="card-action">
-                                        <a href="./kaspersky-safe-kids-ar.html" class="text-ar">المزيد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-lg-offset-0 col-md-offset-1 col-md-10 col-sm-12" style="">
-                            <div class="recharge-offer-card kaspersky-card white">
-                                <div class="card-img">
-                                    <img src="images/kaspersky/kis.png" class="img-right" alt=""/>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="title">kaspersky Internet Security</h4>
-                                    <div class="card-article">
-                                        <p>
-                                            حل أمن إلكتروني سريع وفعال لحماية بياناتكم وحياتكم الخاصة بكل سرية.
-                                        </p>
-                                        <p>حماية تشمل الحاسوب وأجهزة Mac والأندرويد
-                                            <br>
-                                            <span class="text-red">- الهاتف الذكي واللوحة الإلكترونية -</span>
-                                        </p>
-                                    </div>
-                                    <div class="ooredoo-starting-from">
-                                        <span class="starting">ابتداء من</span>
-                                        <span class="price text-red dir-rtl">200 <sup class="currency dir-ltr">دج</sup></span><br>
-                                    </div>
-                                    <div class="card-action">
-                                        <a href="./kaspersky-internet-security-ar.html" class="text-ar">المزيد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-lg-offset-0 col-md-offset-1 col-md-10 col-sm-12" style="">
-                            <div class="recharge-offer-card kaspersky-card white">
-                                <div class="card-img">
-                                    <img src="images/kaspersky/ka.png" class="img-right" alt=""/>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="title">KIS Android</h4>
-                                    <div class="card-article">
-                                        <p>قوموا بحماية جهاز الأندرويد
-                                            الخاص بكم واحموا أنفسكم من البرامج الضارة الأكثر شيوعًا وتقنيات القرصنة
-                                            المستحدثة.</p>
-                                    </div>
-                                    <div class="ooredoo-starting-from">
-                                        <span class="starting">ابتداء من</span>
-                                        <span class="price text-red dir-rtl">100 <sup class="currency dir-ltr">دج</sup></span><br>
-                                    </div>
-                                    <div class="card-action">
-                                        <a href="./kaspersky-internet-security-android-ar.html" class="text-ar">المزيد</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-lg-offset-0 col-md-offset-1 col-md-10 col-sm-12" style="">
-                            <div class="recharge-offer-card kaspersky-card white">
-                                <div class="card-img">
-                                    <img src="images/kaspersky/kts.png" class="img-right" alt=""/>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="title">kaspersky total Security</h4>
-                                    <div class="card-article">
-                                        <p>
-                                            هو الحل الأمثل لحماية حياتكم الشخصية وهويتكم
-                                            ونشاطكم على شبكة الإنترنت، سواءً على جهاز الحاسوب أو اللوحة الإلكترونية أو
-                                            الهاتف الذكي.
-                                            <br>
-                                            <br>
-                                            سنعمل على ضمان حمايتكم وحماية عائلتكم.
-                                        </p>
-                                    </div>
-                                    <div class="ooredoo-starting-from">
-                                        <span class="starting">ابتداء من</span>
-                                        <span class="price text-red dir-rtl">350 <sup class="currency dir-ltr">دج</sup></span><br>
-                                    </div>
-                                    <div class="card-action">
-                                        <a href="./kaspersky-total-security-ar.html" class="text-ar">المزيد</a>
-                                    </div>
+                                <div class="card-content" style="left: auto;right: 6%">
+                                    <img src="images/freefire/bar.png" alt="bar" class="bar" style="transform: scaleX(-1)" >
+
+                                    <p>
+                                        <b>احصل على جواهر فري فايرالخاصة بك من خلال النقر على الزر أدناه</b>
+                                    </p>
+                                    <a href="#" >
+                                        <img src="images/freefire/btn-ar.png" alt="btn">
+                                    </a>
                                 </div>
                             </div>
                         </div>
