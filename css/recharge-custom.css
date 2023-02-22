@@ -685,7 +685,8 @@ input, select {
 }
 /*========================FREE FIRE===================================================================================*/
 .freefire-card {
-    min-width: 250px;
+    /*min-width: 250px;*/
+    width: 100%;
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
@@ -696,6 +697,7 @@ input, select {
     padding: 0!important;
     overflow: hidden;
     aspect-ratio: 1.9 / 1;
+    min-height:auto;
 }
 .freefire-card>.card-img{
     /*position: absolute;*/
@@ -738,5 +740,10 @@ input, select {
 @media (max-width: 600px) {
     .freefire-card>.card-content{
         font-size: 1.2rem;
+    }
+}
+@media (max-width: 400px) {
+    .freefire-card>.card-content{
+        font-size: 0.8rem;
     }
 }
