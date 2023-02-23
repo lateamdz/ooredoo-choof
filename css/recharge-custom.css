@@ -54,7 +54,11 @@
 .pr-2 {
     padding-right: 8px;
 }
-
+@media (max-width: 400px) {
+    .section-title .title h1{
+        font-size: 25px!important;
+    }
+}
 /*@media (min-width: 1200px) {*/
 /*    .container-special {*/
 /*        width: 930px;*/
@@ -740,10 +744,12 @@ input, select {
 @media (max-width: 600px) {
     .freefire-card>.card-content{
         font-size: 1.2rem;
+        max-width: 55%;
     }
 }
 @media (max-width: 400px) {
     .freefire-card>.card-content{
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        /*max-width: 55%;*/
     }
 }

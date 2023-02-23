@@ -905,3 +905,9 @@ progress::-webkit-progress-value {
 .ar .small.renouvellement{
 	float: left;
 }
+@media (max-width: 479px) {
+    .recharge .section-title .title h1 {
+        font-size: 18px!important;
+    }
+
+}
