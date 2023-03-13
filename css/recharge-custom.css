@@ -93,7 +93,7 @@
     margin-left: -1em;
 }
 .text-fr-bold{
-    font-family: rubik-bold,ooredoobold, Arial,sans-serif !important;
+    font-family: outfit-bold,ooredoobold, Arial,sans-serif !important;
 }
 .text-fr {
     font-family: rubik, ooredoobold,Arial;,sans-serif !important;
@@ -353,11 +353,15 @@
     display: flex;
     max-width: 560px;
 }
+
 .ramadan-banner .offer-image img{
     transform: scale(2);
     transform-origin: 60% 60%;
     margin-top: -40px;
     width: 100%;
+}
+.ar .ramadan-banner .offer-image img{
+    transform-origin: 20% 70%;
 }
 .ramadan-title {
     font-family:  outfit-bold, Arial, sans-serif;
