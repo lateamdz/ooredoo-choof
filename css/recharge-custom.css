@@ -3,6 +3,11 @@
     src: url(../fonts/outfit.ttf);
 }
 @font-face {
+    font-family: outfit-bold;
+    src: url(../fonts/outfit.ttf);
+    font-weight: 800;
+}
+@font-face {
     font-family: rubik;
     src: url(../fonts/rubik.ttf);
     font-weight: 200;
@@ -11,6 +16,10 @@
     font-family: rubik-bold;
     src: url(../fonts/rubik.ttf);
     font-weight: 800;
+}
+:root{
+    --ooredoo-red:#ed1c24;
+    --color-qaada:#ffaa01;
 }
 #page, body, html{
     font-family: rubik,ooredooregular, Arial ;
@@ -119,7 +128,7 @@
     font-weight: 800;
     padding: 0 4px;
     font-family: rubik-bold,ooredoobold, Arial;
-    /*color: #ed1c24;*/
+    /*color: var(--ooredoo-red);*/
     /*font-family: NotoSans-Bold;*/
 }
 
@@ -128,7 +137,7 @@
     white-space: nowrap;
     font-size: 1.6em;
     font-weight: 800;
-    color: #ed1c24;
+    color: var(--ooredoo-red);
     z-index: 1;
     display: flex;
     flex-wrap: nowrap;
@@ -140,7 +149,7 @@
 .recharge-offer-card .internet {
     font-size: 3.1em;
     font-weight: 800;
-    color: #ed1c24;
+    color: var(--ooredoo-red);
     z-index: 1;
     display: flex;
     flex-wrap: nowrap;
@@ -162,7 +171,7 @@
 }
 
 .text-red {
-    color: #ed1c24 !important;
+    color: var(--ooredoo-red) !important;
 }
 
 .recharge-offer-card .buy img {
@@ -181,7 +190,7 @@
 }
 
 .recharge-offer-card .buy h3 {
-    color: #ed1c24;
+    color: var(--ooredoo-red);
     font-size: 2.5em;
     font-family: rubik, ooredoobold,Arial;;
 }
@@ -313,84 +322,140 @@
 
 /*====================================================================================================================*/
 /* QATAR BANNER */
-.qatar-banner {
+.ramadan-banner {
+    overflow: hidden;
     padding: 34px;
-    /*min-height: calc(100vh - 116px);*/
+    min-height: calc(100vh - 200px);
     width: 100%;
-    background: rgb(28, 1, 18);
-    background: linear-gradient(45deg, rgba(28, 1, 18, 1) 0%, rgba(139, 21, 56, 1) 100%);
-    color: white;
+    background: var(--color-qaada);
+    /*background: linear-gradient(45deg, var(--color-qaada) 0%, rgba(139, 21, 56, 1) 100%);*/
+    color: black;
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    justify-content: center;
     margin-bottom: 84px;
+    flex-wrap: wrap;
+    background: url("../images/ramadan/bg-ramadan.png");
+    background-position: bottom left;
 }
-
-.qatar-title h2 {
+.ramadan-banner .offer-description{
     flex: 1;
-    font-family:  rubik-bold, Arial, sans-serif;
-    font-size: 3.5em;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+}
+.ramadan-banner .offer-image{
+    flex: 1;
+    display: flex;
+    max-width: 560px;
+}
+.ramadan-banner .offer-image img{
+    transform: scale(2);
+    transform-origin: 60% 60%;
+    margin-top: -40px;
+    width: 100%;
+}
+.ramadan-title {
+    font-family:  outfit-bold, Arial, sans-serif;
+}
+.ramadan-title h4 {
+    font-size: 2.5em;
+}
+.ramadan-title h2 {
+    flex: 1;
+    font-size: 5em;
     font-weight: 800;
 }
 
-.qatar-header img {
+.ramadan-header img {
     width: 80%;
     max-width: 900px;
 }
 
-.qatar-description {
+.ramadan-description {
     max-width: 70%;
     font-family: outfit, Arial, sans-serif;
     padding: 64px 34px 16px;
     font-size: 1.6em;
+    text-align: start;
 }
 
-.qatar-participate-section {
+.ramadan-participate-section {
     margin-top: 54px;
     display: flex;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     gap: 20px;
     font-family: outfit,  Arial;
 }
 
-.qatar-participate-section .conditions {
-    color: white;
+.ramadan-participate-section .conditions {
+    color: var(--ooredoo-red);
     text-decoration: underline;
     font-size: 1.2em;
     font-weight: bold;
 }
 
-.qatar-participate-section .qatar-participate {
-    background-color: white;
+.ramadan-participate-section .ramadan-participate {
+    background-color: var(--ooredoo-red);
     padding: 8px 24px;
-    color: #8B1538FF;
+    color: white;
     font-size: 1.5em;
     font-weight: 800;
     border-radius: 1.5em;
+    transform: scale(1.6);
 }
 
-@media (max-width: 1000px) {
-    .qatar-banner {
+@media (max-width: 600px) {
+    .ramadan-banner {
         padding: 34px 5px;
+        /*background-position: bottom -20%;*/
+        background-size: auto 100%;
+
     }
-    .qatar-header img{
+
+}
+@media (max-width: 1000px) {
+    .ramadan-banner {
+        padding: 34px 5px;
+        flex-direction: column-reverse;
+    }
+    .ramadan-banner .offer-description{
+        margin-top: 20px;
+        padding: 0 10%;
+    }
+    .ramadan-banner .offer-image img{
+        margin-top: 0;
+        transform: scale(1.2);
+        transform-origin: bottom;
+    }
+    .ramadan-header img{
         width:40%
     }
-    .qatar-title h2{
+
+    .ramadan-title h4{
+        font-size: 1em;
+    }
+    .ramadan-title h2{
         font-size: 2em;
         margin-top: 10px;
     }
-    .qatar-description {
+    .ramadan-description {
         max-width: 100%;
         padding: 35px 20px 16px;
         font-size: 1.1em;
     }
-    .qatar-participate-section{
+    .ramadan-participate-section{
         margin-top: 5px;
         transform: scale(0.8);
+    }
+    .ramadan-participate-section .ramadan-participate {
+        transform: scale(1);
     }
 }
 
@@ -405,7 +470,7 @@
 .submit-btn {
     color: white;
     padding: 8px 24px;
-    background-color: #ed1c24 !important;
+    background-color: var(--ooredoo-red) !important;
     /*font-weight: ;*/
     font-size: 1.05em;
     border-radius: 0.8em;
@@ -429,7 +494,7 @@
     outline: unset;
 }
 
-.qatar-form-section {
+.ramadan-form-section {
     background: unset;
 
     display: flex;
@@ -449,13 +514,13 @@
     text-align: left;
 }
 
-.qatar-form h3{
+.ramadan-form h3{
     font-family: rubik-bold, ooredoobold, Arial;
 }
 input,select{
     font-family: rubik, ooredoobold, Arial;
 }
-.qatar-form {
+.ramadan-form {
     font-family: rubik, Arial;
     box-shadow: 0px 0px 60px -24px rgba(0, 0, 0, 0.75);
     background: white;
@@ -469,16 +534,16 @@ input,select{
 
 }
 
-.dark.recharge .qatar-form {
+.dark.recharge .ramadan-form {
     background: #171717;
     color: white;
 }
 
-.dark.recharge .qatar-form select option {
+.dark.recharge .ramadan-form select option {
     background: #171717;
 }
 
-.dark.recharge .qatar-form input, .dark.recharge .qatar-form select {
+.dark.recharge .ramadan-form input, .dark.recharge .ramadan-form select {
     background: rgba(128, 128, 128, 0.1);
     color: white;
 }
@@ -509,7 +574,7 @@ input,select{
 
     color: white;
     padding: 8px 24px;
-    background-color: #ed1c24 !important;
+    background-color: var(--ooredoo-red) !important;
     /*font-weight: ;*/
     font-size: 1.05em;
     border-radius: 0.8em;
