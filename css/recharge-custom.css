@@ -23,13 +23,47 @@
 
 :root {
     --ooredoo-red: #ed1c24;
-    --color-qaada: #ffaa01;
+    --color-qaada: #fee161;
 }
 
 #page, body, html {
     font-family: rubik, ooredooregular, Arial;
 }
-
+.fs-22{
+    font-size: 22px!important;
+}
+.fs-20{
+    font-size: 20px!important;
+}
+.fs-18{
+    font-size: 18px!important;
+}
+.fs-16{
+    font-size: 16px!important;
+}
+.fs-14{
+    font-size: 14px!important;
+}
+.fs-12{
+    font-size: 12px!important;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.relative{
+    position: relative;
+    isolation: isolate;
+}
+.absolute{
+    position: absolute;
+}
+.top{top: 0;}
+.left{left: 0;}
+.right{right: 0;}
+.bottom{bottom: 0;}
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit,
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency,
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a {
@@ -76,7 +110,15 @@
     z-index: -1;
     max-width: 60%;
 }
-
+.text-line-through{
+    text-decoration: line-through;
+}
+.text-outfit{
+    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+}
+.border-round{
+    border-radius: 1000px!important;
+}
 .text-bold {
     font-weight: bold;
 }
@@ -84,7 +126,9 @@
 .text-grey {
     color: rgba(128, 128, 128);
 }
-
+.text-center{
+    text-align: center;
+}
 .text-ar {
     font-family: ooredoobold, Arial !important;
 }
@@ -121,10 +165,20 @@
     background: #3cdbbf;
 }
 
-.recharge-offer-card.yellow {
-    background: #ffd101;
+.recharge-offer-card.yellow .fanous{
+    height: 50%;
+    right: 12px!important;
+    top: -20px!important;
 }
-
+.recharge-offer-card.yellow  {
+    max-width: 260px;
+    padding: 30px;
+    overflow: hidden;
+    background: var(--color-qaada);
+}
+.sahla-box-cards .image-boost{
+    margin-top: 50px;
+}
 .recharge-offer-card.white {
     background: #ffffff;
 }
