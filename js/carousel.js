@@ -13,7 +13,6 @@ class CustomCarousel{
 
         this.update(content,carousel,next,prev);
         this.UIchanges(next,prev,this.index);
-        content.style.transform = `translateX(-${this.index*this.slideBy}px)`;
         // console.log(this.count,this.index,this.slideBy)
         window.addEventListener('resize', (event)=> {
             this.update(content,carousel,next,prev)
@@ -34,11 +33,11 @@ class CustomCarousel{
         }
     }
     update(content,carousel,next,prev){
-
+        const margin=0;
         const childElement=carousel.querySelector('.carousel-item');
-        const margin=60;
-        this.slideBy=childElement.clientWidth+margin;
-
+        // this.slideBy=childElement.clientWidth+margin;
+        this.slideBy=childElement.getBoundingClientRect().width+margin;
+        content.style.transform = `translateX(-${this.index*this.slideBy}px)`;
 
         next.onclick = ()=>{
             this.index=this.index<this.count-1?this.index+1:this.index;

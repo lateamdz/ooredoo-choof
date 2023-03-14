@@ -29,9 +29,13 @@
 #page, body, html {
     font-family: rubik, ooredooregular, Arial;
 }
-.fs-22{
-    font-size: 22px!important;
-}
+.fs-34{font-size: 34px!important;}
+.fs-32{font-size: 32px!important;}
+.fs-30{font-size: 30px!important;}
+.fs-28{font-size: 28px!important;}
+.fs-26{font-size: 26px!important;}
+.fs-24{font-size: 24px!important;}
+.fs-22{font-size: 22px!important;}
 .fs-20{
     font-size: 20px!important;
 }
@@ -91,27 +95,13 @@
 /*        width: 930px;*/
 /*    }*/
 /*}*/
-.recharge-offer-card {
-    flex: 1;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 15px;
-    color: #171717;
-    position: relative;
-    isolation: isolate;
-    min-height: 218px;
-    min-width: 218px;
-}
 
-.recharge-offer-card .hand-3d {
-    position: absolute;
-    bottom: 110px;
-    right: 0;
-    z-index: -1;
-    max-width: 60%;
-}
+
 .text-line-through{
     text-decoration: line-through;
+}
+.text-outfit-light{
+    font-family: outfit, ooredoobold, Arial, sans-serif !important;
 }
 .text-outfit{
     font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
@@ -155,23 +145,13 @@
     font-family: rubik, ooredoobold, Arial;, sans-serif !important;
 }
 
-.ar .recharge-offer-card .hand-3d {
-    left: 0;
-    right: auto;
-    transform: scaleX(-1);
-}
-
-.recharge-offer-card.blue {
-    background: #3cdbbf;
-}
-
-.recharge-offer-card.yellow .fanous{
-    height: 50%;
-    right: 12px!important;
-    top: -20px!important;
-    z-index: -1;
-}
-.recharge-offer-card.yellow  {
+/*BOOST CARD =========================================================================================================*/
+.boost-card {
+    flex: 1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #171717;
+    min-height: 218px;
     max-width: 260px;
     padding: 30px;
     overflow: hidden;
@@ -180,18 +160,18 @@
     position: relative;
     isolation: isolate;
 }
-
-.recharge-offer-card.white {
-    background: #ffffff;
+.boost-card .fanous{
+    height: 50%;
+    right: 12px!important;
+    top: -20px!important;
+    z-index: -1;
 }
-
-.recharge-offer-card .ooredoo-calls .to-ooredoo {
+.boost-card .ooredoo-calls .to-ooredoo {
     font-weight: normal;
     font-size: 1.1em;
     font-family: rubik, ooredoobold, Arial;;
 }
-
-.recharge-offer-card .ooredoo-calls .call-count {
+.boost-card .ooredoo-calls .call-count {
     font-size: 1.7em;
     font-weight: 800;
     padding: 0 4px;
@@ -199,22 +179,7 @@
     /*color: var(--ooredoo-red);*/
     /*font-family: NotoSans-Bold;*/
 }
-
-.recharge-offer-card .boost {
-    flex: 1;
-    white-space: nowrap;
-    font-size: 1.6em;
-    font-weight: 800;
-    color: var(--ooredoo-red);
-    z-index: 1;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    font-family: rubik-bold, Arial;
-}
-
-.recharge-offer-card .internet {
+.boost-card .internet {
     font-size: 3.1em;
     font-weight: 800;
     color: var(--ooredoo-red);
@@ -225,61 +190,101 @@
     justify-content: flex-start;
     font-family: rubik-bold, ooredoobold, Arial;
 }
-
-.recharge-offer-card .internet img {
-    vertical-align: sub;
-    max-height: 1.2em;
-    /*padding: 0 0.3em;*/
-}
-
-.recharge-offer-card .internet .gigas {
+.boost-card .internet .gigas {
     flex: 1;
     color: #171717;
     letter-spacing: -2px;
 }
-
+/*RECHARGE CARD =========================================================================================================*/
+.recharge-card {
+    width: 100%;
+    margin: 0 10px;
+    flex: 1;
+    border-radius:18px;
+    color: #171717;
+    min-height: 72%;
+    padding: 30px;
+    padding-bottom: 0;
+    padding-top: 16px;
+    overflow: hidden;
+    background: white;
+    /*min-width: 180px!important;*/
+    position: relative;
+    isolation: isolate;
+    outline: 2px solid var(--ooredoo-red);
+    box-shadow: inset 0 0 0 -1px red, 5px 5px 20px 2px rgba(121, 121, 121, 0.6);
+}
+.recharge-card.special{
+    overflow: unset;
+    min-height: 85%;
+    /*margin-bottom: -33px;*/
+    padding-top: 30px;
+}
+.recharge-card.special:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: -2px;
+    border-top-right-radius: 18px;;
+    border-top-left-radius: 18px;;
+    /*margin-top: -60px;*/
+    /*margin-left: -32px;*/
+    /*margin-right: -40px;*/
+    width: calc(100% + 4px);
+    height: 30px;
+    background-color: var(--ooredoo-red);
+}
+.dark .recharge-card{
+    box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.77);
+}
+.recharge-card .fanous{
+    height: 50%;
+    right: 12px!important;
+    top: -15px!important;
+    z-index: -1;
+}
+.recharge-card .ooredoo-calls .to-ooredoo {
+    font-weight: normal;
+    font-size: 1.1em;
+    font-family: rubik, ooredoobold, Arial;;
+}
+.recharge-card .ooredoo-calls .call-count {
+    font-size: 1.7em;
+    font-weight: 800;
+    padding: 0 4px;
+    font-family: rubik-bold, ooredoobold, Arial;
+    /*color: var(--ooredoo-red);*/
+    /*font-family: NotoSans-Bold;*/
+}
+.recharge-card .internet {
+    font-size: 3.1em;
+    font-weight: 800;
+    color: var(--ooredoo-red);
+    z-index: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: rubik-bold, ooredoobold, Arial;
+}
+.recharge-card .internet .gigas {
+    flex: 1;
+    color: #171717;
+    letter-spacing: -2px;
+}
+.recharge-card .available-days{
+    border-top: 1px dashed grey;
+    padding-top: 8px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    margin-left: -30px;
+    width: calc(100% + 60px) ;
+}
+/*====================================================================================================================*/
 .text-red {
     color: var(--ooredoo-red) !important;
 }
-
-.recharge-offer-card .buy img {
-    transition: filter 300ms ease;
-    border-radius: 20px;
-    transition-property: filter, box-shadow;
-}
-
-.recharge-offer-card .buy img:hover {
-    filter: brightness(1.2);
-    box-shadow: 0px 0px 1px 8px rgba(128, 128, 128, 0.1);
-}
-
-.recharge-offer-card .buy h3 sup {
-    font-family: rubik, ooredoobold, Arial;
-}
-
-.recharge-offer-card .buy h3 {
-    color: var(--ooredoo-red);
-    font-size: 2.5em;
-    font-family: rubik, ooredoobold, Arial;;
-}
-
-.recharge-offer-card .buy {
-    /*margin-top: 60px;*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    width: calc(100% - 15px);
-}
-
-.recharge-offer-card .buy a {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-/*========================*/
 .recharge .md-recharge-film .favourit-film .anaflix-logo {
     position: absolute;
     top: 86px;
@@ -770,7 +775,32 @@ input, select {
 .sahla-box-cards .image-boost{
     margin-top: 50px;
 }
+
+.dark .ramadan-promo-header{
+    color: #cdcdcd;
+}
+.ramadan-promo-header img{
+    max-width: 450px;
+}
+.ramadan-promo-header h2{
+    font-size: 7.1em;
+    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+}
+
+
+.ramadan-forfait-carousel >.container{
+    max-width: 1042px;
+}
+.ramadan-forfait-carousel{
+    min-height: 480px;
+    margin-top:80px;
+    margin-bottom:80px;
+}
+
 @media (max-width: 1199px) {
+    .ramadan-forfait-carousel{
+        margin-bottom:200px;
+    }
     .sahla-box-cards{
         margin-bottom: 0px;
     }
@@ -789,16 +819,6 @@ input, select {
         transform-origin: bottom;
     }
 }
-.dark .ramadan-promo-header{
-    color: #cdcdcd;
-}
-.ramadan-promo-header img{
-    max-width: 450px;
-}
-.ramadan-promo-header h2{
-    font-size: 7.1em;
-    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
-}
 @media (max-width: 1000px) {
     .ramadan-promo .ramadan-flower{
         max-width: 70%;
@@ -809,8 +829,4 @@ input, select {
     .ramadan-promo-header img{
         max-width: 100%;
     }
-}
-
-.ramadan-forfait-carousel{
-    min-height: 600px;
 }
