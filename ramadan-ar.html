@@ -64,8 +64,20 @@
                 ["contact"]: document.getElementById('contact').value,
                 ["condition-accept"]: document.getElementById('condition-accept').checked,
             }
+            const answers={
+                answer1:document.getElementById("answer1").checked,
+                answer2:document.getElementById("answer2").checked,
+            }
+            const userHaveAnswer=Object.entries(answers).some(([key, value]) => value && value.toString().trim() !== "")
+            console.log(answers,userHaveAnswer)
+            if(!userHaveAnswer){
+                document.getElementById("answer-required").classList.remove("d-none");
+                return;
+            }else{
+                document.getElementById("answer-required").classList.add("d-none");
+            }
             const notEmpty = Object.entries(value).every(([key, value]) => value.toString().trim() !== "")
-            if (notEmpty && document.getElementById('condition-accept').checked) {
+            if (notEmpty && document.getElementById('condition-accept').checked && userHaveAnswer) {
                 if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["contact"])) return
                 if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["sahla-box-number"])) return
                 console.log(value);
@@ -207,6 +219,7 @@
                                 </div>
                             </div>
                         </div>
+                        <span class="text-red text-ar d-none" id="answer-required">يجب عليك اختيار إجابة واحدة على الأقل</span>
                     </div>
                     <h3 class="text-ar text-right">معلومات شخصية:</h3>
                     <br>
@@ -214,23 +227,23 @@
                         <div class="rendered-form">
                             <div class="formbuilder-text form-group field-sahla-box-number">
                                 <label for="sahla-box-number" class="formbuilder-text-label text-ar">رقم ساهلة Box<span class="formbuilder-required">*</span></label>
-                                <input type="tel" pattern="^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,7}$" placeholder="Ex: 010 XXXX" class="form-control" name="sahla-box-number" access="false" maxlength="100" id="sahla-box-number" required="required" aria-required="true">
+                                <input type="tel" pattern="^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,7}$" placeholder="مثال : 010XXXX" class="form-control" name="sahla-box-number" access="false" maxlength="100" id="sahla-box-number" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-prenom">
                                 <label for="prenom" class="formbuilder-text-label text-ar">الاسم<span class="formbuilder-required">*</span></label>
-                                <input type="text" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" placeholder="votre prénom" class="form-control" name="prenom" access="false" maxlength="50" id="prenom" required="required" aria-required="true">
+                                <input type="text" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" placeholder="الاسم" class="form-control" name="prenom" access="false" maxlength="50" id="prenom" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-nom">
                                 <label for="nom" class="formbuilder-text-label text-ar">اللقب<span class="formbuilder-required">*</span></label>
-                                <input type="text" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" placeholder="votre nom" class="form-control" name="nom" access="false" maxlength="50" id="nom" required="required" aria-required="true">
+                                <input type="text" onkeydown="return /[A-Za-z\s]{1,32}/i.test(event.key)" placeholder="اللقب" class="form-control" name="nom" access="false" maxlength="50" id="nom" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-adresse">
                                 <label for="adresse" class="formbuilder-text-label text-ar">العنوان<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="Ex: 12 rue de la porte" class="form-control" name="adresse" access="false" maxlength="300" id="adresse" required="required" aria-required="true">
+                                <input type="text" placeholder="مثال : 12 شارع XXX" class="form-control" name="adresse" access="false" maxlength="300" id="adresse" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-text form-group field-commune">
                                 <label for="commune" class="formbuilder-text-label text-ar">الدائرة<span class="formbuilder-required">*</span></label>
-                                <input type="text" placeholder="Ex: Alger" class="form-control" name="commune" access="false" maxlength="15" id="commune" required="required" aria-required="true">
+                                <input type="text" placeholder="مثال : الجزائر" class="form-control" name="commune" access="false" maxlength="15" id="commune" required="required" aria-required="true">
                             </div>
                             <div class="formbuilder-select form-group field-wilaya">
                                 <label for="wilaya" class="formbuilder-select-label text-ar">الولاية<span class="formbuilder-required">*</span></label>

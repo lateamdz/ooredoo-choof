@@ -54,18 +54,30 @@
     <script type="text/javascript">
         function process(element) {
             // const form = element.closest('form')
-            const value = {
+            const value=  {
                 ["sahla-box-number"]: document.getElementById('sahla-box-number').value,
                 ["prenom"]: document.getElementById('prenom').value,
-                ["nom"]: document.getElementById('nom').value,
+                ["nom"]:  document.getElementById('nom').value,
                 ["address"]: document.getElementById('adresse').value,
                 ["commune"]: document.getElementById('commune').value,
                 ["wilaya"]: document.getElementById('wilaya').value,
                 ["contact"]: document.getElementById('contact').value,
                 ["condition-accept"]: document.getElementById('condition-accept').checked,
             }
+            const answers={
+                answer1:document.getElementById("answer1").checked,
+                answer2:document.getElementById("answer2").checked,
+            }
+            const userHaveAnswer=Object.entries(answers).some(([key, value]) => value && value.toString().trim() !== "")
+            console.log(answers,userHaveAnswer)
+            if(!userHaveAnswer){
+                document.getElementById("answer-required").classList.remove("d-none");
+                return;
+            }else{
+                document.getElementById("answer-required").classList.add("d-none");
+            }
             const notEmpty = Object.entries(value).every(([key, value]) => value.toString().trim() !== "")
-            if (notEmpty && document.getElementById('condition-accept').checked ) {
+            if (notEmpty && document.getElementById('condition-accept').checked && userHaveAnswer) {
                 if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["contact"])) return
                 if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["sahla-box-number"])) return
                 console.log(value);
@@ -205,6 +217,7 @@
                                 </div>
                             </div>
                         </div>
+                        <span class="text-red text-bold d-none" id="answer-required">Vous devez choisir au moins une réponse</span>
                     </div>
                     <h3 class="text-left">Informations Personnelles:</h3>
                     <br>
