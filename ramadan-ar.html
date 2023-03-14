@@ -69,7 +69,7 @@
                 if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["contact"])) return
                 if(!new RegExp(`^[\\\\+]?[(]?[0-9]{3}[)]?[-\\\\s\\\\.]?[0-9]{3}[-\\\\s\\\\.]?[0-9]{4,7}$`).test(value["sahla-box-number"])) return
                 console.log(value);
-                window.localStorage.setItem("participated","true");
+                window.localStorage.setItem("participated-ramadan-2023","true");
                 document.getElementById("custom-modal").classList.remove("modal-hidden");
             }
         }
