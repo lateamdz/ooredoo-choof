@@ -2,34 +2,40 @@
     font-family: outfit;
     src: url(../fonts/outfit.ttf);
 }
+
 @font-face {
     font-family: outfit-bold;
     src: url(../fonts/outfit.ttf);
     font-weight: 800;
 }
+
 @font-face {
     font-family: rubik;
     src: url(../fonts/rubik.ttf);
     font-weight: 200;
 }
+
 @font-face {
     font-family: rubik-bold;
     src: url(../fonts/rubik.ttf);
     font-weight: 800;
 }
-:root{
-    --ooredoo-red:#ed1c24;
-    --color-qaada:#ffaa01;
+
+:root {
+    --ooredoo-red: #ed1c24;
+    --color-qaada: #ffaa01;
 }
-#page, body, html{
-    font-family: rubik,ooredooregular, Arial ;
+
+#page, body, html {
+    font-family: rubik, ooredooregular, Arial;
 }
+
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .price-unit,
 .md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit .price .price-hero .currency,
-.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a
-{
-    font-family: rubik,ooredooregular, Arial ;
+.md-my-account .section-content .my-account-container .my-account-holder .holder-content .holder-content-inner .credit-info a {
+    font-family: rubik, ooredooregular, Arial;
 }
+
 .choof-logo {
     height: 48px;
 }
@@ -40,6 +46,10 @@
 
 .pr-2 {
     padding-right: 8px;
+}
+
+.d-none {
+    display: none !important;
 }
 
 /*@media (min-width: 1200px) {*/
@@ -92,11 +102,13 @@
     color: transparent !important;
     margin-left: -1em;
 }
-.text-fr-bold{
-    font-family: outfit-bold,ooredoobold, Arial,sans-serif !important;
+
+.text-fr-bold {
+    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
 }
+
 .text-fr {
-    font-family: rubik, ooredoobold,Arial;,sans-serif !important;
+    font-family: rubik, ooredoobold, Arial;, sans-serif !important;
 }
 
 .ar .recharge-offer-card .hand-3d {
@@ -120,14 +132,14 @@
 .recharge-offer-card .ooredoo-calls .to-ooredoo {
     font-weight: normal;
     font-size: 1.1em;
-    font-family: rubik, ooredoobold,Arial;;
+    font-family: rubik, ooredoobold, Arial;;
 }
 
 .recharge-offer-card .ooredoo-calls .call-count {
     font-size: 1.7em;
     font-weight: 800;
     padding: 0 4px;
-    font-family: rubik-bold,ooredoobold, Arial;
+    font-family: rubik-bold, ooredoobold, Arial;
     /*color: var(--ooredoo-red);*/
     /*font-family: NotoSans-Bold;*/
 }
@@ -155,7 +167,7 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
-    font-family: rubik-bold,ooredoobold, Arial;
+    font-family: rubik-bold, ooredoobold, Arial;
 }
 
 .recharge-offer-card .internet img {
@@ -186,13 +198,13 @@
 }
 
 .recharge-offer-card .buy h3 sup {
-    font-family: rubik, ooredoobold,Arial;
+    font-family: rubik, ooredoobold, Arial;
 }
 
 .recharge-offer-card .buy h3 {
     color: var(--ooredoo-red);
     font-size: 2.5em;
-    font-family: rubik, ooredoobold,Arial;;
+    font-family: rubik, ooredoobold, Arial;;
 }
 
 .recharge-offer-card .buy {
@@ -339,7 +351,9 @@
     background: url("../images/ramadan/bg-ramadan.png");
     background-position: bottom left;
 }
-.ramadan-banner .offer-description{
+
+.ramadan-banner .offer-description {
+    max-width: 500px;
     flex: 1;
     text-align: center;
     flex-direction: column;
@@ -348,27 +362,32 @@
     justify-content: flex-start;
     z-index: 2;
 }
-.ramadan-banner .offer-image{
+
+.ramadan-banner .offer-image {
     flex: 1;
     display: flex;
     max-width: 560px;
 }
 
-.ramadan-banner .offer-image img{
-    transform: scale(2);
-    transform-origin: 60% 60%;
+.ramadan-banner .offer-image img {
+    transform: scale(2.5);
+    transform-origin: 40% 68%;
     margin-top: -40px;
     width: 100%;
 }
-.ar .ramadan-banner .offer-image img{
-    transform-origin: 20% 70%;
+
+.ar .ramadan-banner .offer-image img {
+    transform-origin: 55% 70%;
 }
+
 .ramadan-title {
-    font-family:  outfit-bold, Arial, sans-serif;
+    font-family: outfit-bold, Arial, sans-serif;
 }
+
 .ramadan-title h4 {
     font-size: 2.5em;
 }
+
 .ramadan-title h2 {
     flex: 1;
     font-size: 5em;
@@ -381,21 +400,23 @@
 }
 
 .ramadan-description {
-    max-width: 70%;
+    padding-top: 64px;
+    max-width: 87%;
     font-family: outfit, Arial, sans-serif;
-    padding: 64px 34px 16px;
+    /*padding: 64px 34px 16px;*/
     font-size: 1.6em;
-    text-align: start;
+    text-align: justify;
+
 }
 
 .ramadan-participate-section {
     margin-top: 54px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    font-family: outfit,  Arial;
+    font-family: outfit, Arial;
 }
 
 .ramadan-participate-section .conditions {
@@ -424,40 +445,48 @@
     }
 
 }
+
 @media (max-width: 1000px) {
     .ramadan-banner {
         padding: 34px 5px;
         flex-direction: column-reverse;
     }
-    .ramadan-banner .offer-description{
+
+    .ramadan-banner .offer-description {
         margin-top: 20px;
         padding: 0 10%;
     }
-    .ramadan-banner .offer-image img{
+
+    .ramadan-banner .offer-image img {
         margin-top: 0;
         transform: scale(1.2);
         transform-origin: bottom;
     }
-    .ramadan-header img{
-        width:40%
+
+    .ramadan-header img {
+        width: 40%
     }
 
-    .ramadan-title h4{
+    .ramadan-title h4 {
         font-size: 1em;
     }
-    .ramadan-title h2{
+
+    .ramadan-title h2 {
         font-size: 2em;
         margin-top: 10px;
     }
+
     .ramadan-description {
         max-width: 100%;
         padding: 35px 20px 16px;
         font-size: 1.1em;
     }
-    .ramadan-participate-section{
+
+    .ramadan-participate-section {
         margin-top: 5px;
         transform: scale(0.8);
     }
+
     .ramadan-participate-section .ramadan-participate {
         transform: scale(1);
     }
@@ -480,11 +509,11 @@
     border-radius: 0.8em;
     border: unset;
     outline: unset;
-    font-family: outfit,ooredoobold, Arial;
+    font-family: outfit, ooredoobold, Arial;
 }
 
 .cancel-btn {
-    font-family:  outfit,ooredoobold, Arial;
+    font-family: outfit, ooredoobold, Arial;
     color: #262626;
     padding: 8px 24px;
     background-color: #dedede;
@@ -518,12 +547,14 @@
     text-align: left;
 }
 
-.ramadan-form h3{
+.ramadan-form h3 {
     font-family: rubik-bold, ooredoobold, Arial;
 }
-input,select{
+
+input, select {
     font-family: rubik, ooredoobold, Arial;
 }
+
 .ramadan-form {
     font-family: rubik, Arial;
     box-shadow: 0px 0px 60px -24px rgba(0, 0, 0, 0.75);
@@ -556,6 +587,22 @@ input,select{
     width: 100%;
     text-align: start;
 }
+.formbuilder-required{
+    padding-inline-start: 4px;
+    color: var(--ooredoo-red);
+}
+.question p {
+    text-align: start;
+    border: 1px solid #ccc;
+    padding: 4px 8px ;
+    border-radius: 4px;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 /*======================================*/
 .custom-modal {
@@ -584,7 +631,7 @@ input,select{
     border-radius: 0.8em;
     border: unset;
     outline: unset;
-    font-family: rubik,ooredoobold, Arial;
+    font-family: rubik, ooredoobold, Arial;
 }
 
 .red-btn:hover {
@@ -596,7 +643,7 @@ input,select{
 }
 
 .custom-modal-popup {
-    font-family: rubik,ooredoobold, Arial;
+    font-family: rubik, ooredoobold, Arial;
     display: flex;
     align-items: center;
     justify-content: center;
