@@ -169,16 +169,18 @@
     height: 50%;
     right: 12px!important;
     top: -20px!important;
+    z-index: -1;
 }
 .recharge-offer-card.yellow  {
     max-width: 260px;
     padding: 30px;
     overflow: hidden;
     background: var(--color-qaada);
+    min-width: 180px!important;
+    position: relative;
+    isolation: isolate;
 }
-.sahla-box-cards .image-boost{
-    margin-top: 50px;
-}
+
 .recharge-offer-card.white {
     background: #ffffff;
 }
@@ -726,4 +728,89 @@ input, select {
 
 .modal-hidden {
     display: none;
+}
+/*boost section ======================================================================================================*/
+.ramadan-promo{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    margin-top: -84px;
+    margin-bottom: 84px;
+    padding: 20px 0;
+    background-color:white;
+}
+.dark .ramadan-promo{
+    background-color:#121212;
+}
+.ramadan-forfait-boost{
+    position: relative;
+    isolation: isolate;
+}
+.ramadan-forfait-boost .ramadan-shape{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.5);
+    transform-origin: 66% 18%;
+}
+.ramadan-promo .ramadan-flower{
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-height: 45%;
+    z-index: -1;
+}
+.sahla-box-cards{
+    max-width: 960px;
+    margin: 60px auto;
+    margin-left: 44px;
+    position: relative;
+    isolation: isolate;
+}
+.sahla-box-cards .image-boost{
+    margin-top: 50px;
+}
+@media (max-width: 1199px) {
+    .sahla-box-cards{
+        margin-bottom: 0px;
+    }
+    .image-boost p{ text-align: center}
+    .image-boost img{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .sahla-box-cards{
+        margin-left: auto;
+    }
+    .ramadan-forfait-boost .ramadan-shape {
+        transform: scale(5) rotate(-90deg) translate(-40% , 50%);
+        /*transform: scale(4.3) rotate(-90deg) translate(-38% , 50%);*/
+        /*transform: scale(4.3) rotate(-90deg) translate(-44% , 50%);*/
+        transform-origin: bottom;
+    }
+}
+.dark .ramadan-promo-header{
+    color: #cdcdcd;
+}
+.ramadan-promo-header img{
+    max-width: 450px;
+}
+.ramadan-promo-header h2{
+    font-size: 7.1em;
+    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+}
+@media (max-width: 1000px) {
+    .ramadan-promo .ramadan-flower{
+        max-width: 70%;
+    }
+    .ramadan-promo-header h2{
+        font-size: 4em;
+    }
+    .ramadan-promo-header img{
+        max-width: 100%;
+    }
+}
+
+.ramadan-forfait-carousel{
+    min-height: 600px;
 }
