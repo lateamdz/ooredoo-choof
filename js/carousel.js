@@ -1,4 +1,5 @@
 class CustomCarousel{
+    ar=false;
     index=0;
     count=0;
     slideBy=100;
@@ -10,13 +11,13 @@ class CustomCarousel{
 
         this.count=content.childElementCount;
         this.index=Number(content.getAttribute("data-index")||0);
+        this.ar=Boolean(content.getAttribute("data-ar"));
 
         this.update(content,carousel,next,prev);
         this.UIchanges(next,prev,this.index);
-        // console.log(this.count,this.index,this.slideBy)
+
         window.addEventListener('resize', (event)=> {
             this.update(content,carousel,next,prev)
-            // this.UIchanges(next,prev, this.index);
         }, true);
     }
     UIchanges(next,prev,index){
@@ -33,20 +34,31 @@ class CustomCarousel{
         }
     }
     update(content,carousel,next,prev){
+        const translate=(i,slide)=>{
+            if(this.ar){
+                if(window.innerWidth<=600){
+                    content.style.transform = `translateX(${((-(this.count-i-1)*slide))}px)`;
+                }else{
+                    content.style.transform = `translateX(${((i-1)*slide)}px)`;
+                }
+            }else{
+                content.style.transform = `translateX(-${i*slide}px)`;
+            }
+        }
         const margin=0;
         const childElement=carousel.querySelector('.carousel-item');
         // this.slideBy=childElement.clientWidth+margin;
         this.slideBy=childElement.getBoundingClientRect().width+margin;
-        content.style.transform = `translateX(-${this.index*this.slideBy}px)`;
-
+        // content.style.transform = `translateX(${(this.ar?1:-1)*this.index*this.slideBy}px)`;
+        translate(this.index,this.slideBy)
         next.onclick = ()=>{
             this.index=this.index<this.count-1?this.index+1:this.index;
-            content.style.transform = `translateX(-${this.index*this.slideBy}px)`;
+            translate(this.index,this.slideBy)
            this.UIchanges(next,prev, this.index)
         };
         prev.onclick = ()=>{
             this.index=this.count>0?this.index-1:0;
-            content.style.transform = `translateX(-${this.index*this.slideBy}px)`;
+            translate(this.index,this.slideBy)
             this.UIchanges(next,prev, this.index)
         };
     }

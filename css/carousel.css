@@ -22,6 +22,7 @@
 /*    height: 160%;*/
 /*    box-shadow: inset 0 0 30px 40px white;*/
 /*}*/
+
 .custrom-carousel-content{
     height: 100%;
     margin: 0 30px;
@@ -60,6 +61,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.ar .custrom-carousel-content,.ar .carousel-buttons{
+    flex-direction: row-reverse;
+}
+.ar .carousel-buttons img{
+    transform: rotate(180deg);
 }
 @media (max-width: 600px) {
     .carousel-item{
