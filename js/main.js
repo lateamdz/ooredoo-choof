@@ -224,7 +224,6 @@ $(function() {
 		}else{
 		$(divClass).css("min-height", "inherit"); // 30 est relative au Padding
 		}
-		console.log(maxHeight);		
 	}
 	
 	heightUnify(".my-account-holder",990,36);
