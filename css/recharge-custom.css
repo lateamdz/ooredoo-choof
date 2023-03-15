@@ -168,7 +168,8 @@
 }
 .ar .boost-card .fanous{
     right: auto!important;
-    left: 12px!important;
+    left: 4px!important;
+    transform: scaleX(-1);
 }
 .boost-card .ooredoo-calls .to-ooredoo {
     font-weight: normal;
@@ -250,7 +251,8 @@
 }
 .ar .recharge-card .fanous{
     right: auto!important;
-    left: 12px!important;
+    left: 2px!important;
+    transform: scaleX(-1);
 }
 .recharge-card .ooredoo-calls .to-ooredoo {
     font-weight: normal;
@@ -406,7 +408,7 @@
 .ramadan-banner {
     overflow: hidden;
     padding: 34px;
-    min-height: calc(100vh - 200px);
+    /*min-height: calc(100vh - 200px);*/
     width: 100%;
     background: var(--color-qaada);
     /*background: linear-gradient(45deg, var(--color-qaada) 0%, rgba(139, 21, 56, 1) 100%);*/
@@ -423,6 +425,7 @@
 
 .ramadan-banner .offer-description {
     max-width: 660px;
+    margin-bottom: 20px;
     flex: 1;
     text-align: center;
     flex-direction: column;
@@ -453,21 +456,21 @@
     font-family: outfit-bold, Arial, sans-serif;
 }
 
-.ramadan-title h4 {
-    font-size: 2.7em;
-}
 
 .ramadan-title h2 {
     flex: 1;
-    font-size: 7.1em;
-    font-weight: 800;
+    font-size: 635%;
+    margin-top: 10px;
+}
+.ar .ramadan-title h2 {
+    font-size:635%;
+    margin-top: 10px;
+}
+.ramadan-title h4 {
+    font-size: 245%;
 }
 .ar .ramadan-title h4 {
-    font-size: 2.7em;
-}
-
-.ar .ramadan-title h2 {
-    font-size: 7.1em;
+    font-size: 245%;
 }
 
 .ramadan-header img {
@@ -476,7 +479,9 @@
 }
 
 .ramadan-description {
-    padding-top: 64px;
+    padding-top: 40px;
+    padding-left: 14px;
+    padding-right: 18px;
     max-width: 87%;
     font-family: outfit, Arial, sans-serif;
     /*padding: 64px 34px 16px;*/
@@ -506,21 +511,13 @@
     background-color: var(--ooredoo-red);
     padding: 8px 24px;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 800;
     border-radius: 1.5em;
     transform: scale(1.6);
 }
 
-@media (max-width: 600px) {
-    .ramadan-banner {
-        padding: 34px 5px;
-        /*background-position: bottom -20%;*/
-        background-size: auto 100%;
 
-    }
-
-}
 
 @media (max-width: 1000px) {
     .ramadan-banner {
@@ -533,9 +530,9 @@
         padding: 0 10%;
     }
 
-    .ramadan-banner .offer-image img {
+    .ramadan-banner .offer-image img,.ar .ramadan-banner .offer-image img {
         margin-top: 0;
-        transform: scale(1.2);
+        transform: scale(1.5);
         transform-origin: bottom;
     }
 
@@ -543,22 +540,21 @@
         width: 40%
     }
 
-    .ramadan-title h4 {
-        font-size: 1.5em;
-    }
-
     .ramadan-title h2 {
-        font-size: 4em;
+        font-size: 550%;
         margin-top: 10px;
+    }
+    .ar .ramadan-title h2 {
+        font-size:550%;
+        margin-top: 10px;
+    }
+    .ramadan-title h4 {
+        font-size: 220%;
     }
    .ar .ramadan-title h4 {
-        font-size: 1.5em;
+        font-size: 220%;
     }
 
-    .ar .ramadan-title h2 {
-        font-size: 4em;
-        margin-top: 10px;
-    }
 
     .ramadan-description {
         max-width: 100%;
@@ -573,6 +569,31 @@
 
     .ramadan-participate-section .ramadan-participate {
         transform: scale(1);
+    }
+}
+@media (max-width: 600px) {
+    .ramadan-banner {
+        padding: 34px 5px;
+        /*background-position: bottom -20%;*/
+        background-size: auto 100%;
+
+    }
+    .ramadan-title h2 {
+        font-size: 12vw;
+        margin-top: 10px;
+    }
+    .ar .ramadan-title h2 {
+        font-size:12vw;
+        margin-top: 10px;
+    }
+    .ramadan-title h4 {
+        font-size: 4.6vw;
+    }
+    .ar .ramadan-title h4 {
+        font-size: 4.6vw;
+    }
+    .ramadan-participate-section .ramadan-participate {
+        transform: scale(1.2);
     }
 }
 
@@ -748,8 +769,7 @@ input, select {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    margin-top: -84px;
-    margin-bottom: 84px;
+    margin-top: 0;
     padding: 20px 0;
     background-color:white;
 }
@@ -789,13 +809,17 @@ input, select {
     color: #cdcdcd;
 }
 .ramadan-promo-header img{
-    max-width: 450px;
-}
-.ramadan-promo-header h2{
-    font-size: 7.1em;
-    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+    max-width: 350px;
 }
 
+.ramadan-promo-header h2{
+    color: black;
+    font-size: 6vw;
+    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+}
+.dark .ramadan-promo-header h2{
+    color: inherit;
+}
 
 .ramadan-forfait-carousel >.container{
     max-width: 1042px;
@@ -856,7 +880,9 @@ input, select {
     left: 10px;
 }
 
-
+.image-boost img{
+    width: 80%;
+}
 @media (max-width: 1199px) {
     .ramadan-forfait-carousel{
         margin-bottom:200px;
@@ -866,8 +892,9 @@ input, select {
     }
     .image-boost p{ text-align: center}
     .image-boost img{
-        width: 80%;
-        margin-left: 10%;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
     }
     .sahla-box-cards{
         margin-left: auto;
@@ -879,14 +906,20 @@ input, select {
         transform-origin: bottom;
     }
 }
+@media (max-width: 600px) {
+    .ramadan-forfait-carousel{
+        margin-bottom:80px;
+    }
+}
 @media (max-width: 1000px) {
     .ramadan-promo .ramadan-flower{
         max-width: 70%;
     }
     .ramadan-promo-header h2{
-        font-size: 4em;
+        font-size: 9vw;
     }
     .ramadan-promo-header img{
-        max-width: 100%;
+        max-width: 80%;
+        margin-left: 10%;
     }
 }
