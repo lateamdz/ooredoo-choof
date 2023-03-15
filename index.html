@@ -55,7 +55,7 @@
     <link href="css/recharge-custom.css" rel="stylesheet">
     <script type = "text/javascript" defer>
         function participate() {
-            const participated = window.localStorage.getItem("participated-ramadan-2023").toString();
+            const participated = (window.localStorage.getItem("participated-ramadan-2023")||"").toString();
             setTimeout(()=>{
                 if(participated){
                     document.getElementById("participate").classList.add("disable-link");
@@ -63,11 +63,53 @@
             },100)
         }
         participate();
+        function getAnchor() {
+            const currentUrl = document.URL, urlParts   = currentUrl.split('#');
+            if (urlParts.length > 1) {
+                const anchor=urlParts.pop();
+                console.log(anchor);
+                setTimeout(()=>{
+                    if(anchor==="forfait"){
+                        document.getElementById("custom-modal").classList.remove("modal-hidden");
+                        document.getElementById("custom-modal-2").classList.add("modal-hidden");
+                    }else if(anchor==="boost"){
+                        document.getElementById("custom-modal-2").classList.remove("modal-hidden");
+                        document.getElementById("custom-modal").classList.add("modal-hidden");
+                    }
+                },400)
+            }
+        }
+        getAnchor();
+
+
+        function closeModal(){
+            document.getElementById("custom-modal").classList.add("modal-hidden");
+        }
+        function closeModal2(){
+            document.getElementById("custom-modal-2").classList.add("modal-hidden");
+        }
     </script>
 </head>
 
 <body class="recharge" >
-
+<div class="custom-modal modal-hidden" id="custom-modal">
+    <div class="custom-modal-popup relative">
+        <button class="close text" onclick="closeModal()"><img src="images/ramadan/close.png" alt="close"/></button>
+        <img src="images/ramadan/fanous.png" alt="forfait recharge" class="fanous"/>
+        <p class="text-center text-outfit">
+            Profitez de volume internet doublé sur <br> tous les forfait sahla box.
+        </p>
+    </div>
+</div>
+<div class="custom-modal modal-hidden" id="custom-modal-2">
+    <div class="custom-modal-popup relative">
+        <button class="close text" onclick="closeModal2()"><img src="images/ramadan/close.png" alt="close"/></button>
+        <img src="images/ramadan/fanous.png" alt="forfait recharge" class="fanous"/>
+        <p class="text-center text-outfit">
+            Profitez de volume internet doublé sur <br> tous les boosts sahla box.
+        </p>
+    </div>
+</div>
 <div class="accessibilities mobileMenu" style="display: none;">
     <div class="accessibilities-header">
         <img src="images/choof-black.svg" alt="Logo ooredoo" class="img-responsive">
@@ -878,7 +920,17 @@
                 </div>
             </div>
         </section>
+        <div class="center social-footer">
+            <h1 class="text-uppercase text-red text-outfit">restez connecés</h1>
+            <div class="social-links">
+                <a href="https://web.facebook.com/OoredooDZ" class="social-link" target="_blank"><img src="images/ramadan/social_fb.png" alt="facebook"/></a>
+                <a href="https://www.instagram.com/ooredooalgerie/" class="social-link" target="_blank"><img src="images/ramadan/social_instagram.png" alt="instagram"/></a>
+                <a href="https://twitter.com/OoredooDZ" class="social-link" target="_blank"><img src="images/ramadan/social_twitter.png" alt="twitter"/></a>
+                <a href="https://www.linkedin.com/company/ooredoo-algerie/" class="social-link" target="_blank"><img src="images/ramadan/social_linkedin.png" alt="linkedin"/></a>
+                <a href="https://www.youtube.com/channel/UCHA12Axwf7nAHgeJau3aHGw" class="social-link" target="_blank"><img src="images/ramadan/social_youtube.png" alt="youtube"/></a>
+            </div>
 
+        </div>
     </div>
     <!-- /main-content -->
     <!-- Block Footer -->

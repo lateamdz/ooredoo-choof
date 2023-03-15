@@ -727,6 +727,7 @@ input, select {
 }
 
 .custom-modal-popup {
+    overflow: hidden;
     font-family: rubik, ooredoobold, Arial;
     display: flex;
     align-items: center;
@@ -804,6 +805,57 @@ input, select {
     margin-top:80px;
     margin-bottom:80px;
 }
+
+.social-footer{
+    background-color:#f8f8f8;
+    padding-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+}
+.dark .social-footer{
+    background-color:#101010;
+}
+.social-links{
+    max-width: 500px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-links a{
+    height: 40px;
+    width: 40px;
+}
+.social-links a img{
+    height: 100%;
+}
+.custom-modal-popup .close{
+    opacity: 1;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.custom-modal-popup .fanous{
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    opacity: 0.5;
+    height: 85%;
+    z-index: -1;
+}
+.ar .custom-modal-popup .fanous{
+    top: -12px;
+    left: auto;
+    right: 10px;
+}
+.ar .custom-modal-popup .close{
+    right: auto;
+    top: 10px;
+    left: 10px;
+}
+
 
 @media (max-width: 1199px) {
     .ramadan-forfait-carousel{
