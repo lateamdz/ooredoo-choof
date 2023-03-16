@@ -908,11 +908,7 @@ input, select {
         transform-origin: bottom;
     }
 }
-@media (max-width: 600px) {
-    .ramadan-forfait-carousel{
-        margin-bottom:80px;
-    }
-}
+
 @media (max-width: 1000px) {
     .ramadan-promo .ramadan-flower{
         max-width: 70%;
@@ -923,5 +919,31 @@ input, select {
     .ramadan-promo-header img{
         max-width: 80%;
         margin-left: 10%;
+    }
+}
+@media (max-width: 600px) {
+    .ramadan-forfait-carousel{
+        margin-bottom:80px;
+    }
+}
+@media (max-width: 360px) {
+    .boost-card{
+        min-width: 160px!important;
+        padding: 15px!important;
+    }
+    .recharge-card .center a{
+        font-size: 16px!important;
+    }
+    .recharge-card .h3{
+        font-size: 20px!important;
+    }
+    .recharge-card:not(.special) .fanous{
+        top: -35px!important;
+    }
+    .gigas{
+        font-size: 34px!important;
+        /*margin-left: -30px;*/
+        /*margin-right: -30px;*/
+        /*padding-left: 15px;*/
     }
 }
