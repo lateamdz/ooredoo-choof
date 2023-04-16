@@ -209,19 +209,6 @@
     isolation: isolate;
 }
 
-.boost-card .fanous {
-    height: 50%;
-    right: 12px !important;
-    top: -20px !important;
-    z-index: -1;
-}
-
-.ar .boost-card .fanous {
-    right: auto !important;
-    left: 4px !important;
-    transform: scaleX(-1);
-}
-
 .boost-card .ooredoo-calls .to-ooredoo {
     font-weight: normal;
     font-size: 1.1em;
@@ -262,7 +249,7 @@
     flex: 1;
     border-radius: 18px;
     color: #171717;
-    min-height: 70%;
+    min-height: 66%;
     padding: 30px;
     padding-bottom: 0;
     padding-top: 16px;
@@ -302,19 +289,6 @@
 
 .dark .recharge-card {
     box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.77);
-}
-
-.recharge-card .fanous {
-    height: 50%;
-    right: 12px !important;
-    top: -15px !important;
-    z-index: -1;
-}
-
-.ar .recharge-card .fanous {
-    right: auto !important;
-    left: 2px !important;
-    transform: scaleX(-1);
 }
 
 .recharge-card .ooredoo-calls .to-ooredoo {
@@ -474,52 +448,6 @@
 
 /*====================================================================================================================*/
 /* QATAR BANNER */
-.ramadan-banner {
-    overflow: hidden;
-    padding: 34px;
-    /*min-height: calc(100vh - 200px);*/
-    width: 100%;
-    background: var(--color-qaada);
-    /*background: linear-gradient(45deg, var(--color-qaada) 0%, rgba(139, 21, 56, 1) 100%);*/
-    color: black;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 84px;
-    flex-wrap: wrap;
-    background: url("../images/ramadan/bg-ramadan.png");
-    background-position: bottom left;
-}
-
-.ramadan-banner .offer-description {
-    max-width: 660px;
-    margin-bottom: 20px;
-    flex: 1;
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 2;
-}
-
-.ramadan-banner .offer-image {
-    flex: 1;
-    display: flex;
-    max-width: 560px;
-}
-
-.ramadan-banner .offer-image img {
-    transform: scale(2.0);
-    transform-origin: 40% 68%;
-    margin-top: -40px;
-    width: 100%;
-}
-
-.ar .ramadan-banner .offer-image img {
-    transform-origin: 40% 70%;
-}
 
 .ramadan-title {
     font-family: outfit-bold, Arial, sans-serif;
@@ -864,6 +792,7 @@ input, select {
 .ramadan-forfait-boost {
     position: relative;
     isolation: isolate;
+    margin-bottom: 10vw;
 }
 
 .ramadan-forfait-boost .ramadan-shape {
@@ -884,14 +813,22 @@ input, select {
 
 .sahla-box-cards {
     max-width: 960px;
-    margin: 60px auto;
-    margin-left: 44px;
     position: relative;
     isolation: isolate;
+
+    border: 2px solid var(--ooredoo-red);
+    border-radius: 2rem;
+    padding: 2rem;
 }
 
-.sahla-box-cards .image-boost {
-    margin-top: 50px;
+.sahla-box-cards .image-boost h2{
+    color: black;
+    font-size: 555%;
+    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+}
+
+.dark .sahla-box-cards .image-boost h2{
+    color: #cdcdcd;
 }
 
 .dark .ramadan-promo-header {
@@ -904,7 +841,7 @@ input, select {
 
 .ramadan-promo-header h2 {
     color: black;
-    font-size: 6vw;
+    font-size: 555%;
     font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
 }
 
@@ -917,7 +854,6 @@ input, select {
 }
 
 .ramadan-forfait-carousel {
-    min-height: 480px;
     margin-top: 80px;
     margin-bottom: 80px;
 }
@@ -959,20 +895,6 @@ input, select {
     right: 10px;
 }
 
-.custom-modal-popup .fanous {
-    position: absolute;
-    top: -12px;
-    left: 10px;
-    opacity: 0.5;
-    height: 85%;
-    z-index: -1;
-}
-
-.ar .custom-modal-popup .fanous {
-    top: -12px;
-    left: auto;
-    right: 10px;
-}
 
 .ar .custom-modal-popup .close {
     right: auto;
@@ -991,6 +913,7 @@ input, select {
 
     .sahla-box-cards {
         margin-bottom: 0px;
+        width: calc(100% - 2rem);
     }
 
     .image-boost p {
@@ -1015,13 +938,15 @@ input, select {
     }
 }
 
+
 @media (max-width: 1000px) {
     .ramadan-promo .ramadan-flower {
         max-width: 70%;
     }
 
-    .ramadan-promo-header h2 {
-        font-size: 9vw;
+    .ramadan-promo-header h2,.sahla-box-cards .image-boost h2 {
+        font-size: 235%;
+        text-align: center;
     }
 
     .ramadan-promo-header img {
@@ -1054,10 +979,6 @@ input, select {
 
     .recharge-card .h3 {
         font-size: 20px !important;
-    }
-
-    .recharge-card:not(.special) .fanous {
-        top: -35px !important;
     }
 
     .gigas {
