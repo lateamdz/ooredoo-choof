@@ -825,7 +825,7 @@ input, select {
     max-width: 1012px;
     position: relative;
     isolation: isolate;
-
+    background-color: white;
     border: 2px solid var(--ooredoo-red);
     border-radius: 2rem;
     padding: 2rem;
@@ -835,8 +835,12 @@ input, select {
     color: black;
     font-size: 555%;
     font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+
 }
 
+.dark .sahla-box-cards {
+    background-color:  #121212;
+}
 .dark .sahla-box-cards .image-boost h2{
     color: #cdcdcd;
 }
@@ -914,7 +918,10 @@ input, select {
 }
 
 .bg-shape {
-
+    position: absolute;
+    margin: auto auto;
+    transform: scale(1.2) rotate(-11deg);
+    inset: 0 0;
 }
 @media (max-width: 1199px) {
     .default-forfait-carousel {
@@ -965,6 +972,10 @@ input, select {
 @media (max-width: 600px) {
     .default-forfait-carousel {
         margin-bottom: 80px;
+    }
+
+    .bg-shape {
+        top: -40%
     }
 }
 
