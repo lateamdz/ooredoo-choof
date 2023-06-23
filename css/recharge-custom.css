@@ -266,6 +266,9 @@
     box-shadow: 5px 5px 20px 2px rgba(121, 121, 121, 0.6);
 }
 
+.recharge-card.special .internet {
+        font-size: 2.6em;
+}
 .recharge-card.special {
     overflow: unset;
     transform: scale(1);
@@ -765,8 +768,17 @@ input, select {
 
 .custom-modal-popup p {
     font-size: 1.2em;
+    margin-top: 40px;
 }
 
+.custom-modal-popup h2{
+    background-color: var(--ooredoo-red);
+    color: white!important;
+    position: absolute;
+    top: -22px;
+    padding: 8px 16px;
+    border-radius: 0 0 16px 16px;
+}
 .custom-modal-popup {
     overflow: hidden;
     font-family: rubik, ooredoobold, Arial;
@@ -779,8 +791,12 @@ input, select {
     max-width: 400px;
     background-color: white;
     border-radius: 14px;
+    border: 2px solid var(--ooredoo-red);
 }
-
+.dark .custom-modal-popup {
+    background-color: #121212;
+    color: #cdcdcd;
+}
 .modal-hidden {
     display: none;
 }
