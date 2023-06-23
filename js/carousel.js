@@ -39,7 +39,7 @@ class CustomCarousel{
                 if(window.innerWidth<=600){
                     content.style.transform = `translateX(${((-(this.count-i-1)*slide))}px)`;
                 }else{
-                    content.style.transform = `translateX(${((i-1)*slide)}px)`;
+                    content.style.transform = `translateX(${((i-2)*slide)}px)`;
                 }
             }else{
                 content.style.transform = `translateX(-${i*slide}px)`;

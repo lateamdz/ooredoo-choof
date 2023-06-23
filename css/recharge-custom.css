@@ -270,7 +270,14 @@
     /*margin-bottom: -33px;*/
     padding-top: 30px;
 }
-
+.recharge-card.special .top-badge {
+    position: absolute;
+    top: -8px;
+    text-align: center;
+    width: calc(100% - 64px);
+    font-weight: bold;
+    color: yellow;
+}
 .recharge-card.special:before {
     content: '';
     display: block;
@@ -283,7 +290,7 @@
     /*margin-left: -32px;*/
     /*margin-right: -40px;*/
     width: calc(100% + 4px);
-    height: 30px;
+    height: 46px;
     background-color: var(--ooredoo-red);
 }
 
