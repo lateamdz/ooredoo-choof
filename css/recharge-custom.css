@@ -84,7 +84,10 @@
     justify-content: center;
     gap: 12px;
 }
-
+.img-inline{
+    display: inline;
+    height: 1.5em;
+}
 .relative {
     position: relative;
     isolation: isolate;
@@ -842,9 +845,6 @@ input, select {
     color: #cdcdcd;
 }
 
-.default-promo-header img {
-    max-width: 350px;
-}
 
 .default-promo-header h2 {
     color: black;
@@ -913,6 +913,9 @@ input, select {
     width: 80%;
 }
 
+.bg-shape {
+
+}
 @media (max-width: 1199px) {
     .default-forfait-carousel {
         margin-bottom: 200px;
@@ -956,10 +959,7 @@ input, select {
         text-align: center;
     }
 
-    .default-promo-header img {
-        max-width: 80%;
-        margin-left: 10%;
-    }
+
 }
 
 @media (max-width: 600px) {
