@@ -200,14 +200,14 @@
 .boost-card {
     flex: 1;
     border-radius: 10px;
-    /*margin-bottom: 20px;*/
+    /* margin-bottom: 20px; */
     color: #171717;
     min-height: 218px;
     max-width: 260px;
-    padding: 30px;
+    padding: 9px;
     overflow: hidden;
     background: var(--color-qaada);
-    min-width: 180px !important;
+    min-width: 162px !important;
     position: relative;
     isolation: isolate;
 }
@@ -275,10 +275,24 @@
     /*min-height: 85%;*/
     /*margin-bottom: -33px;*/
     padding-top: 30px;
+    margin: 0;
+    min-height: 79%;
+}
+.recharge-card.special h3 {
+    margin-top: 36px;
+}
+.recharge-card.special .available-days {
+    margin-top: 36px;
+}
+.recharge-card.special .gigas {
+    line-height: 4.4rem;
+    margin-top: 31px;
+    font-size: 43px;
 }
 .recharge-card.special .top-badge {
+    font-size: 35px!important;
     position: absolute;
-    top: -8px;
+    top: -16px;
     text-align: center;
     width: calc(100% - 64px);
     font-weight: bold;
@@ -838,7 +852,7 @@ input, select {
 }
 
 .sahla-box-cards {
-    max-width: 1012px;
+    max-width: 885px;
     position: relative;
     isolation: isolate;
     background-color: white;
@@ -849,7 +863,7 @@ input, select {
 
 .sahla-box-cards .image-boost h2{
     color: black;
-    font-size: 555%;
+    font-size: 455%;
     font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
 
 }
@@ -936,7 +950,7 @@ input, select {
 .bg-shape {
     position: absolute;
     margin: auto auto;
-    transform: scale(1.2) rotate(-11deg);
+    transform: translateY(-20%) scale(1.6) rotate(-21deg);
     inset: 0 0;
 }
 @media (max-width: 1199px) {
@@ -997,7 +1011,10 @@ input, select {
 
 @media (max-width: 400px) {
     .boost-cards {
-        flex-direction: column;
+        /*flex-direction: column;*/
+    }
+    .recharge-card.special .gigas {
+        font-size: 36px;
     }
 }
 
