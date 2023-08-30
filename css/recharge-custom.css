@@ -29,7 +29,18 @@
 #page, body, html {
     font-family: rubik, ooredooregular, Arial;
 }
-
+.fs-46 {
+    font-size: 46px !important;
+}
+.fs-40 {
+    font-size: 40px !important;
+}
+.fs-38 {
+    font-size: 38px !important;
+}
+.fs-36 {
+    font-size: 36px !important;
+}
 .fs-34 {
     font-size: 34px !important;
 }
@@ -77,16 +88,31 @@
 .fs-12 {
     font-size: 12px !important;
 }
-
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
 .center {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
 }
+.flex-1{
+    flex: 1;
+}
 .img-inline{
     display: inline;
-    height: 1.5em;
+    height: 0.75em;
+    vertical-align: baseline;
 }
 .relative {
     position: relative;
@@ -881,13 +907,14 @@ input, select {
 
 
 .default-promo-header h2 {
-    color: black;
-    font-size: 555%;
+    color: white;
+    font-size: 360%;
+    margin: 0!important;
     font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
 }
 
 .dark .default-promo-header h2 {
-    color: inherit;
+    color: white;
 }
 
 .default-forfait-carousel > .container {
@@ -952,6 +979,7 @@ input, select {
     margin: auto auto;
     transform: translateY(-20%) scale(1.6) rotate(-21deg);
     inset: 0 0;
+    z-index: -1;
 }
 @media (max-width: 1199px) {
     .default-forfait-carousel {

@@ -1,0 +1,54 @@
+.default-forfait-cards {
+    margin: 40px;
+}
+
+.v4-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 16px 0;
+    box-shadow: 10px 10px 23px -1px rgba(0,0,0,0.25);
+}
+.v4-card >div{
+    width: 100%;
+}
+.v4-card .gigas-bonus-box .plus{
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    position: relative;
+}
+.v4-card .gigas-bonus-box .plus:before{
+    content: '+';
+    position: absolute;
+    top: -4px;
+    left: 7px;
+    font-size: 26px;
+}
+.v4-card .gigas-bonus-box{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.v4-card .money-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*flex-direction: column;*/
+}
+.default-promo{
+    padding-top: 0px;
+}
+.default-promo-header h2 {
+    background-color: var(--ooredoo-red);
+    width: fit-content;
+    padding: 8px 24px;
+    border-radius: 0px 0px 24px 24px;
+}
