@@ -30,7 +30,6 @@
 .v4-card .gigas-bonus-box > .gigas-text{
     line-height: 0.5em;
     white-space: nowrap;
-
 }
 .v4-card .gigas-bonus-box .plus:before{
     content: '+';
@@ -38,6 +37,9 @@
     top: -4px;
     left: 7px;
     font-size: 26px;
+}
+.v4-card .gigas-bonus-box .bonus-text >span:first-child{
+    white-space: nowrap;
 }
 .v4-card .gigas-bonus-box .bonus-text{
     line-height: 1em;
