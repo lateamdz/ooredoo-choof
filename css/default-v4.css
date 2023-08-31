@@ -70,7 +70,7 @@
     .v4-card .bonus-text{
         transform: scale(0.8);
     }
-    .default-forfait-cards >.container>.row  {
+    .ar .default-forfait-cards >.container>.row  {
         display: flex;
         flex-direction: column-reverse;
     }
