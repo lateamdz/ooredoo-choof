@@ -21,6 +21,7 @@
     padding: 10px;
     height: 30px;
     width: 30px;
+    min-width: 30px;
     border-radius: 30px;
     position: relative;
 }
@@ -66,9 +67,15 @@
     border-radius: 0px 0px 24px 24px;
 }
 @media (max-width: 991px) {
+    .v4-card .bonus-text{
+        transform: scale(0.8);
+    }
     .default-forfait-cards >.container>.row  {
         display: flex;
         flex-direction: column-reverse;
+    }
+    .v4-card .gigas-bonus-box .plus{
+        transform: scale(0.8);
     }
 
 }
