@@ -1019,8 +1019,12 @@ input, select {
         max-width: 70%;
     }
 
+    .default-promo-header {
+        display: flex;
+        justify-content: center;
+    }
     .default-promo-header h2,.sahla-box-cards .image-boost h2 {
-        font-size: 235%;
+        font-size: 150%;
         text-align: center;
     }
 
