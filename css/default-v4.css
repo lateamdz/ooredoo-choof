@@ -1,5 +1,5 @@
 .default-forfait-cards {
-    margin: 40px 16px;
+    margin: 80px 16px;
 }
 
 .v4-card {
@@ -66,16 +66,22 @@
     padding: 8px 24px;
     border-radius: 0px 0px 24px 24px;
 }
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
     .v4-card .bonus-text{
         transform: scale(0.8);
     }
+
+    .v4-card .gigas-bonus-box .plus{
+        transform: scale(0.8);
+    }
+
+}
+@media (max-width: 991px) {
+
     .ar .default-forfait-cards >.container>.row  {
         display: flex;
         flex-direction: column-reverse;
     }
-    .v4-card .gigas-bonus-box .plus{
-        transform: scale(0.8);
-    }
+
 
 }
