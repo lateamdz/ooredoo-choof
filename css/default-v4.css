@@ -24,9 +24,13 @@
     border-radius: 30px;
     position: relative;
 }
+.v4-card .gigas-bonus-box > .gigas-text >span{
+    margin-inline-start: -4px;
+}
 .v4-card .gigas-bonus-box > .gigas-text{
     line-height: 0.5em;
     white-space: nowrap;
+
 }
 .v4-card .gigas-bonus-box .plus:before{
     content: '+';
