@@ -60,3 +60,10 @@
     padding: 8px 24px;
     border-radius: 0px 0px 24px 24px;
 }
+@media (max-width: 991px) {
+    .default-forfait-cards >.container>.row  {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
