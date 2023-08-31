@@ -1,5 +1,5 @@
 .default-forfait-cards {
-    margin: 40px;
+    margin: 16px;
 }
 
 .v4-card {
@@ -23,6 +23,10 @@
     width: 30px;
     border-radius: 30px;
     position: relative;
+}
+.v4-card .gigas-bonus-box > .gigas-text{
+    line-height: 0.5em;
+    white-space: nowrap;
 }
 .v4-card .gigas-bonus-box .plus:before{
     content: '+';
