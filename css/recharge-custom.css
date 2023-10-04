@@ -722,6 +722,7 @@ input, select {
     position: absolute;
     bottom: 12%;
     left: 6%;
+    color:black;
 }
 /*@media (max-width: 1000px) {*/
 /*    .freefire-card>.card-content{*/
