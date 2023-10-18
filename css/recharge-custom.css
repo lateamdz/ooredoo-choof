@@ -474,6 +474,45 @@
 }
 
 /*====================================================================================================================*/
+/*Main banner*/
+.main-banner {
+position: relative;
+}
+.main-banner >a {
+    position: absolute;;
+    bottom: 3vw;
+    text-align: center;
+    width: 45%;
+    min-height: 4vw;
+    font-size: 1.8vw!important;
+    /*left: 0;*/
+    right: 3vw;
+}
+.ar .main-banner >a {
+    right: auto;
+    left: 3vw;
+}
+@media (max-width: 991px) {
+    .main-banner >a {
+        position: absolute;;
+        bottom: 5vw;
+        text-align: center;
+        width: 80%;
+        min-height: 8vw;
+        font-size: 4vw!important;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ar .main-banner >a {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/*====================================================================================================================*/
 /* QATAR BANNER */
 
 .default-title {
@@ -829,20 +868,6 @@ input, select {
     background-color: #121212;
 }
 
-.default-forfait-boost {
-    position: relative;
-    isolation: isolate;
-    margin-bottom: 10vw;
-}
-
-.default-forfait-boost .default-shape {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scale(1.5);
-    transform-origin: 66% 18%;
-}
-
 .default-promo .default-flower {
     position: absolute;
     top: 0;
@@ -975,13 +1000,6 @@ input, select {
 
     .sahla-box-cards {
         margin-left: auto;
-    }
-
-    .default-forfait-boost .default-shape {
-        transform: scale(5) rotate(-90deg) translate(-40%, 50%);
-        /*transform: scale(4.3) rotate(-90deg) translate(-38% , 50%);*/
-        /*transform: scale(4.3) rotate(-90deg) translate(-44% , 50%);*/
-        transform-origin: bottom;
     }
 }
 

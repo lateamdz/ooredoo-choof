@@ -94,9 +94,9 @@
 </head>
 
 <body class="recharge" >
-<div class="custom-modal" id="custom-modal">
+<div class="custom-modal modal-hidden" id="custom-modal">
     <div class="custom-modal-popup relative">
-        <button class="close text" onclick="closeModal()"><img src="images/ramadan/close.png" alt="close"/></button>
+        <button class="close text" onclick="closeModal()"><img src="images/carousel-assets/close.png" alt="close"/></button>
         <h2 class="text-center text-outfit text-red">NOUVEAU !</h2>
         <p class="text-center text-outfit">
             Profitez d'internet <span class="text-uppercase">illimité</span> pour 2500 DA seulement !.
@@ -105,8 +105,8 @@
 </div>
 <div class="custom-modal modal-hidden" id="custom-modal-2">
     <div class="custom-modal-popup relative">
-        <button class="close text" onclick="closeModal2()"><img src="images/ramadan/close.png" alt="close"/></button>
-        <img src="images/ramadan/fanous.png" alt="forfait recharge" class="fanous"/>
+        <button class="close text" onclick="closeModal2()"><img src="images/carousel-assets/close.png" alt="close"/></button>
+        <img src="images/carousel-assets/fanous.png" alt="forfait recharge" class="fanous"/>
         <h2 class="text-center text-outfit text-red">PROMO RAMADHAN</h2>
         <p class="text-center text-outfit">
             Profitez de volume internet doublé sur tous les boosts sahla box.
@@ -190,9 +190,15 @@
     </div>
     <!-- /header -->
     <div id="main-content">
-
+        <section class="main-banner">
+            <picture>
+                <source srcset="images/dimax/main-banner-v1-mobile-fr.jpg" media="(max-width: 992px)">
+                <img class="img-contain" src="images/dimax/main-banner-v1-desktop-fr.jpg" alt="" >
+            </picture>
+            <a href="http://www.google.com" class="red-btn text-outfit border-round fs-20">Migrer vers DIMA X</a>
+        </section>
         <!-- md-my-account -->
-        <section class="md-s md-my-account clearfix">
+        <section class="md-s md-my-account clearfix" style="padding-top: 26px">
             <div class="section-title">
                 <div class="container">
                     <div class="row">
@@ -590,8 +596,8 @@
                     <div class="container">
                         <div class="custom-carousel" id="card-carousel" data-slide="400" >
                             <div class="carousel-buttons">
-                                <button class="carousel-prev"><img src="images/ramadan/prev.png" alt="previous"></button>
-                                <button class="carousel-next"><img src="images/ramadan/next.png" alt="next"></button>
+                                <button class="carousel-prev"><img src="images/carousel-assets/prev.png" alt="previous"></button>
+                                <button class="carousel-next"><img src="images/carousel-assets/next.png" alt="next"></button>
                             </div>
                             <div class="custrom-carousel-inner">
                                 <div class="custrom-carousel-content" data-index="2">
@@ -689,46 +695,6 @@
                                 </div>
                             </div>
 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="default-forfait-boost">
-                    <div class="container sahla-box-cards">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12 change center" style="">
-                                <div class="image-boost">
-                                    <h2>FORFAIT BOOST</h2>
-                                    <br>
-                                    <p class="text-grey text-bold"> * Les Boosts sont éligibles pour les bundles 2000 DA et plus</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12 change center boost-cards" style="">
-                                <div class="boost-card relative">
-                                    <div class="internet">
-                                        <span class="gigas text-outfit fs-34">+ 4Go</span>
-                                    </div>
-                                    <div class="ooredoo-calls">
-                                        <span class="to-ooredoo">Suit la validité de<br>votre forfait Sahla Box</span>
-                                    </div>
-                                    <h3 class="text-outfit text-center">200<sup style=" font-variant: unicase;">DA</sup></h3>
-                                    <div class="center">
-                                        <a href="" class="red-btn text-outfit border-round fs-18">ACHETER</a>
-                                    </div>
-                                </div>
-                                <div class="boost-card relative">
-                                    <div class="internet">
-                                        <span class="gigas text-outfit fs-34">+ 10Go</span>
-                                    </div>
-                                    <div class="ooredoo-calls">
-                                        <span class="to-ooredoo">Suit la validité de<br>votre forfait Sahla Box</span>
-                                    </div>
-                                    <h3 class="text-outfit text-center">500<sup style=" font-variant: unicase;">DA</sup></h3>
-                                    <div class="center">
-                                        <a href="" class="red-btn text-outfit border-round fs-18">ACHETER</a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
