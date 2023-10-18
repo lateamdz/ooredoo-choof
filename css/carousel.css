@@ -7,7 +7,7 @@
 }
 .custrom-carousel-inner{
     height: 100%;
-    margin: 0 30px;
+    margin: 0 0px;
     overflow: hidden;
     position: relative;
 }
@@ -44,6 +44,10 @@
     align-items: center;
     justify-content: space-between;
 }
+.carousel-buttons button img{
+    border-radius: 60px;
+    box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.33)!important;
+}
 .carousel-buttons button, .carousel-buttons a{
     pointer-events: all;
     background-color: unset;
@@ -70,7 +74,22 @@
 .ar .carousel-buttons img{
     transform: rotate(180deg);
 }
+.ar .custom-carousel  .carousel-buttons{
+    transform: scaleX(-1);
+}
+.ar .custom-carousel{
+    transform: scaleX(-1);
+}
+.ar .custom-carousel .carousel-item{
+    transform: scaleX(-1);
+}
 @media (max-width: 600px) {
+    .custom-carousel .carousel-buttons img{
+        transform: scale(0.75);
+    }
+    .ar .carousel-buttons img{
+        transform: scale(0.75) rotate(180deg);
+    }
     .carousel-item{
         height: 100%;
         width: calc(100vw - 160px);

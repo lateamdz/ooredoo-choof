@@ -907,7 +907,7 @@ input, select {
 
 .default-promo-header h2 {
     color: black;
-    font-size: 555%;
+    font-size: 3.5vw;
     font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
 }
 
@@ -920,7 +920,7 @@ input, select {
 }
 
 .default-forfait-carousel {
-    margin-top: 80px;
+    /*margin-top: 80px;*/
     margin-bottom: 80px;
 }
 

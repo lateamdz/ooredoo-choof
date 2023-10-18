@@ -1,5 +1,4 @@
 class CustomCarousel{
-    ar=false;
     index=0;
     count=0;
     slideBy=100;
@@ -11,7 +10,6 @@ class CustomCarousel{
 
         this.count=content.childElementCount;
         this.index=Number(content.getAttribute("data-index")||0);
-        this.ar=Boolean(content.getAttribute("data-ar"));
 
         this.update(content,carousel,next,prev);
         this.UIchanges(next,prev,this.index);
@@ -35,15 +33,7 @@ class CustomCarousel{
     }
     update(content,carousel,next,prev){
         const translate=(i,slide)=>{
-            if(this.ar){
-                if(window.innerWidth<=600){
-                    content.style.transform = `translateX(${((-(this.count-i-1)*slide))}px)`;
-                }else{
-                    content.style.transform = `translateX(${((i-2)*slide)}px)`;
-                }
-            }else{
-                content.style.transform = `translateX(-${i*slide}px)`;
-            }
+            content.style.transform = `translateX(-${i*slide}px)`;
         }
         const margin=0;
         const childElement=carousel.querySelector('.carousel-item');
