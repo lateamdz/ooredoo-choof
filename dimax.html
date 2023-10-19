@@ -584,10 +584,28 @@
             </div>
             <div class="default-promo">
                 <!--                <img src="images/bg-shape.png" class="bg-shape">-->
-            <div class="dimax-migration">
-                <img src="images/dimax/dimax-agree-fr.jpg" alt="">
+                <div class="container">
+                    <div class="dimax-migration">
+                        <div class="dimax-migration-card">
+                            <img src="images/dimax/dimax-agree-fr.jpg" alt="">
+                            <div class="dimax-migration-form">
+                                <div class="form-checkbox">
+                                    <input name="condition-accept[]" access="false" id="condition-accept"
+                                           class="form-check-input"
+                                           required="required" aria-required="true" type="checkbox" oninput="document.getElementById('migrate-btn').disabled=!this.checked">
+                                    <label for="condition-accept">J'attest avoire lu et accepter <a
+                                            href="https://www.ooredoo.dz"
+                                            target="_blank"
+                                            class="text-red text-underline">les termes et conditions du
+                                        contract</a></label>
+                                </div>
+                                <button  id='migrate-btn' class="red-btn text-outfit border-round fs-20" disabled="">Migrer vers DIMA X</button>
+                                <a href="./index.html" class="text-center  text-red border-round fs-20"><b>Retour</b></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            </div>
             </div>
         </section>
         <!-- /md-my-account  -->
