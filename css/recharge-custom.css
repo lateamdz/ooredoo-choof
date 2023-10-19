@@ -495,7 +495,7 @@ position: relative;
 @media (max-width: 991px) {
     .main-banner >a {
         position: absolute;;
-        bottom: 5vw;
+        bottom: 9vw;
         text-align: center;
         width: 80%;
         min-height: 8vw;
@@ -825,10 +825,10 @@ input, select {
 }
 
 .custom-modal-popup h2{
-    background-color: var(--ooredoo-red);
-    color: white!important;
+    /*background-color: var(--ooredoo-red);*/
+    /*color: white!important;*/
     position: absolute;
-    top: -22px;
+    top: -12px;
     padding: 8px 16px;
     border-radius: 0 0 16px 16px;
 }
@@ -844,7 +844,7 @@ input, select {
     max-width: 400px;
     background-color: white;
     border-radius: 14px;
-    border: 2px solid var(--ooredoo-red);
+    /*border: 2px solid var(--ooredoo-red);*/
 }
 .dark .custom-modal-popup {
     background-color: #121212;

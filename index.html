@@ -55,71 +55,11 @@
     <link href="css/recharge-custom.css" rel="stylesheet">
     <link href="css/recharge-card.css" rel="stylesheet">
     <script type="text/javascript" defer>
-        function participate() {
-            return;
-            const participated = (window.localStorage.getItem("participated-default-2023") || "").toString();
-            setTimeout(() => {
-                if (participated) {
-                    document.getElementById("participate").classList.add("disable-link");
-                }
-            }, 100)
-        }
 
-        participate();
-
-        function getAnchor() {
-            return;
-            const currentUrl = document.URL, urlParts = currentUrl.split('#');
-            if (urlParts.length > 1) {
-                const anchor = urlParts.pop();
-                console.log(anchor);
-                setTimeout(() => {
-                    if (anchor === "forfait") {
-                        document.getElementById("custom-modal").classList.remove("modal-hidden");
-                        document.getElementById("custom-modal-2").classList.add("modal-hidden");
-                    } else if (anchor === "boost") {
-                        document.getElementById("custom-modal-2").classList.remove("modal-hidden");
-                        document.getElementById("custom-modal").classList.add("modal-hidden");
-                    }
-                }, 400)
-            }
-        }
-
-        getAnchor();
-
-
-        function closeModal() {
-            document.getElementById("custom-modal").classList.add("modal-hidden");
-        }
-
-        function closeModal2() {
-            document.getElementById("custom-modal-2").classList.add("modal-hidden");
-        }
     </script>
 </head>
 
 <body class="recharge">
-<div class="custom-modal modal-hidden" id="custom-modal">
-    <div class="custom-modal-popup relative">
-        <button class="close text" onclick="closeModal()"><img src="images/carousel-assets/close.png" alt="close"/>
-        </button>
-        <h2 class="text-center text-outfit text-red">NOUVEAU !</h2>
-        <p class="text-center text-outfit">
-            Profitez d'internet <span class="text-uppercase">illimité</span> pour 2500 DA seulement !.
-        </p>
-    </div>
-</div>
-<div class="custom-modal modal-hidden" id="custom-modal-2">
-    <div class="custom-modal-popup relative">
-        <button class="close text" onclick="closeModal2()"><img src="images/carousel-assets/close.png" alt="close"/>
-        </button>
-        <img src="images/carousel-assets/fanous.png" alt="forfait recharge" class="fanous"/>
-        <h2 class="text-center text-outfit text-red">PROMO RAMADHAN</h2>
-        <p class="text-center text-outfit">
-            Profitez de volume internet doublé sur tous les boosts sahla box.
-        </p>
-    </div>
-</div>
 <div class="accessibilities mobileMenu" style="display: none;">
     <div class="accessibilities-header">
         <img src="images/choof-black.svg" alt="Logo ooredoo" class="img-responsive">
