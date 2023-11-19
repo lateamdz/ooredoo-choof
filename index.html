@@ -138,11 +138,11 @@
     <!-- /header -->
     <div id="main-content">
         <section class="main-banner">
-            <picture>
-                <source srcset="images/dimax/main-banner-v1-mobile-fr.jpg" media="(max-width: 992px)">
-                <img class="img-contain" src="images/dimax/main-banner-v1-desktop-fr.jpg" alt="" style="width: 100%">
-            </picture>
-            <a href="./dimax.html" class="red-btn text-outfit border-round fs-20">Migrer vers DIMA +</a>
+            <!--            <picture>-->
+            <!--                <source srcset="images/dimax/main-banner-v1-mobile-fr.jpg" media="(max-width: 992px)">-->
+            <!--                <img class="img-contain" src="images/dimax/main-banner-v1-desktop-fr.jpg" alt="" style="width: 100%">-->
+            <!--            </picture>-->
+            <!--            <a href="./dimax.html" class="red-btn text-outfit border-round fs-20">Migrer vers DIMA +</a>-->
         </section>
 
         <!-- md-my-account -->
@@ -533,244 +533,148 @@
             <div class="default-promo">
                 <!--                <img src="images/bg-shape.png" class="bg-shape">-->
                 <div class="container">
-                    <div class="default-promo-header">
-                        <h2>FORFAIT DIMA</h2>
+                    <div class="default-promo-header text-uppercase">
+                        <h2>FORFAIT fidélité</h2>
                     </div>
-                </div>
+                    <br>
+                    <div class="promo-grid" id="promo-grid">
+                        <script>
+                            (() => {
+                                const data = [
+                                    {
+                                        forfait: "100",
+                                        plus: false,
+                                        duration: "24 Heures",
+                                        internet: 0,
+                                        ooredoo: true,
+                                        facebook: false,
+                                        hadra: 600,
+                                        sms: 0,
+                                        minutes: 0,
+                                    },
+                                    {
+                                        forfait: "800",
+                                        plus: true,
+                                        duration: "30 Jours",
+                                        internet: 12,
+                                        ooredoo: true,
+                                        facebook: false,
+                                        hadra: 2000,
+                                        sms: 0,
+                                        minutes: 0,
+                                    },
+                                    {
+                                        forfait: "1200",
+                                        plus: true,
+                                        duration: "30 Jours",
+                                        internet: 40,
+                                        ooredoo: true,
+                                        facebook: false,
+                                        hadra: 3000,
+                                        sms: 0,
+                                        minutes: 0,
+                                    },
+                                    {
+                                        forfait: "1500",
+                                        plus: true,
+                                        duration: "30 Jours",
+                                        internet: 60,
+                                        ooredoo: true,
+                                        facebook: false,
+                                        hadra: 5000,
+                                        sms: 0,
+                                        minutes: 0,
+                                    },
+                                    {
+                                        forfait: "800",
+                                        plus: false,
+                                        duration: "30 Jours",
+                                        internet: 8,
+                                        ooredoo: true,
+                                        facebook: true,
+                                        hadra: 0,
+                                        minutes: 100,
+                                        sms: 120,
+                                    },
+                                    {
+                                        forfait: "1200",
+                                        plus: false,
+                                        duration: "30 Jours",
+                                        internet: 30,
+                                        ooredoo: true,
+                                        facebook: true,
+                                        hadra: 0,
+                                        minutes: 150,
+                                        sms: 150,
+                                    },
+                                    {
+                                        forfait: "1500",
+                                        plus: false,
+                                        duration: "30 Jours",
+                                        internet: 50,
+                                        ooredoo: true,
+                                        facebook: true,
+                                        hadra: 0,
+                                        minutes: 300,
+                                        sms: 200,
+                                    },
+                                    {
+                                        forfait: "2000",
+                                        plus: false,
+                                        duration: "30 Jours",
+                                        internet: 70,
+                                        ooredoo: true,
+                                        facebook: true,
+                                        hadra: 0,
+                                        minutes: 700,
+                                        sms: 350,
+                                    },
+                                ];
+                                const listContainer = document.getElementById("promo-grid");
 
-                <div class="default-forfait-carousel">
-                    <div class="container">
-                        <div class="custom-carousel" id="card-carousel" data-slide="400">
-                            <div class="carousel-buttons">
-                                <button class="carousel-prev"><img src="images/carousel-assets/prev.png" alt="previous">
-                                </button>
-                                <button class="carousel-next"><img src="images/carousel-assets/next.png" alt="next">
-                                </button>
-                            </div>
-                            <div class="custrom-carousel-inner">
-                                <div class="custrom-carousel-content" data-index="2">
-                                    <div class="carousel-item">
-                                        <div class="dima-card">
-                                            <h2 class="text-center text-red text-outfit ">Dima 500</h2>
-                                            <div class="dima-card-content">
-                                                <h4 class="text-red text-center fs-26"><span
-                                                        class="text-outfit">3 GO</span>
-                                                    <b>Internet</b></h4>
-                                                <ul class="offer-list">
-                                                    <li><span class="text-bold">50 <img src="images/dimax/Icon-SMS.svg"
-                                                                                        alt=""
-                                                                                        class="img-inline-1em"></span>
-                                                        <span>&</span>
-                                                        <span class="text-bold">100 Min <img
-                                                                src="images/dimax/Icon-Appel.svg" alt=""
-                                                                class="img-inline-1em"></span></li>
-                                                    <li><span class="text-bold">Illimitée vers <img
-                                                            src="images/dimax/ooredoo_logo.svg"
-                                                            alt="" class="img-inline-1em"
-                                                            style="font-size: 0.8em"></span>
-                                                    </li>
-                                                    <li>
-                                                        <!--                                                        <img src="images/dimax/Icon-Anazik.svg" alt="">-->
-                                                        <!--                                                        <img src="images/dimax/Icon-Anaflix.svg" alt="">-->
-                                                        <!--                                                        <img src="images/dimax/Icon-Chahid.svg" alt="">-->
-                                                        <img src="images/dimax/FB-Gratuis.svg" alt="">
-                                                    </li>
-                                                </ul>
-                                                <div class="dima-footer">
-                                                    <div class="price-duration fs-28">
+                                data.forEach(function (item) {
+                                    const card = document.createElement("div");
+                                    card.className = "promo-card";
+                                    card.innerHTML = `
+                                <div class="promo-card-content">
+                                <h4 class="text-red text-center fs-26"><span class="text-outfit"><span>FIDÉLITÉ </span> ${item.forfait}${item.plus?'+':''}</span></h4>
+                                <ul class="offer-list">
+                                ${item.internet?
+                                        `<li><span ><span class="text-outfit text-uppercase">${item.internet} <small>GO</small></span> <small class="text-bold" style="font-size: 0.55em">d'internet</small></span></li>`
+                                        :`<li><span ><span class="text-bold">internet</span> <span class="text-outfit text-uppercase">illimité</span></span></li>`}
+                                    ${item.ooredoo ? `<li><span class=""><span class="text-outfit text-uppercase">appels Illimitée</span> <small class="text-bold" style="font-size: 0.55em">vers Ooredoo</small></span></li>`:''}
+                                    ${item.facebook ? `<li><span class=""><span class="text-outfit text-uppercase">Illimitée</span> <small class="text-bold">Facebook <img src="images/icons/fb.png" style="bottom: -0.2em;position: relative;" class="img-inline-1em"></small></span></li>`:''}
+                                   ${item.hadra ? ` <li><span class=""><span class="text-outfit text-uppercase">${item.hadra} DA</span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-Appel.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"> & <img src="images/dimax/Icon-SMS.svg" style="bottom: -0.4em;position: relative;" class="img-inline-2em"> vers tous les réseaux</small></span></li>`:''}
+                                    ${item.minutes ? `<li><span class=""><span class="text-outfit text-uppercase">${item.minutes} <small>MIN</small></span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-Appel.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"> vers les autres réseaux</small></span></li>`:''}
+                                    ${item.sms ? `<li><span class=""><span class="text-outfit text-uppercase">${item.sms} </span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-SMS.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"></small></span></li>`:''}
+                                </ul>
+                                <div class="promo-footer">
+                                    <div class="price-duration fs-28">
                                                     <span class="text-bold text-center">
                                                        <span class="fs-12">Valables</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">30 Jours</span>
+                                                       <span class="text-bold white-space-nowrap fs-18">${item.duration}</span>
                                                     </span>
-                                                        <span class="text-outfit text-red">500 <sup>DA</sup></span>
-                                                    </div>
-                                                    <div class="center">
-                                                        <a href=""
-                                                           class="red-btn text-outfit border-round fs-20">ACHETER</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                                    <div >
+                                                    <div class="center"><span class="text-outfit text-red">${item.forfait} <sup>DA</sup></span></div>
+                                                        <a href="" class="red-btn border-round fs-16">ACHETER</a>
                                     </div>
-                                    <div class="carousel-item">
-                                        <div class="dima-card">
-                                            <h2 class="text-center text-red text-outfit ">Dima 1200</h2>
-                                            <div class="dima-card-content">
-                                                <h4 class="text-red text-center fs-26"><span
-                                                        class="text-outfit">8 GO</span>
-                                                    <b>Internet</b></h4>
-                                                <ul class="offer-list">
-                                                    <li><span class="text-bold">120 <img src="images/dimax/Icon-SMS.svg"
-                                                                                         alt=""
-                                                                                         class="img-inline-1em"></span>
-                                                        <span>&</span>
-                                                        <span class="text-bold">100 Min <img
-                                                                src="images/dimax/Icon-Appel.svg" alt=""
-                                                                class="img-inline-1em"></span></li>
-                                                    <li><span class="text-bold">Illimitée vers <img
-                                                            src="images/dimax/ooredoo_logo.svg"
-                                                            alt="" class="img-inline-1em"
-                                                            style="font-size: 0.8em"></span>
-                                                    </li>
-                                                    <li>
-                                                        <img src="images/dimax/Icon-Anazik.svg" alt="">
-                                                        <!--                                                        <img src="images/dimax/Icon-Anaflix.svg" alt="">-->
-                                                        <!--                                                        <img src="images/dimax/Icon-Chahid.svg" alt="">-->
-                                                        <img src="images/dimax/FB-Gratuis.svg" alt="">
-                                                    </li>
-                                                </ul>
-                                                <div class="dima-footer">
 
-                                                    <div class="price-duration fs-28">
-                                                    <span class="text-bold text-center">
-                                                       <span class="fs-12">Valables</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">30 Jours</span>
-                                                    </span>
-                                                        <span class="text-outfit text-red">1200 <sup>DA</sup></span>
-                                                    </div>
-                                                    <div class="center">
-                                                        <a href=""
-                                                           class="red-btn text-outfit border-round fs-20">ACHETER</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
-                                    <div class="carousel-item">
-                                        <div class="dima-card">
-                                            <h2 class="text-center text-red text-outfit ">Dima 1500</h2>
-                                            <div class="dima-card-content">
-                                                <h4 class="text-red text-center fs-26"><span
-                                                        class="text-outfit">30 GO</span>
-                                                    <b>Internet</b></h4>
-                                                <ul class="offer-list">
-                                                    <li><span class="text-bold">150 <img src="images/dimax/Icon-SMS.svg"
-                                                                                         alt=""
-                                                                                         class="img-inline-1em"></span>
-                                                        <span>&</span>
-                                                        <span class="text-bold">150 Min <img
-                                                                src="images/dimax/Icon-Appel.svg" alt=""
-                                                                class="img-inline-1em"></span></li>
-                                                    <li><span class="text-bold">Illimitée vers <img
-                                                            src="images/dimax/ooredoo_logo.svg"
-                                                            alt="" class="img-inline-1em"
-                                                            style="font-size: 0.8em"></span>
-                                                    </li>
-                                                    <li>
-                                                        <!--<img src="images/dimax/Icon-Anazik.svg" alt="">-->
-                                                        <img src="images/dimax/Icon-Anaflix.svg" alt="">
-                                                        <!-- <img src="images/dimax/Icon-Chahid.svg" alt="">-->
-                                                        <img src="images/dimax/FB-Gratuis.svg" alt="">
-                                                    </li>
-                                                </ul>
-                                                <div class="dima-footer">
 
-                                                    <div class="price-duration fs-28">
-                                                    <span class="text-bold text-center">
-                                                       <span class="fs-12">Valables</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">30 Jours</span>
-                                                    </span>
-                                                        <span class="text-outfit text-red">1500 <sup>DA</sup></span>
-                                                    </div>
-                                                    <div class="center">
-                                                        <a href=""
-                                                           class="red-btn text-outfit border-round fs-20">ACHETER</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="dima-card">
-                                            <h2 class="text-center text-red text-outfit ">Dima 2000</h2>
-                                            <div class="dima-card-content">
-                                                <h4 class="text-red text-center fs-26"><span
-                                                        class="text-outfit">50 GO</span>
-                                                    <b>Internet</b></h4>
-                                                <ul class="offer-list">
-                                                    <li><span class="text-bold">200 <img src="images/dimax/Icon-SMS.svg"
-                                                                                         alt=""
-                                                                                         class="img-inline-1em"></span>
-                                                        <span>&</span>
-                                                        <span class="text-bold">300 Min <img
-                                                                src="images/dimax/Icon-Appel.svg" alt=""
-                                                                class="img-inline-1em"></span></li>
-                                                    <li><span class="text-bold">Illimitée vers <img
-                                                            src="images/dimax/ooredoo_logo.svg"
-                                                            alt="" class="img-inline-1em"
-                                                            style="font-size: 0.8em"></span>
-                                                    </li>
-                                                    <li>
-                                                        <img src="images/dimax/Icon-Anazik.svg" alt="">
-                                                        <img src="images/dimax/Icon-Anaflix.svg" alt="">
-                                                        <!-- <img src="images/dimax/Icon-Chahid.svg" alt="">-->
-                                                        <img src="images/dimax/FB-Gratuis.svg" alt="">
-                                                    </li>
-                                                </ul>
-                                                <div class="dima-footer">
-                                                    <div class="price-duration fs-28">
-                                                    <span class="text-bold text-center">
-                                                       <span class="fs-12">Valables</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">30 Jours</span>
-                                                    </span>
-                                                        <span class="text-outfit text-red">2000 <sup>DA</sup></span>
-                                                    </div>
-                                                    <div class="center">
-                                                        <a href=""
-                                                           class="red-btn text-outfit border-round fs-20">ACHETER</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="dima-card">
-                                            <h2 class="text-center text-red text-outfit ">Dima 2500</h2>
-                                            <div class="dima-card-content">
-                                                <h4 class="text-red text-center fs-26"><span
-                                                        class="text-outfit">60 GO</span>
-                                                    <b>Internet</b></h4>
-                                                <ul class="offer-list">
-                                                    <li><span class="text-bold">250 <img src="images/dimax/Icon-SMS.svg"
-                                                                                         alt=""
-                                                                                         class="img-inline-1em"></span>
-<!--                                                        <span>&</span>-->
-<!--                                                        <span class="text-bold">300 Min <img-->
-<!--                                                                src="images/dimax/Icon-Appel.svg" alt=""-->
-<!--                                                                class="img-inline-1em"></span>-->
-                                                    </li>
-                                                    <li><span
-                                                            class="text-bold fs-16">Appels illimités vers tous les réseaux</span>
-                                                    </li>
-                                                    <li>
-                                                        <img src="images/dimax/Icon-Anazik.svg" alt="">
-                                                        <img src="images/dimax/Icon-Anaflix.svg" alt="">
-<!--                                                        <img src="images/dimax/Icon-Chahid.svg" alt="">-->
-                                                        <img src="images/dimax/FB-Gratuis.svg" alt="">
-                                                    </li>
-                                                </ul>
-                                                <div class="dima-footer">
-
-                                                    <div class="price-duration fs-28">
-                                                    <span class="text-bold text-center">
-                                                       <span class="fs-12">Valables</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">30 Jours</span>
-                                                    </span>
-                                                        <span class="text-outfit text-red">2500 <sup>DA</sup></span>
-                                                    </div>
-                                                    <div class="center">
-                                                        <a href=""
-                                                           class="red-btn text-outfit border-round fs-20">ACHETER</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                        </div>
+`;
+
+                                    listContainer.appendChild(card);
+                                });
+                            })();
+                        </script>
                     </div>
                 </div>
+
+                <!--                <div class="default-forfait-carousel">-->
+
+                <!--                </div>-->
             </div>
         </section>
         <!-- /md-my-account  -->
