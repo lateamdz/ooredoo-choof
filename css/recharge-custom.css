@@ -871,7 +871,14 @@ input, select {
 .dark .default-promo {
     background-color: #121212;
 }
-
+#main-content , #page {
+    background-color: white!important;
+    color: black;
+}
+.dark #main-content , .dark #page{
+    background-color: #121212!important;
+    color: white;
+}
 .default-promo .default-flower {
     position: absolute;
     top: 0;
