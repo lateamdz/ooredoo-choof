@@ -38,7 +38,7 @@
     <script type="text/javascript" src="js/jquery/jquery-migrate-1.2.1.min.js"></script>
     <script type='text/javascript' src='js/jquery/jquery.easing.js'></script>
     <script type='text/javascript' src='js/carousel.js' defer></script>
-    <link rel="stylesheet" href="css/carousel.css" >
+    <link rel="stylesheet" href="css/carousel.css">
     <script>
         $ = jQuery.noConflict();
     </script>
@@ -53,7 +53,8 @@
     <![endif]-->
     <link href="css/recharge.css" rel="stylesheet">
     <link href="css/recharge-custom.css" rel="stylesheet">
-    <link href="css/recharge-card.css" rel="stylesheet">
+    <!--    branch css -->
+    <link href="css/default-v4.css" rel="stylesheet">
     <script type="text/javascript" defer>
 
         function participate() {
@@ -74,15 +75,15 @@
             if (urlParts.length > 1) {
                 const anchor = urlParts.pop();
                 console.log(anchor);
-                // setTimeout(() => {
-                //     if (anchor === "forfait") {
-                //         document.getElementById("custom-modal").classList.remove("modal-hidden");
-                //         document.getElementById("custom-modal-2").classList.add("modal-hidden");
-                //     } else if (anchor === "boost") {
-                //         document.getElementById("custom-modal-2").classList.remove("modal-hidden");
-                //         document.getElementById("custom-modal").classList.add("modal-hidden");
-                //     }
-                // }, 400)
+                setTimeout(() => {
+                    if (anchor === "forfait") {
+                        document.getElementById("custom-modal").classList.remove("modal-hidden");
+                        document.getElementById("custom-modal-2").classList.add("modal-hidden");
+                    } else if (anchor === "boost") {
+                        document.getElementById("custom-modal-2").classList.remove("modal-hidden");
+                        document.getElementById("custom-modal").classList.add("modal-hidden");
+                    }
+                }, 400)
             }
         }
 
@@ -100,20 +101,6 @@
 </head>
 
 <body class="ar recharge">
-<div class="custom-modal" id="custom-modal">
-    <div class="custom-modal-popup relative" style="padding: 34px 60px">
-        <button class="close text" onclick="closeModal()"><img src="images/carousel-assets/close.png" alt="close"/></button>
-        <h2 class="text-center text-outfit text-red">معلومات</h2>
-        <p class="text-center text-outfit">
-            وقعوا عقدكم مجانا و بدون التزام استفيدوا من حجم إنترت مجاني مدة أسبوع (1 Go)
-        </p>
-        <br>
-        <br>
-        <a href="./ar-conditions.html" class="red-btn text-outfit border-round fs-18">القبول</a>
-        <br>
-        <a href="./docs/condition-achat-ar.pdf"  target="_blank" class="text-uppercase text-bold" style="color: inherit; position: absolute;left: 16px; bottom: 16px">الشروط العامة للعقد</a>
-    </div>
-</div>
 <div class="accessibilities mobileMenu" style="display: none;">
     <div class="accessibilities-header">
         <img src="images/choof-black.svg" alt="Logo ooredoo" class="img-responsive">
@@ -170,7 +157,7 @@
                         <a href="#" class="inner-switch">Mode Nuit : OFF</a>
                     </div>
                     <div class="lang">
-                        <a href="index.html">
+                        <a href="conditions.html">
                             FR
                         </a>
                     </div>
@@ -192,16 +179,10 @@
     </div>
     <!-- /header -->
     <div id="main-content">
-        <section class="main-banner">
-<!--            <picture>-->
-<!--                <source srcset="images/dimax/main-banner-v1-mobile-ar.jpg" media="(max-width: 992px)">-->
-<!--                <img class="img-contain" src="images/dimax/main-banner-v1-desktop-ar.jpg" alt="" style="width: 100%" >-->
-<!--            </picture>-->
-<!--            <a href="./dimax-ar.html" class="red-btn text-outfit border-round fs-20 ">التغيير إلى + DIMA </a>-->
-        </section>
+
         <!-- md-my-account -->
-        <section class="md-s md-my-account clearfix">
-            <div class="section-title">
+        <section class="md-s md-my-account clearfix relative">
+            <div class="section-title d-none">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 pull-left">
@@ -221,7 +202,7 @@
                 </div>
             </div>
 
-            <div class="section-content">
+            <div class="section-content d-none">
                 <div class="container">
                     <div class="row">
                         <div class="my-account-container">
@@ -589,205 +570,159 @@
 
 
             </div>
-            <div class="default-promo">
-                <div class="container">
-                    <div class="default-promo-header">
-                        <h2>إشتراكات الوفاء</h2>
-                    </div>
-                    <br>
-                    <div class="promo-grid" id="promo-grid">
-                        <script>
-                            (() => {
-                                const data = [
-                                    {
-                                        forfait: "100",
-                                        plus: false,
-                                        duration: "24 ساعة",
-                                        internet: 0,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 600,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "800",
-                                        plus: true,
-                                        duration: "30 يوم",
-                                        internet: 12,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 2000,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "1200",
-                                        plus: true,
-                                        duration: "30 يوم",
-                                        internet: 40,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 3000,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "1500",
-                                        plus: true,
-                                        duration: "30 يوم",
-                                        internet: 60,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 5000,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "800",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 8,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 100,
-                                        sms: 120,
-                                    },
-                                    {
-                                        forfait: "1200",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 30,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 150,
-                                        sms: 150,
-                                    },
-                                    {
-                                        forfait: "1500",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 50,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 300,
-                                        sms: 200,
-                                    },
-                                    {
-                                        forfait: "2000",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 70,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 700,
-                                        sms: 350,
-                                    },
-                                ];
-                                const listContainer = document.getElementById("promo-grid");
+            <div class="container " style="min-height: 500px">
+                <br>
+                <br>
+                <br>
+                <h1 class="text-outfit text-uppercase text-center">
+                    الشروط العامة للعقد
+                </h1>
+                <br>
+                <br>
+                <br>
+                <p>
+                <h4>المادة 1 - موضوع العقد</h4>
+                <span> هدف هذا العقد إلى تحديد شروط توفير خدمات "Ooredoo" من قبل المتعامل الوطنية للاتصالات الجزائر-شركة ذات أسهم، بالاختصار WTA التي تسمح للزبون بإجراء و استقبال مكالمات وطنية و دولية و استعمال خدمة الإنترنت في منطقة تغطية شبكة WTA أو شبكات متعاملين آخرين التي أبرمت معهم WTA  عقدا للتجوال الدولي. ويمكن إجراء هذه الاتصالات من خلال أي جهاز معتمد يتم تصميمه لاستقبال بطاقة) SIM /USIM التي يقتنيها الزبون) . يتماشى مع تكنولوجيا الخدمة التي إقتناها الزبون. هذا العقد مخصص للزبائن الخواص) الأشخاص الطبيعية) الذين يجب عليهم ملؤه بكل عناية.  تنطبق الشروط العامة على كل العروض والخدمات التي توفرها  WTA للزبائن. خصائص العروض والخدمات تحكمها شروط خاصة تكون تكميلية للشروط العامة. إذا تم  توقيف العرض الذي اكتتبه الزبون لاعتبارات استراتيجية أو تنظيمية و/أو قانونية مثبتة ، تقوم  WTAبتحويل الزبون إلى عرض لا يقل مزايا ولا يزيد عن الالتزامات المفروضة عليه. ففي مثل هذه الحالة، سيتم استخدام الآليات المناسبة لإعلام الزبون.
+                </span>
+                <br>
+                <br>
+                <h4>المادة 2 - توقيع العقد</h4>
+                <span>يتم توقيع عقد الاشتراك لدى فضاءات Ooredoo  أو نقاط بيع معتمدة من قبل .WTA يقدم الزبون لـ WTA كل الوثائق الضرورية لـ WTA خلال توقيع العقد لدى نقاط البيع المعتمدة، يتم توقيف خط الزبون إلى غاية استكمال الوثائق الضرورية. يمكن للزبون أن يوكّل شخصا آخرا من أجل إبرام العقد والتوقيع عليه لحسابه. وفي هذه الحالة يجب أن يحوز الوكيل على: 1. وكالة خاصة محررة من طرف موثق أو مصادق عليها من طرف الإدارة المختصة. .2 بطاقة هويته ونسخة منها.    .3  بطاقة هوية للزبون ونسخة منها. إذا تبين لـ WTA أن الزبون مدين اتجاهها بمبالغ مالية ناتجة من عقود خدمات سابقة وأمام انعدام أي احتجاج جدي على هذه الديون فإنه يحق لـ WTA أن ترفض اكتتاب العقد للزبون حتى تسوية هذا الأخير لوضعيته
+                </span>
+                <br>
+                <br>
+                <h4>المادة 3 - ضمان/ كفالة</h4>
+                <span>يمكن لـ WTA أن تطلب من الزبون أن يدفع لها كفالة. و يتم إرجاع مبلغ الكفالة بعد فسخ العقد بشرط دفع المبالغ المستحقة لـWTA ، حيث تحتفظ هذه الأخيرة بحق تغيير قيمة الكفالة في أي وقت و يمكن للمشترك أن يرفع من قيمة كفالته إذا رغب في زيادة حد استهلاكاته التي تحددها WTA وفقا للبطاقات التعريفية المخصصة لمختلف العروض التجارية المقترحة من طرف  .WTA</span>
+                <br>
+                <br>
+                <h4>المادة 4 - دفع المستحقات والتعبئة</h4>
+                <span>
+                    <b>1.4 - خدمات الدفع المؤجل: </b>يجب دفع المبالغ المذكورة على الفاتورة كأقصى حد عند الأجل المشار إليه سواء في الفاتورة أو الرسالة القصيرة (SMS) المرسلة للزبون. لا يمكن للزبون في أي حالة الادعاء بعدم استلام الفاتورة )التي يتم إرسال مبلغها عبر رسالة قصيرة (لتبرير التأخر في دفعها. و لا يتم تسديد الفاتورة إلا عبر بطاقات التعبئة أو خدمة التعبئة الإلكترونية أو عبر أي طريقة دفع تقترحها لاحقا .WTA في حالة فسخ العقد، يتم إعداد فاتورة عند التاريخ الفعلي للفسخ. ويعتبر الزبون المسؤول الوحيد عند دفع جميع المبالغ المعدّة في الفواتير.
+                </span>
+                <br>
+                <span><b>2.4  - خدمات الدفع المسبق: </b>يمكن لصاحب خدمة WTA القيام، وفي أي وقت، بتعبئة بطاقته  SIM /USIM برصيد مكالمات وهذا باستعمال بطاقات التعبئة أو خدمة التعبئة الإلكترونية STORM المتوفرة لدى فضاءات "Ooredoo" أو نقاط البيع المعتمدة من قبل.WTA  ويمكن للتعبئات أن تتراكم إلى مبلغ إجمالي يقدر بـ 50000 دج كأقصى حد.</span>
+                <br>
+                <br>
+                <h4>المادة 5 – التعديلات</h4>
+                <span>تكون الأسعار محل بطاقة تعريفية تعدها WTA فيشكل عروض تجارية مختلفة عن هذه الأسعار من شأنها أن تتغير خلال سريان العقد. في هذه الحالة، يتم تبليغ الزبون بكل الوسائل. يتم وضع هذه الأسعار أيضا تحت تصرف الزبون في فضاءات "Ooredoo" وعن طريق الاتصال بمصلحة زبائن"Ooredoo". إضافة إلى ذلك، يبدي الزبون رسميا، موافقته على العرض التجاري الذي اختاره بمجرد توقيعه على العقد الحالي.</span>
+                <br>
+                <br>
+                <h4>المادة 6 - التزامات ومسؤوليات الزبون</h4>
+                <span>يجب على الزبون احترام الشروط المحددة مسبقا من قبلWTA ، و ذلك ابتداء من توقيع العقد. وخلال فترة الالتزام التعاقدي، يلتزم الزبون بصراحة بعدم القيام بأي استعمال تجاري للخدمة بمقابل أو دون مقابل، ويلتزم باستعمال الخدمة فقط لأغراضه الشخصية في إطار استعمال شخصي وجد خاص. يشكل الاستعمال المذكور آنفا للخدمة استعمالا مزورا أو ممنوعا منعا باتا. ويمتنع الزبون عن أي استعمال تعسفي أو مفرط للخدمة من شأنه أن يحدث تدهورا عاما لخدمة الزبائن الآخرين لـ WTA مثل تجاوز حدود الاستعمال التي تحددها  .WTA يعتبر الزبون المسؤول الوحيد عن توقيف خطه في حالة :</span>
+                <br>
+                <span>-عدم التعاون مع المتعامل خلال استقبال مكالمة أو رسالة قصيرة يطلب منه من خلالها أن يتوجه إلى فضاء "Ooredoo"من أجل تسوية ملفه</span>
+                <br>
+                <span>-في حالة عدم وصول الملف خلال إمضاء العقد لدى نقطة بيع</span>
+                <br>
+                <span>-في حالة التخلف عن دفع المبالغ المتعلقة باستعمال الخدمة ضمن الآجال التعاقدية</span>
+                <br>
+                <br>
+                <span>
+                    يعترف الزبون أنه على أتم المعرفة بطبيعة الانترنت وبالخصوص الأداء التقني ومدة الاستجابة والتفاعل من حيث زيارة المواقع والبحث وتحويل المعلومات. يعترف الزبون أنه قد تم إخطاره بأن المعلومات المتنقلة عبر هذه الشبكة غير مؤمنة كليا ضد أي نوع من أنواع التطفل وأنه لا يمكن للوطنية للاتصالات الجزائر أن تضمن سرية المعلومات المرسلة عبر الانترنت وأنه من صلاحية الزبون أن يقوم باتخاذ كلّ الإجراءات الضرورية من أجل حماية سرية معلوماته. يمتنع الزبون عن نشر أي محتوى مخالف للنظام العام والآداب العامة، كما يمتنع المشترك أيضا عن المساس بالحقوق المادية والمعنوية للغير. يتخذ الزبون كلّ الإجراءات الضرورية من أجل الحرص شخصيا على الاحتياطات الواجب القيام بها في حالة استعمال الخدمة من طرف القصر.
+                </span>
+                <br>
+                <br>
+                <h4>المادة 7 التزامات ومسؤوليات WTA</h4>
+                <span>إنWTA  مسؤولة عن وضع الوسائل الضرورية للسير الحسن للخدمة. عندما يتم توقيف أو الإخلال بالخدمات الممنوحة في إطار العقد بسبب ظروف استثنائية، تقوم WTA بالإجراءات الضرورية لإعادة الخدمة إلى ما كانت عليها في أقرب الآجال.</span>
+                <br>
+                <span>لا تعتبر WTA مسؤولة  في الحالات التالية:</span>
+                <span>-استعمال بطاقة  SIM /USIM لأغراض غير مطابقة لمجالات استعمالها.</span><br>
+                <span>- استعمال خدمة "Ooredoo" بعد كشف أو إبطال أو فقدان أو سرقة شفرة استعمال الخدمة، وعموما استعمال الخدمة من قبل الغير.</span><br>
+                <span>- ضرر غير مباشر أو غير مادي حصل في إطار استعمال الخدمة مهما كانت طبيعته</span><br>
+                <span>- نقل للإشارات اللاسلكية الكهربائية المتأثرة بموانع أو حدود المعايير التقنية المفروضة على  .WTA</span><br>
+                <span>- اضطرابات أو حظر تصرف محلي ناجم من مخاطر الموجات الكهرومغناطيسية</span><br>
+                <span>- قصور مؤقت للنظام يتسبب في تدهور في نوعية الخدمة، خصوصا في حالة أشغال الصيانة.  تعزيز وتمديد تجهيزات شبكة الاتصالات اللاسلكية</span><br>
+                <span>- حالات القوة القاهرة (أي حادث غير متوقع، غير محتمل )</span><br>
+                <br>
+                <span><b>1.7 - حماية المصالح المادية والمعنوية للزبائن: </b>تتخذ الوطنية للاتصالات الجزائر كلّ الإجراءات اللازمة من أجل حماية المصالح المادية والمعنوية للزبائن. وتكون مختلف مراكز الإعلام متاحة للزبون والمنشأة من أجل تسجيل الشكاوى التي سوف يتم دراستها حسب الإجراءات المقررة وخلال الآجال المثلى والمناسبة.</span>
+                <br>
+                <span><b>2.7  - إلزامية إعلام الزبون: </b>فضلا عن الشروط العامة للعروض، يمكن التعرف و الاطلاع على خصائص العروض وكذا الوثائق اللازمة لإمضاء العقد لدى فضاءات "Ooredoo" ونقاط البيع المعتمدة عن طريق بطاقة تعريفية خاصة بها، بالاتصال بمصلحة خدمة الزبائن أو على الموقع الالكتروني www.ooredoo.dz تبعا لاعتبارات مبررة بتطور مدى الخدمات و/أو منتجات مقدمة، يمكن للوطنية للاتصالات الجزائر أن تغير الشروط العامة والخاصة. في هذه الحالة، تتعهد الوطنية للاتصالات الجزائر بإعلام الزبون عن نطاق هذه التغييرات.</span>
+                <br>
+                <br>
+                <h4>المادة 8 - سرقة أو فقدان بطاقة SIM /USIM</h4>
+                <span>في حالة فقدان أو سرقة بطاقة  SIM /USIM ،ينبغي على الزبون فورا إبلاغ مصلحة زبائن "Ooredoo" أو التوجه إلى أقرب فضاء "Ooredoo" حتى يتم توقيف الخط. يجب أن يؤكد الزبون هذه السرقة أو هذا الفقدان وذلك بإرسال تصريح بذلك في ظرف 48 ساعة على الأكثر ونسخة طبقا الأصل من شهادة أو تصريح بالفقدان محررة لدى السلطات المختصة. إن الزبون مسؤول عن عقد اشتراكه الذي يعتبر عقدا شخصيا و كذا عن استعمال بطاقة  SIM /USIM و تسديد قيمة المكالمات التي أجريت قبل إبلاغ WTA   بسرقة أو فقدان بطاقة . SIM /USIM</span>
+                <br>
+                <br>
+                <h4>المادة 9 - فسخ العقد</h4>
+                <span><b>1.9  - فسخ من قبل :WTA</b>  يمكن لـ WTA فسخ العقد في الحالات الآتية :</span>
+                <br>
+                <span>تخلف الزبون عن دفع المبالغ المستحقة لـ .WTA في حالة خدمات الدفع المؤجل، يظل الزبون مدينا بالأقساط الشهرية المستحقة من فترة الالتزام. أما في حالة خدمات الدفع المسبق، على الزبون أن يقوم خلال الثلاثة أشهر الأخيرة بإحدى العمليات التالية: إجراء أو استقبال مكالمة هاتفية (صوتية أو صوتية مرئية، رسائل قصيرة SMS  أو رسائل متعددة الاعلام MMS) ، أو تعبئة رصيده، أو الدخول إلى شبكة الإنترنت مع نقل المعطيات. كما يجب عليه خلال الشهر الذي يلي الثلاثة أشهر السابقة إجراء مكالمة هاتفية (صوتية أو صوتية مرئية، رسائل قصيرةSMS  أو رسائل متعددة الوسائط MMS) ، أو تعبئة رصيده، أو الدخول إلى شبكة الإنترنت مع نقل المعطيات.  تلتزم WTA بتذكير الزبون بهذه الشروط عن طريق مختلف الوسائل. في حالة مخالفة الزبون لهذه الشروط، تقوم WTA بتوقيف الخط بعد إشعاره بذلك مع إعلامه برصيد المكالمات التي بحوزته. كما أنه إذا تبين لـ WTA بعد اكتتاب العقد الحالي أن الزبون مدين اتجاهها بمبالغ مالية ناتجة من عقود خدمات سابقة، فإنه يحق لـ WTA توقيف خط الزبون إلى غاية دفع المبالغ المستحقة وفي حالة رفض الزبون الدفع في أجل مدته 15 يوم بعد الإشعار الموجه إليه، يتم فسخ العقد الحالي من طرف WTA مع مباشرة الإجراءات القضائية في حق الزبون لاستيفاء ديونه.</span>
+                <br>
+                <span><b>2.9 - فسخ من قبل الزبون: </b>يمكن أن يفسخ الزبون العقد في أي وقت وذلك بتبليغ WTA رسميا وكتابيا في ظرف 30 يوما كأدنى حد. بينما يظل الزبون مدينا بالاشتراك إلى غاية نهاية الفترة المبدئية للعقد في حالة خدمات الدفع المؤجل.</span>
+                <br>
+                <span><b>3.9  - الفسخ بقوة القانون: </b>في حالة وفاة الزبون أو وضع حد لاستغلال الرخصة الخاصة بالعقد الذي وقعه الزبون.</span>
+                <br>
+                <br>
+                <h4>المادة 10 - الاختصاص القضائي</h4>
+                <span>تتم تسوية أي خلاف ناجم عن تنفيذ أو تأويل هذا العقد بطريقة ودية بين الأطراف في أجل معقول. وفي حال عدم التوصل إلى تسوية، يتم طرحه أمام المحاكم القضائية المختصة إقليميا.</span>
+                <br>
+                <br>
+                <h3 class="text-outfit text-uppercase text-center">
+                    الشروط الخاصة باستعمال خدمات الجيل الثالث و الجيل الرابع
+                </h3>
+                <br>
+                <br>
+                <span>
+                    لاستعمال الخدمة من طرف القصر والأشخاص الضعفاء، يشترط أن يتم تحديد هويتهم مسبقا وأن تكون ملحقة إلى حساب وليّهم/ الوصيّ عنهم. وبالتالي يبقى استعمال الخدمة من طرف الأطفال والأشخاص الضعفاء تحت مسؤولية ورقابة وليّهم و/أو الوصي عنهم. تضع WTA  الآليات التي تسمح بتسهيل هذه الرقابة. يعترف الزبون أنه تمّ إخطاره أن تشغيل المعلومات و التطبيقات المتوفرة   على الهاتف النقال أو   أيّ جهاز آخر يسمح باستعمال الخدمة يمكن أن يترتب عليه استهلاك الرصيد المتوفر لديه. إنّ خدمات الجيل الثالث و الجيل الرابع لا تكون متوفرة إلا في المناطق  التي تغطيها شبكة الجيل الثالث و الجيل الرابع لـ  .WTA
+                </span>
+                <br>
+                <br>
+                <span>
+                    *    تمكّن من استعمال خدمات الجيل الرابع (G4) في مناطق التغطية بشبكة الجيل الرابع (G4) و خدمات الجيل الثاني و الثالث (2G/3G) في المناطق غير المغطاة بشبكة الجيل الرابع (G4))
+                </span>
+                <br>
+                <br>
+                <br>
+                </p>
+            </div>
+            <div class="container-fluid sticky-accept">
 
-                                data.forEach(function (item) {
-                                    const card = document.createElement("div");
-                                    card.className = "promo-card";
-                                    card.innerHTML = `
-                                <div class="promo-card-content">
-                                <h4 class="text-red text-center fs-26"><span class="text-outfit"><span>اشتراك الوفاء </span> ${item.forfait}${item.plus?'+':''}</span></h4>
-                                <ul class="offer-list">
-                                ${item.internet?
-                                        `<li><span ><span class="text-outfit text-uppercase">${item.internet} <small>جيغا</small></span> <small style="font-size: 0.55em">انترنت</small></span></li>`
-                                        :`<li><span ><span class="text-outfit text-uppercase">انترنت</span> <span class="text-bold">غير محدود</span></span></li>`}
-                                    ${item.ooredoo ? `<li><span class=""><span class="text-outfit text-uppercase text-bold">مكالمات غير محدودة</span> <small class="text-bold" style="font-size: 0.55em">نحو Ooredoo</small></span></li>`:''}
-                                    ${item.facebook ? `<li><span class=""><small class=" text-uppercase">فايسبوك </small> <span class="text-outfit text-bold">غير محدود <img src="images/icons/fb.png" style="bottom: -0.2em;position: relative;" class="img-inline-1em"></span></span></li>`:''}
-                                   ${item.hadra ? ` <li><span class=""><span class="text-outfit text-uppercase">${item.hadra} دج</span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-Appel.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"> و <img src="images/dimax/Icon-SMS.svg" style="bottom: -0.4em;position: relative;" class="img-inline-2em"> نحو كل الشبكات</small></span></li>`:''}
-                                    ${item.minutes ? `<li><span class=""><span class="text-outfit text-uppercase">${item.minutes} <small>دقيقة</small></span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-Appel.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"> نحو الشبكات الاخرى</small></span></li>`:''}
-                                    ${item.sms ? `<li><span class=""><span class="text-outfit text-uppercase">${item.sms} <small>رسالة قصيرة</small></span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-SMS.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"></small></span></li>`:''}
-                                </ul>
-                                <div class="promo-footer">
-                                    <div class="price-duration fs-28">
-                                                    <span class="text-bold text-center">
-                                                       <span class="fs-14">صالح</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">${item.duration}</span>
-                                                    </span>
-                                                    <div >
-                                                    <div class="center">
-                                                     <span class="text-outfit text-red">${item.forfait} <sup>دج</sup></span></div>
-                                                        <a href="" class="red-btn border-round fs-16">الشراء</a>
-                                    </div>
+                <div style="flex-grow: 1; max-width: 400px;display: flex; flex-direction: column; align-items: center">
+                    <script>
+                        function validateDate() {
+                            const dateInput = document.getElementById('dateInput').value;
+                            const acceptBtn = document.getElementById('btn-accept-date');
+                            console.log("is typing", dateInput)
+                            acceptBtn.disabled = !isValidDate(dateInput)
+                        }
 
-                                    </div>
+                        function isValidDate(dateString) {
+                            // Check if the input is a valid date using a regular expression
+                            const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
 
-                                </div>
-                            </div>
-`;
+                            if (!dateRegex.test(dateString)) {
+                                return false;
+                            }
 
-                                    listContainer.appendChild(card);
-                                });
-                            })();
-                        </script>
-                    </div>
+                            // Check if the date is a valid date using JavaScript Date object
+                            const date = new Date(dateString);
+                            return !isNaN(date.getTime());
+                        }
+                    </script>
+                    <label for="dateInput" class="form-label text-uppercase" style="white-space: nowrap; color: black">تاريخ
+                        الميلاد</label>
+                    <input type="date" id="dateInput" class="form-control" name="birthday"
+                           placeholder="Exemple: JJ/MM/AAAA" value="" required onchange="validateDate()">
                 </div>
-                <div class="promo-card d-none">
-                    <h2 class="text-center text-red text-outfit ">ديما 2000</h2>
-                    <div class="promo-card-content">
-                        <h4 class="text-red text-center fs-26"><span
-                                class="text-outfit  text-bold">50 جيغا</span>
-                            انترنت</h4>
-                        <ul class="offer-list">
-                            <li><span class="text-bold">200 <img src="images/dimax/Icon-SMS.svg"
-                                                                 alt=""
-                                                                 class="img-inline-1em"></span>
-                                <span>&</span>
-                                <span class="text-bold fs-16">300 دقيقة <img
-                                        src="images/dimax/Icon-Appel.svg" alt=""
-                                        class="img-inline-1em"></span></li>
-                            <li><span class="text-bold fs-16">غير محدود نحو <img
-                                    src="images/dimax/ooredoo_logo.svg"
-                                    alt="" class="img-inline-1em"
-                                    style="font-size: 0.8em"></span>
-                            </li>
-                            <li>
-                                <img src="images/dimax/Icon-Anazik.svg" alt="">
-                                <img src="images/dimax/Icon-Anaflix.svg" alt="">
-                                <!-- <img src="images/dimax/Icon-Chahid.svg" alt="">-->
-                                <img src="images/dimax/FB-Madjani.svg" alt="">
-                            </li>
-                        </ul>
-                        <div class="promo-footer">
-                            <div class="price-duration fs-28">
-                                                    <span class="text-bold text-center">
-                                                       <span class="fs-12">صالح لمدة</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">30 يوم</span>
-                                                    </span>
-                                <span class="text-outfit text-red">2000 <sup>دج</sup></span>
-                            </div>
-                            <div class="center">
-                                <a href=""
-                                   class="red-btn text-outfit border-round fs-20">شراء</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+                <button id="btn-accept-date" onclick="(()=>{
+                  window.location.href = './index-ar.html';
+                })()" class="red-btn text-outfit border-round fs-18" disabled>القبول
+                </button>
             </div>
         </section>
         <!-- /md-my-account  -->
 
-<!--        <div class="center social-footer">-->
-<!--            <h1 class="text-uppercase text-red text-outfit">ابقوا متصلين</h1>-->
-<!--            <div class="social-links">-->
-<!--                <a href="https://web.facebook.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_fb.png" alt="facebook"/></a>-->
-<!--                <a href="https://www.instagram.com/ooredooalgerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_instagram.png" alt="instagram"/></a>-->
-<!--                <a href="https://twitter.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_twitter.png" alt="twitter"/></a>-->
-<!--                <a href="https://www.linkedin.com/company/ooredoo-algerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_linkedin.png" alt="linkedin"/></a>-->
-<!--                <a href="https://www.youtube.com/channel/UCHA12Axwf7nAHgeJau3aHGw" class="social-link" target="_blank"><img src="images/carousel-assets/social_youtube.png" alt="youtube"/></a>-->
-<!--            </div>-->
+        <!--        <div class="center social-footer">-->
+        <!--            <h1 class="text-uppercase text-red text-outfit">ابقوا متصلين</h1>-->
+        <!--            <div class="social-links">-->
+        <!--                <a href="https://web.facebook.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_fb.png" alt="facebook"/></a>-->
+        <!--                <a href="https://www.instagram.com/ooredooalgerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_instagram.png" alt="instagram"/></a>-->
+        <!--                <a href="https://twitter.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_twitter.png" alt="twitter"/></a>-->
+        <!--                <a href="https://www.linkedin.com/company/ooredoo-algerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_linkedin.png" alt="linkedin"/></a>-->
+        <!--                <a href="https://www.youtube.com/channel/UCHA12Axwf7nAHgeJau3aHGw" class="social-link" target="_blank"><img src="images/carousel-assets/social_youtube.png" alt="youtube"/></a>-->
+        <!--            </div>-->
 
-<!--        </div>-->
+        <!--        </div>-->
     </div>
     <!-- /main-content -->
     <!-- Block Footer -->

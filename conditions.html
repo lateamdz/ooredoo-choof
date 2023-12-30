@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -32,13 +32,13 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/icomoon.css" rel="stylesheet">
-    <link href="css/rtl.css" rel="stylesheet">
+    <!-- <link href="css/rtl.css" rel="stylesheet"> -->
     <!-- Essential scripts ======================================================================== -->
     <script src="js/jquery/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/jquery/jquery-migrate-1.2.1.min.js"></script>
     <script type='text/javascript' src='js/jquery/jquery.easing.js'></script>
     <script type='text/javascript' src='js/carousel.js' defer></script>
-    <link rel="stylesheet" href="css/carousel.css" >
+    <link rel="stylesheet" href="css/carousel.css">
     <script>
         $ = jQuery.noConflict();
     </script>
@@ -53,9 +53,9 @@
     <![endif]-->
     <link href="css/recharge.css" rel="stylesheet">
     <link href="css/recharge-custom.css" rel="stylesheet">
-    <link href="css/recharge-card.css" rel="stylesheet">
+    <!--    branch css -->
+    <link href="css/default-v4.css" rel="stylesheet">
     <script type="text/javascript" defer>
-
         function participate() {
             return;
             const participated = (window.localStorage.getItem("participated-default-2023") || "").toString();
@@ -74,15 +74,15 @@
             if (urlParts.length > 1) {
                 const anchor = urlParts.pop();
                 console.log(anchor);
-                // setTimeout(() => {
-                //     if (anchor === "forfait") {
+                // setTimeout(()=>{
+                //     if(anchor==="forfait"){
                 //         document.getElementById("custom-modal").classList.remove("modal-hidden");
                 //         document.getElementById("custom-modal-2").classList.add("modal-hidden");
-                //     } else if (anchor === "boost") {
+                //     }else if(anchor==="boost"){
                 //         document.getElementById("custom-modal-2").classList.remove("modal-hidden");
                 //         document.getElementById("custom-modal").classList.add("modal-hidden");
                 //     }
-                // }, 400)
+                // },400)
             }
         }
 
@@ -99,21 +99,7 @@
     </script>
 </head>
 
-<body class="ar recharge">
-<div class="custom-modal" id="custom-modal">
-    <div class="custom-modal-popup relative" style="padding: 34px 60px">
-        <button class="close text" onclick="closeModal()"><img src="images/carousel-assets/close.png" alt="close"/></button>
-        <h2 class="text-center text-outfit text-red">معلومات</h2>
-        <p class="text-center text-outfit">
-            وقعوا عقدكم مجانا و بدون التزام استفيدوا من حجم إنترت مجاني مدة أسبوع (1 Go)
-        </p>
-        <br>
-        <br>
-        <a href="./ar-conditions.html" class="red-btn text-outfit border-round fs-18">القبول</a>
-        <br>
-        <a href="./docs/condition-achat-ar.pdf"  target="_blank" class="text-uppercase text-bold" style="color: inherit; position: absolute;left: 16px; bottom: 16px">الشروط العامة للعقد</a>
-    </div>
-</div>
+<body class="recharge">
 <div class="accessibilities mobileMenu" style="display: none;">
     <div class="accessibilities-header">
         <img src="images/choof-black.svg" alt="Logo ooredoo" class="img-responsive">
@@ -127,7 +113,7 @@
                 </a>
             </li>
             <li>
-                <a href="index-ar.html">
+                <a href="ar-conditions.html">
                     <span class="lang"><img src="images/icons/icone-ar.svg" width="23" alt=""></span> Changer de langue
                 </a>
             </li>
@@ -166,12 +152,9 @@
                 </div>
                 <!-- /lang-list -->
                 <div class="accessibilities hidden-xxs text-right">
-                    <div class="dark-btn switch">
-                        <a href="#" class="inner-switch">Mode Nuit : OFF</a>
-                    </div>
-                    <div class="lang">
-                        <a href="index.html">
-                            FR
+                    <div class="help">
+                        <a href="">
+                            <img src="images/icons/help.svg" alt="help" class="img-responsive">
                         </a>
                     </div>
                     <div class="phone">
@@ -179,11 +162,13 @@
                             <img src="images/icons/phone.svg" alt="phone" class="img-responsive">
                         </a>
                     </div>
-
-                    <div class="help">
-                        <a href="">
-                            <img src="images/icons/help.svg" alt="help" class="img-responsive">
+                    <div class="lang">
+                        <a href="ar-conditions.html">
+                            AR
                         </a>
+                    </div>
+                    <div class="dark-btn switch">
+                        <a href="#" class="inner-switch">Mode Nuit : OFF</a>
                     </div>
                 </div>
                 <!-- accessibilities -->
@@ -192,28 +177,22 @@
     </div>
     <!-- /header -->
     <div id="main-content">
-        <section class="main-banner">
-<!--            <picture>-->
-<!--                <source srcset="images/dimax/main-banner-v1-mobile-ar.jpg" media="(max-width: 992px)">-->
-<!--                <img class="img-contain" src="images/dimax/main-banner-v1-desktop-ar.jpg" alt="" style="width: 100%" >-->
-<!--            </picture>-->
-<!--            <a href="./dimax-ar.html" class="red-btn text-outfit border-round fs-20 ">التغيير إلى + DIMA </a>-->
-        </section>
+
         <!-- md-my-account -->
-        <section class="md-s md-my-account clearfix">
-            <div class="section-title">
+        <section class="md-s md-my-account clearfix relative">
+            <div class="section-title d-none">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 pull-left">
                             <div class="title">
-                                <h1><span>مرحبــا</span></h1>
+                                <h1><span>Mon Compte</span></h1>
                             </div>
                         </div>
                         <div class="col-sm-6 pull-right">
                             <div class="description">
                                 <p><span>
-								<span class="hidden-xs ">ر قمي : </span><span class=" price-unit" dir="rtl">0561 34 43 60</span></span>
-                                </p>
+								<span class="hidden-xs ">Mon numéro  </span><span
+                                        class="safari_only num">0561 34 43 60</span></span></p>
 
                             </div>
                         </div>
@@ -221,15 +200,14 @@
                 </div>
             </div>
 
-            <div class="section-content">
+            <div class="section-content d-none">
                 <div class="container">
                     <div class="row">
                         <div class="my-account-container">
-
                             <div class="col-md-4">
-                                <div class="my-account-holder" style="min-height: 354px;">
+                                <div class="my-account-holder">
                                     <div class="holder-header expandable">
-                                        <h2>حسـابي</h2>
+                                        <h2>Compte</h2>
                                     </div>
                                     <!-- /holder-header -->
                                     <div class="holder-content">
@@ -242,7 +220,7 @@
                                             <div class="row">
                                                 <div class="col-xs-12">
                                                     <div class="credit-info">
-                                                        <a href="" class="x-credit">رصيد التعبئة</a>
+                                                        <a href="" class="x-credit">Crédit recharge</a>
                                                     </div>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -263,11 +241,11 @@
                                                                             <span class="price-unit">1 350</span>
                                                                         </div>
                                                                         <div class="table-cell">
-                                                                            <span class="currency">دج</span>
+                                                                            <span class="currency">DA</span>
                                                                         </div>
                                                                     </div>
                                                                     <div class="">
-                                                                        <span class="validity">إلى 16/05/16</span>
+                                                                        <span class="validity">au 16/05/16</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -289,7 +267,7 @@
                                                 <div class="progressBarContainer">
                                                     <div class="col-xs-8 pull-left">
                                                         <div class="progressBar">
-                                                            <span style="width: 90%;"
+                                                            <span style="width: 80%;"
                                                                   class="progressPercentage greenbar"></span>
                                                         </div>
                                                         <!-- /progressBar -->
@@ -300,12 +278,12 @@
                                                                 <div class="price-hero">
                                                                     <div class="table-row">
                                                                         <div class="table-cell">
-                                                                            <span class="price-unit">مجـاني</span>
+                                                                            <span class="price-unit">Gratuit</span>
                                                                         </div>
 
                                                                     </div>
                                                                     <div class="">
-                                                                        <span class="validity">إلى 16/05/16</span>
+                                                                        <span class="validity">au 16/05/16</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -319,14 +297,12 @@
                                         <br>
                                         <br>
                                         <br>
-
                                         <!-- /holder-content-inner -->
                                         <div class="holder-content-inner border-0">
                                             <div class="row">
                                                 <div class="col-xs-8 pull-left">
                                                     <div class="credit-info">
-                                                        <a class="small">تعديل التجديد</a>
-
+                                                        <a class="small">Renouvellement Automatique</a>
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-4 pull-right">
@@ -343,16 +319,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- /holder-content-inner -->
                                     </div>
                                     <!-- /holder-content -->
                                 </div>
                                 <!-- /my-account-holder -->
                             </div>
                             <div class="col-md-4">
-                                <div class="my-account-holder" style="min-height: 354px;">
+                                <div class="my-account-holder" style="">
                                     <div class="holder-header expandable">
-                                        <h2 class="internet">إنترنت</h2>
+                                        <h2 class="internet">Internet</h2>
                                     </div>
                                     <!-- /holder-header -->
                                     <div class="holder-content">
@@ -362,47 +337,7 @@
                                             <div class="row">
                                                 <div class="col-xs-12">
                                                     <div class="credit-info">
-                                                        <a href="" class="x-t-internet">إنترنت يومي</a>
-                                                    </div>
-                                                </div>
-                                                <div class="clearfix"></div>
-                                                <div class="progressBarContainer">
-                                                    <div class="col-xs-8 pull-left">
-                                                        <div class="progressBar">
-                                                            <span style="width: 10%;"
-                                                                  class="progressPercentage redbar"></span>
-                                                        </div>
-                                                        <!-- /progressBar -->
-                                                    </div>
-                                                    <div class="col-xs-4 pull-right">
-                                                        <div class="credit">
-                                                            <div class="price table">
-                                                                <div class="price-hero">
-                                                                    <div class="table-row">
-                                                                        <div class="table-cell">
-                                                                            <span class="price-unit">20</span>
-                                                                        </div>
-                                                                        <div class="table-cell">
-                                                                            <span class="currency">ميغا</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="">
-                                                                        <span class="validity">إلى 16/05/16</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- /credit -->
-                                                    </div>
-                                                </div>
-                                                <!-- /progressBarContainer -->
-                                            </div>
-                                        </div>
-                                        <div class="holder-content-inner expandable">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="credit-info">
-                                                        <a href="" class="x-m-internet">إنترنت شهري</a>
+                                                        <a href="" class="x-t-internet">Internet Journalier</a>
                                                     </div>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -423,11 +358,11 @@
                                                                             <span class="price-unit">20</span>
                                                                         </div>
                                                                         <div class="table-cell">
-                                                                            <span class="currency">جيغا</span>
+                                                                            <span class="currency">Mo</span>
                                                                         </div>
                                                                     </div>
                                                                     <div class="">
-                                                                        <span class="validity">إلى 16/05/16</span>
+                                                                        <span class="validity">au 16/05/16</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -442,15 +377,15 @@
                                             <div class="row">
                                                 <div class="col-xs-12">
                                                     <div class="credit-info">
-                                                        <a href="" class="facebook">فـايسبوك</a>
+                                                        <a href="" class="x-m-internet">Internet Mensuel</a>
                                                     </div>
                                                 </div>
                                                 <div class="clearfix"></div>
                                                 <div class="progressBarContainer">
                                                     <div class="col-xs-8 pull-left">
                                                         <div class="progressBar">
-                                                            <span style="width: 70%;"
-                                                                  class="progressPercentage greenbar"></span>
+                                                            <span style="width: 20%;"
+                                                                  class="progressPercentage redbar"></span>
                                                         </div>
                                                         <!-- /progressBar -->
                                                     </div>
@@ -460,12 +395,14 @@
                                                                 <div class="price-hero">
                                                                     <div class="table-row">
                                                                         <div class="table-cell">
-                                                                            <span class="price-unit">مجـاني</span>
+                                                                            <span class="price-unit">20</span>
                                                                         </div>
-
+                                                                        <div class="table-cell">
+                                                                            <span class="currency">Go</span>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="">
-                                                                        <span class="validity">إلى 16/05/16</span>
+                                                                        <span class="validity">au 16/05/16</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -476,7 +413,46 @@
                                                 <!-- /progressBarContainer -->
                                             </div>
                                         </div>
+
                                         <!-- /holder-content-inner -->
+                                        <div class="holder-content-inner expandable">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="credit-info">
+                                                        <a href="" class="facebook">Facebook</a>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="progressBarContainer">
+                                                    <div class="col-xs-8 pull-left">
+                                                        <div class="progressBar">
+                                                            <span style="width: 20%;"
+                                                                  class="progressPercentage redbar"></span>
+                                                        </div>
+                                                        <!-- /progressBar -->
+                                                    </div>
+                                                    <div class="col-xs-4 pull-right">
+                                                        <div class="credit">
+                                                            <div class="price table">
+                                                                <div class="price-hero">
+                                                                    <div class="table-row">
+                                                                        <div class="table-cell">
+                                                                            <span class="price-unit">Gratuit</span>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="">
+                                                                        <span class="validity">au 16/05/16</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /credit -->
+                                                    </div>
+                                                </div>
+                                                <!-- /progressBarContainer -->
+                                            </div>
+                                        </div>
 
 
                                     </div>
@@ -485,17 +461,18 @@
                                 <!-- /my-account-holder -->
                             </div>
                             <div class="col-md-4">
-                                <div class="my-account-holder" style="min-height: 354px;">
+                                <div class="my-account-holder">
                                     <div class="holder-header expandable">
-                                        <h2 class="appels">مكـالمات \ SMS</h2>
+                                        <h2 class="appels">Appels / SMS</h2>
                                     </div>
                                     <!-- /holder-header -->
                                     <div class="holder-content">
+
                                         <div class="holder-content-inner">
                                             <div class="row">
                                                 <div class="col-xs-8 pull-left">
                                                     <div class="credit-info">
-                                                        <a href="" class="x-free-call">دقائق مجانية مهداة</a>
+                                                        <a href="" class="x-free-call">Minutes Offertes</a>
 
                                                     </div>
                                                 </div>
@@ -505,14 +482,14 @@
                                                             <div class="price-hero">
                                                                 <div class="table-row">
                                                                     <div class="table-cell">
-                                                                        <span class="price-unit">20</span>
+                                                                        <span class="price-unit">200</span>
                                                                     </div>
                                                                     <div class="table-cell">
-                                                                        <span class="currency">دق</span>
+                                                                        <span class="currency">Min</span>
                                                                     </div>
                                                                 </div>
                                                                 <div class="">
-                                                                    <span class="validity">إلى 16/05/16</span>
+                                                                    <span class="validity">au 16/05/16</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -526,7 +503,7 @@
                                             <div class="row">
                                                 <div class="col-xs-12">
                                                     <div class="credit-info">
-                                                        <a href="" class="x-free-sms">رسائل قصيرة مهداة</a>
+                                                        <a href="" class="x-free-sms">SMS Offerts</a>
                                                     </div>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -544,14 +521,14 @@
                                                                 <div class="price-hero">
                                                                     <div class="table-row">
                                                                         <div class="table-cell">
-                                                                            <span class="price-unit">120</span>
+                                                                            <span class="price-unit">50</span>
                                                                         </div>
                                                                         <div class="table-cell">
                                                                             <span class="currency">SMS</span>
                                                                         </div>
                                                                     </div>
                                                                     <div class="">
-                                                                        <span class="validity">إلى 16/05/16</span>
+                                                                        <span class="validity">au 16/05/16</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -569,14 +546,13 @@
                                 </div>
                                 <!-- /my-account-holder -->
                             </div>
-
                             <div class="col-xs-12 visible-xs visible-sm">
                                 <div class="expandTiggerContainer">
                                     <div class="expandTiggerIcon">
                                         <img src="images/icons/plus.png" alt="">
                                     </div>
                                     <div class="expandTiggerText">
-                                        <a href="" class="btn btn-bordered collapseTrigger">المزيد من التفاصيل</a>
+                                        <a href="" class="btn btn-bordered collapseTrigger">Voir tous les détails</a>
                                     </div>
                                 </div>
                                 <!-- /expandTiggerContainer -->
@@ -586,208 +562,147 @@
                     </div>
                     <br><br> <br><br>
                 </div>
-
+            </div>
+            <div class="container" style="min-height: 500px">
+                <br>
+                <br>
+                <br>
+                <h1 class="text-outfit text-uppercase text-center">
+                    conditions générales
+                </h1>
+                <br>
+                <br>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid commodi, cumque delectus
+                    dignissimos eum, facilis id ipsam magni molestias nihil odit optio perferendis quae rerum similique,
+                    ullam? Blanditiis excepturi illum, in magni perferendis praesentium provident rerum similique soluta
+                    unde? Animi dignissimos ex quo repellat totam? A atque corporis culpa debitis distinctio doloribus
+                    dolorum earum eligendi esse exercitationem facilis harum illo incidunt iusto labore laborum minima
+                    neque
+                    odit pariatur quae quas quia quis quisquam ratione sapiente sequi sint tempora, velit voluptas
+                    <br>
+                    <br>
+                    voluptatibus. Consequatur corporis dicta dignissimos esse fuga nemo nobis possimus repellendus
+                    velit!
+                    Accusantium aliquam aliquid asperiores aspernatur atque beatae blanditiis consequuntur cumque
+                    dignissimos distinctio dolorem dolores enim eum explicabo impedit incidunt ipsa, labore minus nam
+                    natus
+                    possimus praesentium, quae quasi, quidem quod ratione recusandae repellendus similique sint sit
+                    suscipit
+                    veniam vero voluptates. Accusantium aliquam aliquid commodi culpa eos expedita harum id iusto labore
+                    laborum mollitia, natus, numquam odio perspiciatis porro praesentium provident quia recusandae
+                    <br>
+                    <br>
+                    reprehenderit repudiandae sequi sunt, tempora. Cumque dignissimos enim facilis ipsum sequi sit unde!
+                    Aperiam debitis delectus distinctio dolore ex excepturi fugit iste, iure modi mollitia
+                    necessitatibus
+                    neque nisi perferendis provident quasi reprehenderit saepe, suscipit temporibus tenetur, ut!
+                    Consectetur
+                    consequatur corporis ducimus eligendi eos, excepturi ipsam minus odit, omnis optio perferendis porro
+                    qui
+                    quidem repellat voluptatem? Adipisci aperiam consequuntur iste omnis quo. A accusamus accusantium
+                    aspernatur assumenda commodi consectetur dicta distinctio dolor doloribus et eum exercitationem
+                    expedita
+                    harum in incidunt, ipsam iste iure nam nesciunt nihil, nobis numquam odit officia placeat
+                    praesentium
+                    quaerat quibusdam quos repellendus repudiandae sapiente similique sint sunt temporibus velit vero
+                    vitae
+                    voluptates. Debitis earum eligendi enim molestiae omnis? Atque aut autem dolore dolores esse ex
+                    libero
+                    molestias non porro praesentium quibusdam, quod repellendus temporibus. A ad architecto corporis ex
+                    magnam, magni maxime molestias nam pariatur porro qui sint! Asperiores consequuntur, cum ducimus
+                    iste
+                    molestias possimus quisquam tempore! A animi cumque ducimus esse incidunt officia sunt velit vitae?
+                    Culpa dolores in omnis quam quibusdam, quis reiciendis repudiandae sequi suscipit voluptatibus.
+                    Animi
+                    dolor in laudantium optio soluta? Ad culpa facere illo, libero necessitatibus non officiis
+                    perspiciatis
+                    porro possimus quidem sit tempora voluptatem voluptatibus. Ad alias at, deleniti deserunt doloremque
+                    ducimus earum eligendi est ex excepturi fuga id ipsum labore magni molestiae molestias nostrum,
+                    <br>
+                    <br>
+                    obcaecati praesentium provident quas recusandae reprehenderit rerum similique sint suscipit. Aliquid
+                    at
+                    blanditiis debitis dolor, eaque esse hic illo iusto maiores nam nemo nesciunt nostrum numquam omnis
+                    quas
+                    reiciendis, tempora? Dolores eveniet ex laboriosam maiores neque porro, quam sapiente tempora veniam
+                    voluptatibus. Aliquam animi deleniti error! Consequatur culpa cupiditate facere, facilis fuga hic
+                    iste
+                    magnam maiores molestiae mollitia nisi optio, perferendis porro quasi ratione reprehenderit tempora
+                    ullam vel? Cum doloremque et eum excepturi illum, impedit laboriosam magni, modi quas quo quos
+                    ratione,
+                    rem sapiente sit voluptate. Ducimus magnam, velit. Aperiam atque cupiditate deleniti dicta ea,
+                    impedit,
+                    ipsam itaque laboriosam magni nulla omnis optio perferendis placeat quia, quidem quisquam quo
+                    repudiandae similique voluptate voluptatem. Ad asperiores eaque esse explicabo facere ipsum, iste
+                    iusto,
+                    laborum modi molestiae nam odit quidem reprehenderit soluta, sunt velit vero vitae! Ab adipisci at
+                    aut
+                    beatae consequuntur cum dignissimos distinctio eaque enim explicabo fugiat illum ipsum natus nemo
+                    nisi,
+                    odit pariatur possimus quibusdam quisquam sit sunt ullam ut voluptatum? Animi atque autem delectus
+                    dicta
+                    eaque esse eveniet fugiat laboriosam maiores molestiae nisi nostrum perspiciatis possimus repellat,
+                    rerum soluta sunt totam vitae voluptas voluptatum. Ad, asperiores aspernatur atque blanditiis
+                    commodi
+                    consequuntur delectus dicta dolores ducimus ea explicabo, hic id in ipsam iusto magnam
+                    necessitatibus
+                    neque nisi pariatur perspiciatis quae quia quidem quis, rerum sed sit tempore temporibus ullam vero
+                    voluptates. Beatae doloremque molestias nulla obcaecati quasi quibusdam suscipit unde!
+                </p>
 
             </div>
-            <div class="default-promo">
-                <div class="container">
-                    <div class="default-promo-header">
-                        <h2>إشتراكات الوفاء</h2>
-                    </div>
-                    <br>
-                    <div class="promo-grid" id="promo-grid">
-                        <script>
-                            (() => {
-                                const data = [
-                                    {
-                                        forfait: "100",
-                                        plus: false,
-                                        duration: "24 ساعة",
-                                        internet: 0,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 600,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "800",
-                                        plus: true,
-                                        duration: "30 يوم",
-                                        internet: 12,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 2000,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "1200",
-                                        plus: true,
-                                        duration: "30 يوم",
-                                        internet: 40,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 3000,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "1500",
-                                        plus: true,
-                                        duration: "30 يوم",
-                                        internet: 60,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 5000,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "800",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 8,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 100,
-                                        sms: 120,
-                                    },
-                                    {
-                                        forfait: "1200",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 30,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 150,
-                                        sms: 150,
-                                    },
-                                    {
-                                        forfait: "1500",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 50,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 300,
-                                        sms: 200,
-                                    },
-                                    {
-                                        forfait: "2000",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 70,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 700,
-                                        sms: 350,
-                                    },
-                                ];
-                                const listContainer = document.getElementById("promo-grid");
+            <div class="container-fluid sticky-accept">
 
-                                data.forEach(function (item) {
-                                    const card = document.createElement("div");
-                                    card.className = "promo-card";
-                                    card.innerHTML = `
-                                <div class="promo-card-content">
-                                <h4 class="text-red text-center fs-26"><span class="text-outfit"><span>اشتراك الوفاء </span> ${item.forfait}${item.plus?'+':''}</span></h4>
-                                <ul class="offer-list">
-                                ${item.internet?
-                                        `<li><span ><span class="text-outfit text-uppercase">${item.internet} <small>جيغا</small></span> <small style="font-size: 0.55em">انترنت</small></span></li>`
-                                        :`<li><span ><span class="text-outfit text-uppercase">انترنت</span> <span class="text-bold">غير محدود</span></span></li>`}
-                                    ${item.ooredoo ? `<li><span class=""><span class="text-outfit text-uppercase text-bold">مكالمات غير محدودة</span> <small class="text-bold" style="font-size: 0.55em">نحو Ooredoo</small></span></li>`:''}
-                                    ${item.facebook ? `<li><span class=""><small class=" text-uppercase">فايسبوك </small> <span class="text-outfit text-bold">غير محدود <img src="images/icons/fb.png" style="bottom: -0.2em;position: relative;" class="img-inline-1em"></span></span></li>`:''}
-                                   ${item.hadra ? ` <li><span class=""><span class="text-outfit text-uppercase">${item.hadra} دج</span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-Appel.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"> و <img src="images/dimax/Icon-SMS.svg" style="bottom: -0.4em;position: relative;" class="img-inline-2em"> نحو كل الشبكات</small></span></li>`:''}
-                                    ${item.minutes ? `<li><span class=""><span class="text-outfit text-uppercase">${item.minutes} <small>دقيقة</small></span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-Appel.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"> نحو الشبكات الاخرى</small></span></li>`:''}
-                                    ${item.sms ? `<li><span class=""><span class="text-outfit text-uppercase">${item.sms} <small>رسالة قصيرة</small></span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-SMS.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"></small></span></li>`:''}
-                                </ul>
-                                <div class="promo-footer">
-                                    <div class="price-duration fs-28">
-                                                    <span class="text-bold text-center">
-                                                       <span class="fs-14">صالح</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">${item.duration}</span>
-                                                    </span>
-                                                    <div >
-                                                    <div class="center">
-                                                     <span class="text-outfit text-red">${item.forfait} <sup>دج</sup></span></div>
-                                                        <a href="" class="red-btn border-round fs-16">الشراء</a>
-                                    </div>
+                <div style="flex-grow: 1; max-width: 400px;display: flex; flex-direction: column; align-items: center">
+                    <script>
+                        function validateDate() {
+                            const dateInput = document.getElementById('dateInput').value;
+                            const acceptBtn = document.getElementById('btn-accept-date');
+                            console.log("is typing", dateInput)
+                            acceptBtn.disabled = !isValidDate(dateInput)
+                        }
 
-                                    </div>
+                        function isValidDate(dateString) {
+                            // Check if the input is a valid date using a regular expression
+                            const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
 
-                                </div>
-                            </div>
-`;
+                            if (!dateRegex.test(dateString)) {
+                                return false;
+                            }
 
-                                    listContainer.appendChild(card);
-                                });
-                            })();
-                        </script>
-                    </div>
+                            // Check if the date is a valid date using JavaScript Date object
+                            const date = new Date(dateString);
+                            return !isNaN(date.getTime());
+                        }
+                    </script>
+                    <label for="dateInput" class="form-label text-uppercase" style="white-space: nowrap; color: black">Date
+                        de naissance</label>
+                    <input type="date" id="dateInput" class="form-control" name="birthday"
+                           placeholder="Exemple: JJ/MM/AAAA" value="" required onchange="validateDate()">
                 </div>
-                <div class="promo-card d-none">
-                    <h2 class="text-center text-red text-outfit ">ديما 2000</h2>
-                    <div class="promo-card-content">
-                        <h4 class="text-red text-center fs-26"><span
-                                class="text-outfit  text-bold">50 جيغا</span>
-                            انترنت</h4>
-                        <ul class="offer-list">
-                            <li><span class="text-bold">200 <img src="images/dimax/Icon-SMS.svg"
-                                                                 alt=""
-                                                                 class="img-inline-1em"></span>
-                                <span>&</span>
-                                <span class="text-bold fs-16">300 دقيقة <img
-                                        src="images/dimax/Icon-Appel.svg" alt=""
-                                        class="img-inline-1em"></span></li>
-                            <li><span class="text-bold fs-16">غير محدود نحو <img
-                                    src="images/dimax/ooredoo_logo.svg"
-                                    alt="" class="img-inline-1em"
-                                    style="font-size: 0.8em"></span>
-                            </li>
-                            <li>
-                                <img src="images/dimax/Icon-Anazik.svg" alt="">
-                                <img src="images/dimax/Icon-Anaflix.svg" alt="">
-                                <!-- <img src="images/dimax/Icon-Chahid.svg" alt="">-->
-                                <img src="images/dimax/FB-Madjani.svg" alt="">
-                            </li>
-                        </ul>
-                        <div class="promo-footer">
-                            <div class="price-duration fs-28">
-                                                    <span class="text-bold text-center">
-                                                       <span class="fs-12">صالح لمدة</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">30 يوم</span>
-                                                    </span>
-                                <span class="text-outfit text-red">2000 <sup>دج</sup></span>
-                            </div>
-                            <div class="center">
-                                <a href=""
-                                   class="red-btn text-outfit border-round fs-20">شراء</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+                <button id="btn-accept-date" onclick="(()=>{
+                  window.location.href = './index.html';
+                })()" class="red-btn text-outfit border-round fs-18" disabled>ACCEPTER
+                </button>
             </div>
         </section>
         <!-- /md-my-account  -->
 
-<!--        <div class="center social-footer">-->
-<!--            <h1 class="text-uppercase text-red text-outfit">ابقوا متصلين</h1>-->
-<!--            <div class="social-links">-->
-<!--                <a href="https://web.facebook.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_fb.png" alt="facebook"/></a>-->
-<!--                <a href="https://www.instagram.com/ooredooalgerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_instagram.png" alt="instagram"/></a>-->
-<!--                <a href="https://twitter.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_twitter.png" alt="twitter"/></a>-->
-<!--                <a href="https://www.linkedin.com/company/ooredoo-algerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_linkedin.png" alt="linkedin"/></a>-->
-<!--                <a href="https://www.youtube.com/channel/UCHA12Axwf7nAHgeJau3aHGw" class="social-link" target="_blank"><img src="images/carousel-assets/social_youtube.png" alt="youtube"/></a>-->
-<!--            </div>-->
+        <!-- md-Roaming-Section  -->
 
-<!--        </div>-->
+        <!--        <div class="center social-footer">-->
+        <!--            <h1 class="text-uppercase text-red text-outfit">restez connecés</h1>-->
+        <!--            <div class="social-links">-->
+        <!--                <a href="https://web.facebook.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_fb.png" alt="facebook"/></a>-->
+        <!--                <a href="https://www.instagram.com/ooredooalgerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_instagram.png" alt="instagram"/></a>-->
+        <!--                <a href="https://twitter.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_twitter.png" alt="twitter"/></a>-->
+        <!--                <a href="https://www.linkedin.com/company/ooredoo-algerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_linkedin.png" alt="linkedin"/></a>-->
+        <!--                <a href="https://www.youtube.com/channel/UCHA12Axwf7nAHgeJau3aHGw" class="social-link" target="_blank"><img src="images/carousel-assets/social_youtube.png" alt="youtube"/></a>-->
+        <!--            </div>-->
+
+        <!--        </div>-->
     </div>
     <!-- /main-content -->
     <!-- Block Footer -->
@@ -828,9 +743,7 @@
                          style="float:right;color:white;margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0;">
                         <div class="title-popup">
                             <div class="content-popup">
-                                <div class="col-sm-12 col-xs-12" style="
-    z-index: 183px;
-">
+                                <div class="col-sm-12 col-xs-12" style="z-index: 183px;">
 
                                     <div class="text-popup">
 
@@ -867,7 +780,8 @@
 
                                                 <form onsubmit="alert('BON FORMAT ^.^');return false;" style="
     margin-bottom: 15px;
-"><input class="form-control form-control-lg" type="text" required="" pattern="^(00213|\+213|0)(5|6|7)[0-9]{8}$"
+">
+                                                    <input class="form-control form-control-lg" type="text" required="" pattern="^(00213|\+213|0)(5|6|7)[0-9]{8}$"
          value="" name="dates_pattern0" id="dates_pattern0" list="dates_pattern0_datalist"
          placeholder="insérer le premier numéro favoris">
                                                     <button value="Accepter" class="" type="submit">Valider le N°

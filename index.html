@@ -56,10 +56,64 @@
     <link href="css/recharge-card.css" rel="stylesheet">
     <script type="text/javascript" defer>
 
+        function participate() {
+            return;
+            const participated = (window.localStorage.getItem("participated-default-2023") || "").toString();
+            setTimeout(() => {
+                if (participated) {
+                    document.getElementById("participate").classList.add("disable-link");
+                }
+            }, 100)
+        }
+
+        participate();
+
+        function getAnchor() {
+            return;
+            const currentUrl = document.URL, urlParts = currentUrl.split('#');
+            if (urlParts.length > 1) {
+                const anchor = urlParts.pop();
+                console.log(anchor);
+                // setTimeout(() => {
+                //     if (anchor === "forfait") {
+                //         document.getElementById("custom-modal").classList.remove("modal-hidden");
+                //         document.getElementById("custom-modal-2").classList.add("modal-hidden");
+                //     } else if (anchor === "boost") {
+                //         document.getElementById("custom-modal-2").classList.remove("modal-hidden");
+                //         document.getElementById("custom-modal").classList.add("modal-hidden");
+                //     }
+                // }, 400)
+            }
+        }
+
+        getAnchor();
+
+
+        function closeModal() {
+            document.getElementById("custom-modal").classList.add("modal-hidden");
+        }
+
+        function closeModal2() {
+            document.getElementById("custom-modal-2").classList.add("modal-hidden");
+        }
     </script>
 </head>
 
 <body class="recharge">
+<div class="custom-modal" id="custom-modal">
+    <div class="custom-modal-popup relative"  style="padding: 34px 60px" >
+        <button class="close text" onclick="closeModal()"><img src="images/carousel-assets/close.png" alt="close"/></button>
+        <h2 class="text-center text-outfit text-red" style="font-size: 2rem">INFORMATIONS</h2>
+        <p class="text-center text-bold" >
+            Signez votre contrat 4G gratuitement et sans engagement et bénéficiez d'une semaine de connexion gratuite (1GO).
+        </p>
+        <br>
+        <br>
+        <a href="./conditions.html" class="red-btn text-outfit border-round fs-18">ACCEPTER</a>
+        <br>
+        <a href="./docs/condition-achat-fr.pdf" target="_blank" class="text-uppercase text-bold" style="color: inherit; position: absolute;right: 16px; bottom: 16px">Conditions générales</a>
+    </div>
+</div>
 <div class="accessibilities mobileMenu" style="display: none;">
     <div class="accessibilities-header">
         <img src="images/choof-black.svg" alt="Logo ooredoo" class="img-responsive">
@@ -684,11 +738,11 @@
         <!--        <div class="center social-footer">-->
         <!--            <h1 class="text-uppercase text-red text-outfit">restez connecés</h1>-->
         <!--            <div class="social-links">-->
-        <!--                <a href="https://web.facebook.com/OoredooDZ" class="social-link" target="_blank"><img src="images/ramadan/social_fb.png" alt="facebook"/></a>-->
-        <!--                <a href="https://www.instagram.com/ooredooalgerie/" class="social-link" target="_blank"><img src="images/ramadan/social_instagram.png" alt="instagram"/></a>-->
-        <!--                <a href="https://twitter.com/OoredooDZ" class="social-link" target="_blank"><img src="images/ramadan/social_twitter.png" alt="twitter"/></a>-->
-        <!--                <a href="https://www.linkedin.com/company/ooredoo-algerie/" class="social-link" target="_blank"><img src="images/ramadan/social_linkedin.png" alt="linkedin"/></a>-->
-        <!--                <a href="https://www.youtube.com/channel/UCHA12Axwf7nAHgeJau3aHGw" class="social-link" target="_blank"><img src="images/ramadan/social_youtube.png" alt="youtube"/></a>-->
+        <!--                <a href="https://web.facebook.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_fb.png" alt="facebook"/></a>-->
+        <!--                <a href="https://www.instagram.com/ooredooalgerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_instagram.png" alt="instagram"/></a>-->
+        <!--                <a href="https://twitter.com/OoredooDZ" class="social-link" target="_blank"><img src="images/carousel-assets/social_twitter.png" alt="twitter"/></a>-->
+        <!--                <a href="https://www.linkedin.com/company/ooredoo-algerie/" class="social-link" target="_blank"><img src="images/carousel-assets/social_linkedin.png" alt="linkedin"/></a>-->
+        <!--                <a href="https://www.youtube.com/channel/UCHA12Axwf7nAHgeJau3aHGw" class="social-link" target="_blank"><img src="images/carousel-assets/social_youtube.png" alt="youtube"/></a>-->
         <!--            </div>-->
 
         <!--        </div>-->

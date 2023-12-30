@@ -813,6 +813,10 @@ input, select {
     border: unset;
     outline: unset;
     font-family: rubik, ooredoobold, Arial;
+    &:disabled{
+        background-color: orange!important;
+        filter: saturate(0);
+    }
 }
 
 .red-btn:hover {
@@ -841,7 +845,7 @@ input, select {
     flex-direction: column;
     padding: 34px;
     min-height: 160px;
-    max-width: 400px;
+    max-width: 600px;
     background-color: white;
     border-radius: 14px;
     /*border: 2px solid var(--ooredoo-red);*/
@@ -1056,4 +1060,18 @@ input, select {
         /*margin-right: -30px;*/
         /*padding-left: 15px;*/
     }
+}
+.sticky-accept{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #9fe2e1;
+    position: sticky;
+    bottom: 0;
+    gap: 16px;
+}
+.sticky-accept input{
+    border-radius: 40px;
 }
