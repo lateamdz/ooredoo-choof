@@ -649,8 +649,35 @@
 
             </div>
             <div class="container-fluid sticky-accept">
-               <div></div>
-                <a href="./conditions.html" class="red-btn text-outfit border-round fs-18">ACCEPTER</a>
+
+               <div style="flex-grow: 1; max-width: 400px;display: flex; flex-direction: column; align-items: center" >
+                   <script>
+                       function validateDate() {
+                           const dateInput = document.getElementById('dateInput').value;
+                           const acceptBtn = document.getElementById('btn-accept-date');
+                           console.log("is typing", dateInput)
+                           acceptBtn.disabled=!isValidDate(dateInput)
+                       }
+
+                       function isValidDate(dateString) {
+                           // Check if the input is a valid date using a regular expression
+                           const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+
+                           if (!dateRegex.test(dateString)) {
+                               return false;
+                           }
+
+                           // Check if the date is a valid date using JavaScript Date object
+                           const date = new Date(dateString);
+                           return !isNaN(date.getTime());
+                       }
+                   </script>
+                   <label  for="dateInput" class="form-label text-uppercase" style="white-space: nowrap; color: black">Date de naissance</label>
+                   <input type="date" id="dateInput" class="form-control" name="birthday" placeholder="Exemple: JJ/MM/AAAA" value="" required onchange="validateDate()">
+               </div>
+                <button id="btn-accept-date" onclick="(()=>{
+                  window.location.href = './index.html';
+                })()" class="red-btn text-outfit border-round fs-18" disabled>ACCEPTER</button>
             </div>
         </section>
         <!-- /md-my-account  -->

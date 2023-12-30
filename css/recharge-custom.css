@@ -800,6 +800,10 @@ input, select {
     border: unset;
     outline: unset;
     font-family: rubik, ooredoobold, Arial;
+    &:disabled{
+        background-color: orange!important;
+        filter: saturate(0);
+    }
 }
 
 .red-btn:hover {
@@ -1085,8 +1089,11 @@ input, select {
     align-items: center;
     flex-wrap: nowrap;
     justify-content: space-between;
-    background-color: #0d4d7d;
+    background-color: #9fe2e1;
     position: sticky;
     bottom: 0;
+    gap: 16px;
 }
-.sticky-accept input{}
+.sticky-accept input{
+    border-radius: 40px;
+}
