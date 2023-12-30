@@ -56,6 +56,7 @@
     <!--    branch css -->
     <link href="css/default-v4.css" rel="stylesheet">
     <script type="text/javascript" defer>
+
         function participate() {
             return;
             const participated = (window.localStorage.getItem("participated-default-2023") || "").toString();
@@ -74,15 +75,15 @@
             if (urlParts.length > 1) {
                 const anchor = urlParts.pop();
                 console.log(anchor);
-                // setTimeout(()=>{
-                //     if(anchor==="forfait"){
+                // setTimeout(() => {
+                //     if (anchor === "forfait") {
                 //         document.getElementById("custom-modal").classList.remove("modal-hidden");
                 //         document.getElementById("custom-modal-2").classList.add("modal-hidden");
-                //     }else if(anchor==="boost"){
+                //     } else if (anchor === "boost") {
                 //         document.getElementById("custom-modal-2").classList.remove("modal-hidden");
                 //         document.getElementById("custom-modal").classList.add("modal-hidden");
                 //     }
-                // },400)
+                // }, 400)
             }
         }
 
@@ -100,26 +101,21 @@
 </head>
 
 <body class="recharge">
-<div class="custom-modal modal-hidden" id="custom-modal">
-    <div class="custom-modal-popup relative">
+<div class="custom-modal" id="custom-modal">
+    <div class="custom-modal-popup relative"  style="padding: 34px 60px" >
         <button class="close text" onclick="closeModal()"><img src="images/ramadan/close.png" alt="close"/></button>
-        <h2 class="text-center text-outfit text-red">NOUVEAU !</h2>
-        <p class="text-center text-outfit">
-            Bonus internet <span class="text-uppercase">X2 !</span> Profitez d'un volume internet doublée sur vos
-            forfaits
+        <h2 class="text-center text-outfit text-red" style="font-size: 2rem">INFORMATIONS</h2>
+        <p class="text-center text-bold" >
+            Signez votre contrat 4G gratuitement et sans engagement et bénéficiez d'une semaine de connexion gratuite (1GO).
         </p>
+        <br>
+        <br>
+        <a href="./conditions.html" class="red-btn text-outfit border-round fs-18">ACCEPTER</a>
+        <br>
+        <a href="./conditions.html" class="text-uppercase text-bold" style="color: inherit; position: absolute;right: 16px; bottom: 16px">Conditions générales</a>
     </div>
 </div>
-<div class="custom-modal modal-hidden" id="custom-modal-2">
-    <div class="custom-modal-popup relative">
-        <button class="close text" onclick="closeModal2()"><img src="images/ramadan/close.png" alt="close"/></button>
-        <img src="images/ramadan/fanous.png" alt="forfait recharge" class="fanous"/>
-        <h2 class="text-center text-outfit text-red">PROMO RAMADHAN</h2>
-        <p class="text-center text-outfit">
-            Profitez de volume internet doublé sur tous les boosts sahla box.
-        </p>
-    </div>
-</div>
+
 <div class="accessibilities mobileMenu" style="display: none;">
     <div class="accessibilities-header">
         <img src="images/choof-black.svg" alt="Logo ooredoo" class="img-responsive">
