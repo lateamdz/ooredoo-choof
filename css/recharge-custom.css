@@ -859,6 +859,47 @@ input, select {
 }
 
 /*boost section ======================================================================================================*/
+.ooredoo-birthday{
+    height: 0;
+    background-color: var(--ooredoo-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    position: relative;
+    /*margin: 10vw 0;*/
+    top: -2.8vw;
+    margin-top: 10vw;
+    isolation: isolate;
+}
+.ooredoo-birthday:after{
+    content: "";
+    width: 100vw;
+    height: 5vw;
+    top: -2.5vw;
+    left: 0;
+    position: absolute;
+    background-color: var(--ooredoo-red);
+    z-index: -1;
+}
+.ooredoo-birthday>img{
+    height: 20vw;
+    object-fit: contain;
+}
+@media (min-width: 1400px) {
+    .ooredoo-birthday>img{
+        max-height: 250px;
+    }
+}
+@media (max-width: 600px) {
+    .ooredoo-birthday>img{
+        height: 40vw;
+    }
+    .ooredoo-birthday:after{
+        height: 10vw;
+        top: -5vw;
+    }
+}
 .default-promo {
     position: relative;
     isolation: isolate;
