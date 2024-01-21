@@ -23,6 +23,8 @@
 
 :root {
     --ooredoo-red: #ed1c24;
+    --ooredoo-dark: #121212;
+    --ooredoo-light: #c4c4c4;
     --color-qaada: #fee161;
 }
 
@@ -818,10 +820,33 @@ input, select {
         filter: saturate(0);
     }
 }
+.red-btn-outline {
+
+    color:  var(--ooredoo-red);
+    padding: 8px 24px;
+    background-color:white !important;
+    /*font-weight: ;*/
+    font-size: 1.05em;
+    border-radius: 0.8em;
+    border: unset;
+    outline: 1px solid var(--ooredoo-red);
+    font-family: rubik, ooredoobold, Arial;
+    &:disabled{
+        outline: orange!important;
+        color: orange!important;
+        filter: saturate(0);
+    }
+}
 
 .red-btn:hover {
     color: white;
 }
+.dark {
+    .red-btn-outline{
+        background-color:var(--ooredoo-dark) !important;
+    }
+}
+
 
 .custom-modal-popup p {
     font-size: 1.2em;
@@ -845,13 +870,14 @@ input, select {
     flex-direction: column;
     padding: 34px;
     min-height: 160px;
+    min-width: 400px;
     max-width: 600px;
     background-color: white;
     border-radius: 14px;
     /*border: 2px solid var(--ooredoo-red);*/
 }
 .dark .custom-modal-popup {
-    background-color: #121212;
+    background-color: var(--ooredoo-dark);
     color: #cdcdcd;
 }
 .modal-hidden {
@@ -910,14 +936,14 @@ input, select {
 }
 
 .dark .default-promo {
-    background-color: #121212;
+    background-color: var(--ooredoo-dark);
 }
 #main-content , #page {
     background-color: white!important;
     color: black;
 }
 .dark #main-content , .dark #page{
-    background-color: #121212!important;
+    background-color: var(--ooredoo-dark)!important;
     color: white;
 }
 .default-promo .default-flower {
@@ -946,7 +972,7 @@ input, select {
 }
 
 .dark .sahla-box-cards {
-    background-color:  #121212;
+    background-color:  var(--ooredoo-dark);
 }
 .dark .sahla-box-cards .image-boost h2{
     color: #cdcdcd;
