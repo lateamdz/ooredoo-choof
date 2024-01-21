@@ -782,7 +782,7 @@ input, select {
 
 .custom-modal-popup p {
     font-size: 1.2em;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
 }
 
 .custom-modal-popup h2{
@@ -802,7 +802,8 @@ input, select {
     flex-direction: column;
     padding: 34px;
     min-height: 160px;
-    max-width: 400px;
+    max-width: 600px;
+    min-width: 400px;
     background-color: white;
     border-radius: 14px;
     border: 2px solid var(--ooredoo-red);
