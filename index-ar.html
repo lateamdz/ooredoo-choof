@@ -139,7 +139,7 @@
 </head>
 
 <body class="ar recharge">
-<div class="custom-modal"
+<div class="custom-modal d-none"
         id="custom-modal">
     <script>
         const page1 = () => {
@@ -200,7 +200,8 @@
                 </button>
             </div>
         </div>
-        <div id="modal-page-2" class="d-none">
+        <div id="modal-page-2"
+                class="d-none">
 
             <p class="text-center text-outfit">يرجى ادخال تاريخ ميلادك كالتالي</p>
             <p class="text-center text-outfit"><input type="date"
@@ -733,103 +734,44 @@
             <div class="default-promo">
                 <br> <br> <br>
                 <div class="container">
-                    <div class="default-promo-header">
-                        <h2>إشتراكات الوفاء</h2>
+                    <div class="default-promo-header d-none">
+                        <h2>إشتراكات شاهد</h2>
                     </div>
                     <br>
                     <div class="promo-grid"
                             id="promo-grid">
+                        <div class="extra-special-card">
+                            <h1 class="promo-title">إشتراكات شاهد</h1>
+                            <img src="./images/shahid/shahid_ooredoo.png" alt="">
+                            <p>احصلوا الآن على اشتراك شاهد الذي يناسبكم ، و استفيدوا من دخول حصري لمدة 30 يوم + إنترنت</p>
+                        </div>
                         <script>
                             (() => {
                                 const data = [
                                     {
-                                        forfait: "100",
+                                        forfait: "500",
                                         plus: false,
                                         duration: "24 ساعة",
-                                        internet: 0,
-                                        ooredoo: true,
+                                        internet: 2,
+                                        ooredoo: false,
                                         facebook: false,
-                                        hadra: 600,
+                                        hadra: 0,
                                         sms: 0,
                                         minutes: 0,
+                                        shahid: true,
                                     },
                                     {
-                                        forfait: "800",
-                                        plus: true,
+                                        forfait: "1000",
+                                        plus: false,
                                         duration: "30 يوم",
-                                        internet: 12,
-                                        ooredoo: true,
+                                        internet: 6,
+                                        ooredoo: false,
                                         facebook: false,
-                                        hadra: 2000,
+                                        hadra: 0,
                                         sms: 0,
                                         minutes: 0,
-                                    },
-                                    {
-                                        forfait: "1200",
-                                        plus: true,
-                                        duration: "30 يوم",
-                                        internet: 40,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 3000,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "1500",
-                                        plus: true,
-                                        duration: "30 يوم",
-                                        internet: 60,
-                                        ooredoo: true,
-                                        facebook: false,
-                                        hadra: 5000,
-                                        sms: 0,
-                                        minutes: 0,
-                                    },
-                                    {
-                                        forfait: "800",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 8,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 100,
-                                        sms: 120,
-                                    },
-                                    {
-                                        forfait: "1200",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 30,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 150,
-                                        sms: 150,
-                                    },
-                                    {
-                                        forfait: "1500",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 50,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 300,
-                                        sms: 200,
-                                    },
-                                    {
-                                        forfait: "2000",
-                                        plus: false,
-                                        duration: "30 يوم",
-                                        internet: 70,
-                                        ooredoo: true,
-                                        facebook: true,
-                                        hadra: 0,
-                                        minutes: 700,
-                                        sms: 350,
-                                    },
+                                        shahid: true,
+                                    }
                                 ];
                                 const listContainer = document.getElementById("promo-grid");
 
@@ -841,9 +783,10 @@
                                 <h4 class="text-red text-center fs-26"><span class="text-outfit"><span>اشتراك الوفاء </span> ${item.forfait}${item.plus ? '+' : ''}</span></h4>
                                 <ul class="offer-list">
                                 ${item.internet ?
-                                        `<li><span ><span class="text-outfit text-uppercase">${item.internet} <small>جيغا</small></span> <small style="font-size: 0.55em">انترنت</small></span></li>`
+                                        `<li><span ><span class="text-outfit text-uppercase text-bold">${item.internet} <small>جيغا</small></span> <span class="text-bold">انترنت</span></span></li>`
                                         : `<li><span ><span class="text-outfit text-uppercase">انترنت</span> <span class="text-bold">غير محدود</span></span></li>`}
                                     ${item.ooredoo ? `<li><span class=""><span class="text-outfit text-uppercase text-bold">مكالمات غير محدودة</span> <small class="text-bold" style="font-size: 0.55em">نحو Ooredoo</small></span></li>` : ''}
+                                    ${item.shahid ? `<li><span class=""><span class="text-outfit text-uppercase text-bold">دخول الى التطبيق شاهد</span></li>` : ''}
                                     ${item.facebook ? `<li><span class=""><small class=" text-uppercase">فايسبوك </small> <span class="text-outfit text-bold">غير محدود <img src="images/icons/fb.png" style="bottom: -0.2em;position: relative;" class="img-inline-1em"></span></span></li>` : ''}
                                    ${item.hadra ? ` <li><span class=""><span class="text-outfit text-uppercase">${item.hadra} دج</span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-Appel.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"> و <img src="images/dimax/Icon-SMS.svg" style="bottom: -0.4em;position: relative;" class="img-inline-2em"> نحو كل الشبكات</small></span></li>` : ''}
                                     ${item.minutes ? `<li><span class=""><span class="text-outfit text-uppercase">${item.minutes} <small>دقيقة</small></span> <small class="text-bold" style="font-size: 0.55em"> <img src="images/dimax/Icon-Appel.svg" class="img-inline-2em" style="bottom: -0.4em;position: relative;"> نحو الشبكات الاخرى</small></span></li>` : ''}
@@ -852,12 +795,13 @@
                                 <div class="promo-footer">
                                     <div class="price-duration fs-28">
                                                     <span class="text-bold text-center">
-                                                       <span class="fs-14">صالح</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">${item.duration}</span>
+<!--                                                       <span class="fs-14">صالح</span>-->
+                                                       <span class="text-bold white-space-nowrap fs-18">صالح ${item.duration}</span>
+                                                       <span class="text-bold white-space-nowrap fs-18">${item.forfait} <sup>دج</sup></span>
                                                     </span>
                                                     <div >
                                                     <div class="center">
-                                                     <span class="text-outfit text-red">${item.forfait} <sup>دج</sup></span></div>
+<!--                                                     <span class="text-outfit text-red">${item.forfait} <sup>دج</sup></span></div>-->
                                                         <a href="" class="red-btn border-round fs-16">الشراء</a>
                                     </div>
 

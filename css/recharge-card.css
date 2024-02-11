@@ -12,6 +12,28 @@
     height: 1.8em;
     vertical-align: baseline;
 }
+.promo-title{
+    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+}
+.extra-special-card{
+    /*aspect-ratio: 1;*/
+    padding: 0 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    >h1{
+        text-align: center;
+        font-size: 290%;
+    }
+    >img{
+        width: 60%;
+        object-fit: contain;
+    }
+    >p{
+        margin-top: 16px;
+    }
+}
 .promo-grid{
     display: grid;
     gap: 8px;
@@ -39,10 +61,10 @@
     height: 100%;
     background-color: white;
     border-radius: 8px;
-    border: 2px solid lightgrey;
+    border: 2px solid var(--ooredoo-red);
     padding: 12px 8px;
     /*box-shadow: 0px 0px 3px 2px rgba(231, 232, 238, 0.67);*/
-    min-height: 326px;
+    min-height: 256px;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -58,7 +80,7 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
-    border-top: 1px solid lightgrey;
+    border-top: 2px solid var(--ooredoo-red);
     padding-top: 12px;
 }
 
@@ -67,17 +89,16 @@
     flex-direction: column;
 }
 
-
-.promo-card .offer-list li:before {
+.promo-card .offer-list li:not(:last-child):before {
     content: '';
     background-image: url("../images/icons/plus-2.png");
     background-size: 100% 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
     margin-top: auto;
     margin-bottom: auto;
-    left: 0;
+    right: 0;
     height: 16px;
     width: 16px;
     border-radius: 20px;
@@ -107,14 +128,17 @@
 
 .promo-card .offer-list li {
     position: relative;
-    padding-inline-start: 24px;
+    /*padding-inline-start: 24px;*/
     padding-inline-end: 0px;
     min-height: 34px;
     display: flex;;
     gap: 6px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     line-height: 0.8em;
+    &:first-child{
+        flex-direction: column-reverse;
+    }
 }
 
 .promo-card .offer-list {
@@ -126,8 +150,28 @@
 .custom-carousel .carousel-buttons img {
     /*transform: scale(0.75) translateY(20px);*/
 }
+@media (max-width: 991px) {
 
+    .promo-grid{
+       > div:first-child{
+           grid-column: span 3;
+       }
+    }
+    .extra-special-card{
+        aspect-ratio: 16/9;
+        margin-bottom: 20px;
+        >h1{
+            text-align: center;
+            font-size: min(10vw, 500%);
+        }
+    }
+}
 @media (max-width: 600px) {
+    .promo-grid{
+        > div{
+            grid-column: span 3;
+        }
+    }
     .promo-card {
         width: 100%;
         padding: 0 2px;
