@@ -751,7 +751,7 @@
                                     {
                                         forfait: "500",
                                         plus: false,
-                                        duration: "24 ساعة",
+                                        duration: "30 يوم",
                                         internet: 2,
                                         ooredoo: false,
                                         facebook: false,
@@ -780,10 +780,10 @@
                                     card.className = "promo-card";
                                     card.innerHTML = `
                                 <div class="promo-card-content">
-                                <h4 class="text-red text-center fs-26"><span class="text-outfit"><span>شاهد </span> ${item.forfait}${item.plus ? '+' : ''}</span></h4>
+                                <h4 class="text-red text-center text-bold fs-32"><span class="text-outfit"><span>شاهد </span> ${item.forfait}${item.plus ? '+' : ''}</span></h4>
                                 <ul class="offer-list">
                                 ${item.internet ?
-                                        `<li><span ><span class="text-outfit text-uppercase text-bold">${item.internet} <small>جيغا</small></span> <span class="text-bold">انترنت</span></span></li>`
+                                        `<li><span ><span class="text-outfit text-uppercase text-bold">${item.internet} <span>جيغا</span></span> <span class="text-bold">انترنت</span></span></li>`
                                         : `<li><span ><span class="text-outfit text-uppercase">انترنت</span> <span class="text-bold">غير محدود</span></span></li>`}
                                     ${item.ooredoo ? `<li><span class=""><span class="text-outfit text-uppercase text-bold">مكالمات غير محدودة</span> <small class="text-bold" style="font-size: 0.55em">نحو Ooredoo</small></span></li>` : ''}
                                     ${item.shahid ? `<li><span class=""><span class="text-outfit text-uppercase text-bold">دخول الى التطبيق شاهد</span></li>` : ''}
@@ -817,47 +817,7 @@
                         </script>
                     </div>
                 </div>
-                <div class="promo-card d-none">
-                    <h2 class="text-center text-red text-outfit ">ديما 2000</h2>
-                    <div class="promo-card-content">
-                        <h4 class="text-red text-center fs-26"><span
-                                class="text-outfit  text-bold">50 جيغا</span> انترنت</h4>
-                        <ul class="offer-list">
-                            <li><span class="text-bold">200 <img src="images/dimax/Icon-SMS.svg"
-                                    alt=""
-                                    class="img-inline-1em"></span> <span>&</span> <span class="text-bold fs-16">300 دقيقة <img
-                                    src="images/dimax/Icon-Appel.svg"
-                                    alt=""
-                                    class="img-inline-1em"></span></li>
-                            <li><span class="text-bold fs-16">غير محدود نحو <img
-                                    src="images/dimax/ooredoo_logo.svg"
-                                    alt=""
-                                    class="img-inline-1em"
-                                    style="font-size: 0.8em"></span>
-                            </li>
-                            <li>
-                                <img src="images/dimax/Icon-Anazik.svg"
-                                        alt=""> <img src="images/dimax/Icon-Anaflix.svg"
-                                    alt="">
-                                <!-- <img src="images/dimax/Icon-Chahid.svg" alt="">-->
-                                <img src="images/dimax/FB-Madjani.svg"
-                                        alt="">
-                            </li>
-                        </ul>
-                        <div class="promo-footer">
-                            <div class="price-duration fs-28">
-                                                    <span class="text-bold text-center">
-                                                       <span class="fs-12">صالح لمدة</span>
-                                                       <span class="text-bold white-space-nowrap fs-18">30 يوم</span>
-                                                    </span> <span class="text-outfit text-red">2000 <sup>دج</sup></span>
-                            </div>
-                            <div class="center">
-                                <a href=""
-                                        class="red-btn text-outfit border-round fs-20">شراء</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <br> <br> <br>
 
 
             </div>
