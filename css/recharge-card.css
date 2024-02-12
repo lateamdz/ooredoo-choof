@@ -13,7 +13,7 @@
     vertical-align: baseline;
 }
 .promo-title{
-    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+    font-family: outfit-bold, NotoKufiArabic-bold, Arial, sans-serif !important;
 }
 .extra-special-card{
     /*aspect-ratio: 1;*/
@@ -36,6 +36,7 @@
     }
 }
 .promo-grid{
+    /*font-family: NotoKufiArabic, sans-serif;*/
     display: grid;
     gap: 8px;
     /*grid-template-columns: repeat(4, 1fr);*/

@@ -4,6 +4,16 @@
 }
 
 @font-face {
+    font-family: 'NotoKufiArabic';
+    src: url(../fonts/NotoKufiArabic-Medium.ttf) format('truetype');
+    /* Add additional formats if needed */
+}
+@font-face {
+    font-family: 'NotoKufiArabic-bold';
+    src: url(../fonts/NotoKufiArabic-ExtraBold.ttf) format('truetype');
+    /* Add additional formats if needed */
+}
+@font-face {
     font-family: outfit-bold;
     src: url(../fonts/outfit.ttf);
     font-weight: 800;
@@ -29,7 +39,7 @@
 }
 
 #page, body, html {
-    font-family: rubik, ooredooregular, Arial;
+    font-family: rubik,NotoKufiArabic, Arial;
 }
 
 .fs-34 {
@@ -153,7 +163,7 @@
 }
 
 .text-outfit {
-    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+    font-family: outfit-bold, NotoKufiArabic, Arial, sans-serif !important;
 }
 
 .border-round {
@@ -191,7 +201,7 @@
 }
 
 .text-fr-bold {
-    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+    font-family: outfit-bold, NotoKufiArabic, Arial, sans-serif !important;
 }
 
 .text-fr {
@@ -967,7 +977,7 @@ input, select {
 .sahla-box-cards .image-boost h2{
     color: black;
     font-size: 455%;
-    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+    font-family: outfit-bold, NotoKufiArabic, Arial, sans-serif !important;
 
 }
 
@@ -986,7 +996,7 @@ input, select {
 .default-promo-header h2 {
     color: black;
     font-size: 3.5vw;
-    font-family: outfit-bold, ooredoobold, Arial, sans-serif !important;
+    font-family: outfit-bold, NotoKufiArabic-bold, Arial, sans-serif !important;
 }
 
 .dark .default-promo-header h2 {
